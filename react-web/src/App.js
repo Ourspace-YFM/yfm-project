@@ -12,6 +12,10 @@ import SignInPage from './pages/SignInPage'
 import * as authAPI from './api/auth'
 import { setApiToken} from './api/init'
 
+import DynamicButton from './components/DynamicButton'
+import RouteButton from './components/RouteButton'
+import RouteLink from './components/RouteLink'
+
 const tokenKey = 'userToken'
 const savedToken = localStorage.getItem(tokenKey)
 setApiToken(savedToken)
@@ -65,8 +69,22 @@ class App extends Component {
   render() {
     const { error, token, createAccount=false } = this.state
     return (
+
       <Router>
         <main>
+
+        <div>
+          <DynamicButton action={ () => {(console.log("Hello"))}} name="DynamicButton" />
+        </div>
+
+        <div>
+          <RouteButton redirectpath="/home" name="RouteButton" />
+        </div>
+
+        <div>
+          <RouteLink redirectpath="/pages" name="RouteLink" />
+        </div>
+
           <PrimaryNav isSignedIn={!!token} onSignOut={ this.handleSignOut } />
           { !!error && <ErrorMessage error={error}/> }
 
