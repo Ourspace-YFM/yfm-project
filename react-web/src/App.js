@@ -12,6 +12,8 @@ import SignInPage from './pages/SignInPage'
 import * as authAPI from './api/auth'
 import { setApiToken} from './api/init'
 
+// Components:
+import Title from './components/Title'
 import DynamicButton from './components/DynamicButton'
 import RouteButton from './components/RouteButton'
 import RouteLink from './components/RouteLink'
@@ -72,6 +74,10 @@ class App extends Component {
 
       <Router>
         <main>
+
+        <div>
+          <Title text="Page Title"/>
+        </div>
 
         <div>
           <DynamicButton action={ () => {(console.log("Hello"))}} name="DynamicButton" />
