@@ -5,6 +5,7 @@ import {
   Switch
 } from 'react-router-dom'
 import './App.css'
+import './custom.css'
 import PrimaryNav from './components/PrimaryNav'
 import ErrorMessage from './components/ErrorMessage'
 import HomePage from './pages/HomePage'

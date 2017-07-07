@@ -11,10 +11,17 @@
     "react-scripts": "1.0.8"
   },
   "scripts": {
+    "sass": "gulp sass:watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:7000"
+  "proxy": "http://localhost:7000",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-coffee": "^2.3.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0"
+  }
 }
