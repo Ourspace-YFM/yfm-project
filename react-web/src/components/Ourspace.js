@@ -5,9 +5,9 @@ export default function Ourspace({
   className
 }) {
   return (
-    <div className={ className }>
+    <p className={ className }>
       <BoldText text="OUR"/>
-      <p>SPACE</p>
-    </div>
+      <span>SPACE</span>
+    </p>
   )
 }

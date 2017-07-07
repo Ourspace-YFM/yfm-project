@@ -4,8 +4,8 @@ export default function BoldText({
   text
 }) {
   return (
-    <p className="bold">
+    <span className="bold">
       { text }
-    </p>
+    </span>
   )
 }

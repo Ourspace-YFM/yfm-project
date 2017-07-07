@@ -5,8 +5,8 @@ export default function LightText({
 
 }) {
   return (
-    <p className="light">
+    <span className="light">
       { text }
-    </p>
+    </span>
   )
 }
