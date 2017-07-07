@@ -9,13 +9,11 @@ gulp.task( 'default', ['sass:watch'] )
 gulp.task('sass', function () {
   return gulp.src('./src/stylesheets/*.scss')
   .pipe(sass().on('error', sass.logError))
-  .pipe(concat('custom.css')) // this is what was missing
-  .pipe(gulp.dest('./src')); // output to theme root
-  // .pipe(sass.sync().on('error', sass.logError))
-  console.log('asdf')
+  .pipe(concat('custom.css'))
+  .pipe(gulp.dest('./src'));
 });
 
 gulp.task('sass:watch', function () {
-  gulp.task('execute')
+   gulp.start('sass')
   gulp.watch('./src/stylesheets/*.scss', ['sass']);
 });
