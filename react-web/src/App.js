@@ -13,6 +13,7 @@ import * as authAPI from './api/auth'
 import { setApiToken} from './api/init'
 
 // Components:
+import LightText from './components/LightText'
 import BoldText from './components/BoldText'
 import Title from './components/Title'
 import DynamicButton from './components/DynamicButton'
@@ -75,6 +76,10 @@ class App extends Component {
 
       <Router>
         <main>
+
+        <div>
+          <LightText text="Light Text"/>
+        </div>
 
         <div>
           <BoldText text="Bold Text"/>
