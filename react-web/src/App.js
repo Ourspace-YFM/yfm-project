@@ -5,6 +5,7 @@ import {
   Switch
 } from 'react-router-dom'
 import './App.css'
+import './custom.css'
 import PrimaryNav from './components/PrimaryNav'
 import ErrorMessage from './components/ErrorMessage'
 import HomePage from './pages/HomePage'
@@ -12,6 +13,12 @@ import SignInPage from './pages/SignInPage'
 import * as authAPI from './api/auth'
 import { setApiToken} from './api/init'
 
+// Components:
+import Ourspace from './components/Ourspace'
+import Subtitle from './components/Subtitle'
+import LightText from './components/LightText'
+import BoldText from './components/BoldText'
+import Title from './components/Title'
 import DynamicButton from './components/DynamicButton'
 import RouteButton from './components/RouteButton'
 import RouteLink from './components/RouteLink'
@@ -72,6 +79,26 @@ class App extends Component {
 
       <Router>
         <main>
+
+        <div>
+          <Ourspace/>
+        </div>
+
+        <div>
+          <Subtitle text="Subtitle"/>
+        </div>
+
+        <div>
+          <LightText text="Light Text"/>
+        </div>
+
+        <div>
+          <BoldText text="Bold Text"/>
+        </div>
+
+        <div>
+          <Title text="Page Title"/>
+        </div>
 
         <div>
           <DynamicButton action={ () => {(console.log("Hello"))}} name="DynamicButton" />
