@@ -17,7 +17,6 @@
     "passport-local-mongoose": "^4.0.0"
   },
   "scripts": {
-    "dev": "nodemon server.js",
-    "build": "webpack"
+    "dev": "nodemon server.js"
   }
 }
