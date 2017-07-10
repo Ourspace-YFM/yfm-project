@@ -6,6 +6,7 @@ import LightText from '../components/LightText'
 import BoldText from '../components/BoldText'
 import Title from '../components/Title'
 import Link from '../components/Link'
+import DropDownMenuMain from '../molecules/DropDownMenu'
 
 // MUI Components
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -21,6 +22,12 @@ export const ComponentLibrary = () => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
+
+        <div>
+          <MuiThemeProvider>
+            <DropDownMenuMain />
+          </MuiThemeProvider>
+        </div>
 
         <div>
           <Subtitle text="Subtitle"/>
