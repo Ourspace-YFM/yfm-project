@@ -21,6 +21,7 @@ export default class DropDownMenuMain extends React.Component {
     return (
       <div>
         <DropDownMenu
+          className="drop-down-menu"
           value={this.state.value}
           onChange={this.handleChange}
           style={styles.customWidth}
