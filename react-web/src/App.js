@@ -10,17 +10,9 @@ import PrimaryNav from './components/PrimaryNav'
 import ErrorMessage from './components/ErrorMessage'
 import HomePage from './pages/HomePage'
 import SignInPage from './pages/SignInPage'
+import ComponentLibrary from './pages/ComponentLibrary'
 import * as authAPI from './api/auth'
-import { setApiToken} from './api/init'
-
-// Components:
-import Subtitle from './components/Subtitle'
-import LightText from './components/LightText'
-import BoldText from './components/BoldText'
-import Title from './components/Title'
-import DynamicButton from './components/DynamicButton'
-import RouteButton from './components/RouteButton'
-import RouteLink from './components/RouteLink'
+import { setApiToken } from './api/init'
 
 const tokenKey = 'userToken'
 const savedToken = localStorage.getItem(tokenKey)
@@ -78,40 +70,12 @@ class App extends Component {
 
       <Router>
         <main>
-
-        <div>
-          <Subtitle text="Subtitle"/>
-        </div>
-
-        <div>
-          <LightText text="Light Text"/>
-        </div>
-
-        <div>
-          <BoldText text="Bold Text"/>
-        </div>
-
-        <div>
-          <Title text="Page Title"/>
-        </div>
-
-        <div>
-          <DynamicButton action={ () => {(console.log("Hello"))}} name="DynamicButton" />
-        </div>
-
-        <div>
-          <RouteButton redirectpath="/home" name="RouteButton" />
-        </div>
-
-        <div>
-          <RouteLink redirectpath="/pages" name="RouteLink" />
-        </div>
-
           <PrimaryNav isSignedIn={!!token} onSignOut={ this.handleSignOut } />
           { !!error && <ErrorMessage error={error}/> }
 
           <Switch>
             <Route exact path='/' component={ HomePage } />
+            <Route exact path='/componentlibrary' component={ ComponentLibrary } />
             <Route path='/signin' render={
               () => (
                 <SignInPage token={ token } createAccount={ createAccount } toggleCreateAccount={ this.toggleCreateAccount } onSignIn={ this.handleSignIn } onCreateAccount={ this.handleCreateAccount} />
@@ -127,7 +91,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // Asychronous
+    // Asynchronous
 
   }
 }
