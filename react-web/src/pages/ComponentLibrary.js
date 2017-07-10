@@ -6,6 +6,7 @@ import LightText from '../components/LightText'
 import BoldText from '../components/BoldText'
 import Title from '../components/Title'
 import Link from '../components/Link'
+import TextArea from '../components/TextArea'
 
 // MUI Components
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -21,6 +22,10 @@ export const ComponentLibrary = () => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
+
+        <div>
+          <TextArea rows="4" columns="50" text="Text Area"/>
+        </div>
 
         <div>
           <Subtitle text="Subtitle"/>
@@ -40,7 +45,7 @@ export const ComponentLibrary = () => (
 
         <div>
           <MuiThemeProvider>
-            <RaisedButton 
+            <RaisedButton
               className='dynamic-btn'
               label='Dynamic Button'
               onClick={ () => {(console.log("Hello"))} }
@@ -50,10 +55,10 @@ export const ComponentLibrary = () => (
 
         <div>
           <MuiThemeProvider>
-            <RaisedButton 
+            <RaisedButton
               className='link-btn'
               label='Link Button'
-              href="/somelink" 
+              href="/somelink"
               style={ buttonStyle } />
           </MuiThemeProvider>
         </div>
