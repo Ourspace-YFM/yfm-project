@@ -7,6 +7,7 @@ import BoldText from '../components/BoldText'
 import Title from '../components/Title'
 import Link from '../components/Link'
 import TextArea from '../components/TextArea'
+import DropDownMenuMain from '../molecules/DropDownMenu'
 
 // MUI Components
 import LinearProgress from 'material-ui/LinearProgress'
@@ -25,6 +26,12 @@ export const ComponentLibrary = () => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
+
+        <div>
+          <MuiThemeProvider>
+            <DropDownMenuMain />
+          </MuiThemeProvider>
+        </div>
 
         <div>
           <MuiThemeProvider>
