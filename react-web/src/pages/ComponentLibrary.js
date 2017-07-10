@@ -10,6 +10,7 @@ import TextArea from '../components/TextArea'
 
 // MUI Components
 import LinearProgress from 'material-ui/LinearProgress'
+import DatePicker from 'material-ui/DatePicker'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
 
@@ -24,6 +25,12 @@ export const ComponentLibrary = () => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
+
+        <div>
+          <MuiThemeProvider>
+            <DatePicker hintText="Portrait Dialog" />
+          </MuiThemeProvider>
+        </div>
 
         <div>
         <p>Progress bar: </p>
