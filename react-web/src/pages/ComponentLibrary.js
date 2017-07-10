@@ -28,7 +28,7 @@ export const ComponentLibrary = () => (
 
         <div>
           <MuiThemeProvider>
-            <DatePicker hintText="Portrait Dialog" />
+            <DatePicker hintText="Portrait-Style Dialog" />
           </MuiThemeProvider>
         </div>
 
