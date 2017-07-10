@@ -9,8 +9,10 @@ import Link from '../components/Link'
 import TextArea from '../components/TextArea'
 
 // MUI Components
+import LinearProgress from 'material-ui/LinearProgress'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
+
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
@@ -24,7 +26,21 @@ export const ComponentLibrary = () => (
         <h2>Atoms</h2>
 
         <div>
-          <TextArea rows="4" columns="50" text="Text Area"/>
+        <p>Progress bar: </p>
+          <MuiThemeProvider>
+            <LinearProgress
+             mode="determinate"
+             value='50' />
+          </MuiThemeProvider>
+          <br/>
+          <br/>
+        </div>
+
+        <div>
+          <TextArea
+            rows="4"
+            columns="50"
+            text="Text Area"/>
         </div>
 
         <div>
