@@ -14,7 +14,6 @@ import * as authAPI from './api/auth'
 import { setApiToken} from './api/init'
 
 // Components:
-import Ourspace from './components/Ourspace'
 import Subtitle from './components/Subtitle'
 import LightText from './components/LightText'
 import BoldText from './components/BoldText'
@@ -79,10 +78,6 @@ class App extends Component {
 
       <Router>
         <main>
-
-        <div>
-          <Ourspace/>
-        </div>
 
         <div>
           <Subtitle text="Subtitle"/>
