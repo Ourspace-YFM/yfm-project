@@ -5,15 +5,24 @@ import Subtitle from '../components/Subtitle'
 import LightText from '../components/LightText'
 import BoldText from '../components/BoldText'
 import Title from '../components/Title'
-import DynamicButton from '../components/DynamicButton'
-import RouteButton from '../components/RouteButton'
 import RouteLink from '../components/RouteLink'
 
-const ComponentLibrary = () => (
+// MUI Components
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import RaisedButton from 'material-ui/RaisedButton'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+injectTapEventPlugin()
+
+const buttonStyle = {
+  margin: 12,
+};
+
+export const ComponentLibrary = () => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
-                <div>
+
+        <div>
           <Subtitle text="Subtitle"/>
         </div>
 
@@ -30,11 +39,23 @@ const ComponentLibrary = () => (
         </div>
 
         <div>
-          <DynamicButton action={ () => {(console.log("Hello"))}} name="DynamicButton" />
+          <MuiThemeProvider>
+            <RaisedButton 
+              className='dynamic-btn'
+              label='Dynamic Button'
+              onClick={ () => {(console.log("Hello"))} }
+              style={ buttonStyle } />
+          </MuiThemeProvider>
         </div>
 
         <div>
-          <RouteButton redirectpath="/home" name="RouteButton" />
+          <MuiThemeProvider>
+            <RaisedButton 
+              className='route-btn'
+              label='Route Button'
+              href="/someplace" 
+              style={ buttonStyle } />
+          </MuiThemeProvider>
         </div>
 
         <div>

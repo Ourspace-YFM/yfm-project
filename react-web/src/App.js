@@ -12,7 +12,7 @@ import HomePage from './pages/HomePage'
 import SignInPage from './pages/SignInPage'
 import ComponentLibrary from './pages/ComponentLibrary'
 import * as authAPI from './api/auth'
-import { setApiToken} from './api/init'
+import { setApiToken } from './api/init'
 
 const tokenKey = 'userToken'
 const savedToken = localStorage.getItem(tokenKey)
