@@ -13,7 +13,7 @@ const server = express()
 server.use(bodyParser.json())
 server.use(cors())
 server.use(authMiddleware.initialize)
-server.use('/api',authMiddleware.authenticateJWT,)
+server.use('/api',authMiddleware.authenticateJWT)
 
 // Routes
 server.use('/auth',authMiddleware.ensureRole('admin'),authRouter)

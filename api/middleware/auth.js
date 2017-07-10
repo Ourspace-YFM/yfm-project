@@ -6,6 +6,8 @@ const User = require('../models/User')
 const jwtSecret = 'SECRET!'
 const jwtAlgorithm = 'HS256'
 
+// For temporary password
+// https://stackoverflow.com/questions/36648350/passport-local-temporary-password-change-on-first-login
 function rolesForUser(user) {
   let roles = []
   // insert email conditions here
