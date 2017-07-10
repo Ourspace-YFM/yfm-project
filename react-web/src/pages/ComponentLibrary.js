@@ -5,7 +5,7 @@ import Subtitle from '../components/Subtitle'
 import LightText from '../components/LightText'
 import BoldText from '../components/BoldText'
 import Title from '../components/Title'
-import RouteLink from '../components/RouteLink'
+import Link from '../components/Link'
 
 // MUI Components
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -51,15 +51,15 @@ export const ComponentLibrary = () => (
         <div>
           <MuiThemeProvider>
             <RaisedButton 
-              className='route-btn'
-              label='Route Button'
-              href="/someplace" 
+              className='link-btn'
+              label='Link Button'
+              href="/somelink" 
               style={ buttonStyle } />
           </MuiThemeProvider>
         </div>
 
         <div>
-          <RouteLink redirectpath="/pages" name="RouteLink" />
+          <Link redirectpath="/somelink" name="Link" />
         </div>
     </div>
 )
