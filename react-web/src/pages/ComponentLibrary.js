@@ -20,6 +20,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 
 // Molecules
 import ExpandableCard from '../molecules/ExpandableCard'
+import SummaryItem from '../molecules/SummaryItem'
 
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
@@ -158,6 +159,13 @@ export const ComponentLibrary = () => (
           <ExpandableCard subtitle="6 jobs" logoSrc="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" logoAlt="Test Logo" logoClass="testClassName">
             <p>Place children here</p>
           </ExpandableCard>
+        </div>
+        <br/>
+        <br/>
+        <div>
+          <SummaryItem title="Title" subtitle="Subtitle" link="/somewhere">
+            <p>Insert badge and other info here as children</p>
+          </SummaryItem>
         </div>
     </div>
 )
