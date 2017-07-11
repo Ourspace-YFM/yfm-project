@@ -21,6 +21,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 // Molecules
 import ExpandableCard from '../molecules/ExpandableCard'
 import SummaryItem from '../molecules/SummaryItem'
+import ProgressItem from '../molecules/ProgressItem'
 
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
@@ -166,6 +167,13 @@ export const ComponentLibrary = () => (
           <SummaryItem title="Title" subtitle="Subtitle" link="/somewhere">
             <p>Insert badge and other info here as children</p>
           </SummaryItem>
+        </div>
+        <br/>
+        <br/>
+        <div>
+          <ProgressItem title="Title" subtitle="Subtitle" completed="30" numerator="3" denominator="10">
+            <p>Insert badge and other info here as children</p>
+          </ProgressItem>
         </div>
     </div>
 )
