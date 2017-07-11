@@ -153,6 +153,12 @@ export const ComponentLibrary = () => (
             <p>Place children here</p>
           </ExpandableCard>
         </div>
+
+        <div>
+          <ExpandableCard subtitle="6 jobs" logoSrc="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" logoAlt="Test Logo" logoClass="testClassName">
+            <p>Place children here</p>
+          </ExpandableCard>
+        </div>
     </div>
 )
 
