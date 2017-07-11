@@ -42,7 +42,7 @@ const Data = {
 		{
 			"_id": "ksdjbnkdfv",
 			"client": "Supercheap storage",
-			"logo": "logo.png",
+			"logo": "https://i.imgur.com/lbPitNB.png",
 			"projects": [
 				{
 					"name": "SCS Perth & LGL Burwood",
@@ -61,58 +61,55 @@ const Data = {
 	]
 }
 
-const GetClients = (
-  Data.clients.map((client) => (
-    <p>{ client.client }</p>
-  ))
-)
-
-const GetProjects = (
-  Data.clients.map((client) => (
-    client.projects.map((project) => (
-      <p>{ project.name }</p>
-    ))
-  ))
-)
-
 const Projects = () => (
     <div>
         <h1>Projects</h1>
 
-        { GetClients }
-
-        { GetProjects }
-
-        <div>
-          <ExpandableCard 
-            subtitle={ (Data.clients[0].projects.length) + " Projects" }
-            logoSrc={ Data.clients[0].logo }
-            logoAlt="Test Logo"
-            logoClass="testClassName"
-            children="Test" >
-            <br/>
-            <br/>
-
+        {
+          Data.clients.map((client) => (
             <div>
-              <ProgressItem title={ Data.clients[0].projects[0].name } completed={30} numerator={3} denominator={10}>
-            <br/>
-            <br/>   
               <div>
-                <BoldText text="Type:" />  <br />
-                <LightText text={ Data.clients[0].projects[0].type } />
-              </div>
-            <br/>
-            <br/>        
-              <div>
-                <BoldText text="Status:" />  <br />
-                <LightText text={ Data.clients[0].projects[0].status } />
-              </div>
-            <br/>
-            <br/>   
-              </ProgressItem>            
+                <ExpandableCard 
+                  title={ client.client }
+                  logoSrc={ client.logo }
+                  logoAlt="Test Logo"
+                  logoClass="testClassName"
+                  children="Test" >
+                  <br/>
+                  <br/>
+
+                  { 
+                    client.projects.map((project) => (
+                      <div>
+                        <div>
+                          <ProgressItem subtitle={ project.name } completed={30} numerator={3} denominator={10}>
+                        <br/>
+                        <br/>   
+                          <div>
+                            <BoldText text="Type:" />  <br />
+                            <LightText text={ project.type } />
+                          </div>
+                        <br/>
+                        <br/>        
+                          <div>
+                            <BoldText text="Status:" />  <br />
+                            <LightText text={ project.status } />
+                          </div>
+                        <br/>
+                        <br/>   
+                          </ProgressItem>  
+                        <br/>
+                        <br/>           
+                        </div>                      
+                      </div>
+                    )) 
+                  }
+
+                </ExpandableCard>
+              </div>              
             </div>
-          </ExpandableCard>
-        </div>
+          ))
+        }
 
     </div>
 )
