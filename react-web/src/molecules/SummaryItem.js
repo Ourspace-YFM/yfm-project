@@ -16,7 +16,7 @@ export default function SummaryItem({
     <div>
       <div>
         <BoldText text={ title }/>
-        <span>     </span>
+        <span>   </span>
         <LightText text={ subtitle }/>
       </div>
       { children }
