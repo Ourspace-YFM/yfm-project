@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import {Tabs, Tab} from 'material-ui/Tabs'
+import ExpandableCard from '../molecules/ExpandableCard'
 import Subtitle from '../components/Subtitle'
 import LightText from '../components/LightText'
 import BoldText from '../components/BoldText'
@@ -11,6 +11,7 @@ import TextArea from '../components/TextArea'
 import DropDownMenuMain from '../molecules/DropDownMenu'
 
 // MUI Components
+import {Tabs, Tab} from 'material-ui/Tabs'
 import FontIcon from 'material-ui/FontIcon'
 import LinearProgress from 'material-ui/LinearProgress'
 import DatePicker from 'material-ui/DatePicker'
@@ -136,6 +137,14 @@ export const ComponentLibrary = () => (
 
         <div>
           <Link redirectpath="/somelink" name="Link" />
+        </div>
+
+        <h2>Molecules</h2>
+
+        <div>
+          <ExpandableCard title="JOBS" subtitle="6 jobs">
+            <p>Place children here</p>
+          </ExpandableCard>
         </div>
     </div>
 )
