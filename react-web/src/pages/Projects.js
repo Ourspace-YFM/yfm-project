@@ -69,22 +69,23 @@ const Projects = () => (
           Data.clients.map((client) => (
             <div>
               <div>
-                <ExpandableCard 
+                <ExpandableCard
                   title={ client.client }
                   logoSrc={ client.logo }
                   logoAlt="Test Logo"
                   logoClass="testClassName"
                   children="Test" >
-                  <br/>
-                  <br/>
 
                   { 
                     client.projects.map((project) => (
                       <div>
                         <div>
-                          <ProgressItem subtitle={ project.name } completed={30} numerator={3} denominator={10}>
-                        <br/>
-                        <br/>   
+                          <ProgressItem 
+                            subtitle={ "Project: " + (project.name) } 
+                            completed={ 30 } 
+                            numerator={ 3 } 
+                            denominator={ 10 }>
+                              
                           <div>
                             <BoldText text="Type:" />  <br />
                             <LightText text={ project.type } />
@@ -99,7 +100,7 @@ const Projects = () => (
                         <br/>   
                           </ProgressItem>  
                         <br/>
-                        <br/>           
+                        <br/>  
                         </div>                      
                       </div>
                     )) 
