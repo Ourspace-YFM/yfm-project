@@ -10,6 +10,7 @@ import TextArea from '../components/TextArea'
 import DropDownMenuMain from '../molecules/DropDownMenu'
 
 // MUI Components
+import FontIcon from 'material-ui/FontIcon'
 import LinearProgress from 'material-ui/LinearProgress'
 import DatePicker from 'material-ui/DatePicker'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -28,6 +29,13 @@ export const ComponentLibrary = () => (
         <h2>Atoms</h2>
 
         <div>
+          <p>Icon:</p>
+          <MuiThemeProvider>
+            <FontIcon className="material-icons">home</FontIcon>
+          </MuiThemeProvider>
+        </div>
+
+        <div>
           <MuiThemeProvider>
             <DropDownMenuMain />
           </MuiThemeProvider>
@@ -35,7 +43,7 @@ export const ComponentLibrary = () => (
 
         <div>
           <MuiThemeProvider>
-            <DatePicker hintText="Portrait-Style Dialog" />
+            <DatePicker hintText="Date Picker" />
           </MuiThemeProvider>
         </div>
 
