@@ -1,6 +1,7 @@
 import React from 'react'
 
 // Components
+import {Tabs, Tab} from 'material-ui/Tabs'
 import Subtitle from '../components/Subtitle'
 import LightText from '../components/LightText'
 import BoldText from '../components/BoldText'
@@ -23,10 +24,42 @@ const buttonStyle = {
   margin: 12,
 };
 
+const styles = {
+  headline: {
+    fontSize: 24,
+    paddingTop: 16,
+    marginBottom: 12,
+    fontWeight: 400,
+  },
+}
+
 export const ComponentLibrary = () => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
+
+        <div>
+          <MuiThemeProvider>
+            <Tabs>
+             <Tab label="Item One" >
+               <div>
+                 <p style={styles.headline}>Tab One</p>
+                 <p>
+                   Input children here
+                 </p>
+               </div>
+             </Tab>
+             <Tab label="Item Two" >
+               <div>
+                 <p style={styles.headline}>Tab Two</p>
+                 <p>
+                   Input children here
+                 </p>
+               </div>
+             </Tab>
+            </Tabs>
+          </MuiThemeProvider>
+        </div>
 
         <div>
           <p>Icon:</p>
