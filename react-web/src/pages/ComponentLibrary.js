@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import {Tabs, Tab} from 'material-ui/Tabs'
+import Logo from '../components/Logo'
 import Subtitle from '../components/Subtitle'
 import LightText from '../components/LightText'
 import BoldText from '../components/BoldText'
@@ -11,11 +11,15 @@ import TextArea from '../components/TextArea'
 import DropDownMenuMain from '../molecules/DropDownMenu'
 
 // MUI Components
+import {Tabs, Tab} from 'material-ui/Tabs'
 import FontIcon from 'material-ui/FontIcon'
 import LinearProgress from 'material-ui/LinearProgress'
 import DatePicker from 'material-ui/DatePicker'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
+
+// Molecules
+import ExpandableCard from '../molecules/ExpandableCard'
 
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
@@ -37,6 +41,10 @@ export const ComponentLibrary = () => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
+
+        <div>
+          <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="testClassName"/>
+        </div>
 
         <div>
           <MuiThemeProvider>
@@ -136,6 +144,20 @@ export const ComponentLibrary = () => (
 
         <div>
           <Link redirectpath="/somelink" name="Link" />
+        </div>
+
+        <h2>Molecules</h2>
+
+        <div>
+          <ExpandableCard title="JOBS" subtitle="6 jobs">
+            <p>Place children here</p>
+          </ExpandableCard>
+        </div>
+
+        <div>
+          <ExpandableCard subtitle="6 jobs" logoSrc="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" logoAlt="Test Logo" logoClass="testClassName">
+            <p>Place children here</p>
+          </ExpandableCard>
         </div>
     </div>
 )
