@@ -61,18 +61,27 @@ const Data = {
 	]
 }
 
+const GetClients = (
+  Data.clients.map((client) => (
+    <p>{ client.client }</p>
+  ))
+)
+
+const GetProjects = (
+  Data.clients.map((client) => (
+    client.projects.map((project) => (
+      <p>{ project.name }</p>
+    ))
+  ))
+)
+
 const Projects = () => (
     <div>
         <h1>Projects</h1>
 
-          { 
-            Data.clients.map((item) => (
-              <p>
-                { item.client }
-                { console.log( item.client ) }
-              </p>
-            ))
-          }
+        { GetClients }
+
+        { GetProjects }
 
         <div>
           <ExpandableCard 
