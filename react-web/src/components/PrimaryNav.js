@@ -16,6 +16,9 @@ export default ({
           <NavLink to='/signin'  activeClassName='active'>Sign In/Create Account</NavLink>,
           <div>
             <NavLink to='/componentlibrary'  activeClassName='active'>YFM Component Library</NavLink>
+            <div>
+              <NavLink to='/projects'  activeClassName='active'>Projects</NavLink>
+            </div>
           </div>
         ]
         }
