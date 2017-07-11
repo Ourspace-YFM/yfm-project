@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import ExpandableCard from '../molecules/ExpandableCard'
+import Logo from '../components/Logo'
 import Subtitle from '../components/Subtitle'
 import LightText from '../components/LightText'
 import BoldText from '../components/BoldText'
@@ -17,6 +17,9 @@ import LinearProgress from 'material-ui/LinearProgress'
 import DatePicker from 'material-ui/DatePicker'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
+
+// Molecules
+import ExpandableCard from '../molecules/ExpandableCard'
 
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
@@ -38,6 +41,10 @@ export const ComponentLibrary = () => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
+
+        <div>
+          <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="testClassName"/>
+        </div>
 
         <div>
           <MuiThemeProvider>
