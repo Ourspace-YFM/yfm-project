@@ -11,6 +11,7 @@ import ErrorMessage from './components/ErrorMessage'
 import HomePage from './pages/HomePage'
 import SignInPage from './pages/SignInPage'
 import ComponentLibrary from './pages/ComponentLibrary'
+import Projects from './pages/ProjectsPage'
 import * as authAPI from './api/auth'
 import { setApiToken } from './api/init'
 
@@ -76,6 +77,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={ HomePage } />
             <Route exact path='/componentlibrary' component={ ComponentLibrary } />
+            <Route exact path='/projects' component={ Projects } />
             <Route path='/signin' render={
               () => (
                 <SignInPage token={ token } createAccount={ createAccount } toggleCreateAccount={ this.toggleCreateAccount } onSignIn={ this.handleSignIn } onCreateAccount={ this.handleCreateAccount} />
