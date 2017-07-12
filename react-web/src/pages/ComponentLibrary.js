@@ -1,6 +1,7 @@
 import React from 'react'
 
 // Components
+import DatePick from '../components/DatePick'
 import Icon from '../components/Icon'
 import Logo from '../components/Logo'
 import Subtitle from '../components/Subtitle'
@@ -14,7 +15,6 @@ import DropDownMenuMain from '../molecules/DropDownMenu'
 // MUI Components
 import {Tabs, Tab} from 'material-ui/Tabs'
 import LinearProgress from 'material-ui/LinearProgress'
-import DatePicker from 'material-ui/DatePicker'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
 
@@ -82,9 +82,7 @@ export const ComponentLibrary = () => (
         </div>
 
         <div>
-          <MuiThemeProvider>
-            <DatePicker hintText="Date Picker" />
-          </MuiThemeProvider>
+          <DatePick text="Date Picker" />
         </div>
 
         <div>
