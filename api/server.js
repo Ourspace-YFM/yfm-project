@@ -4,7 +4,14 @@ const cors = require('cors')
 const authMiddleware = require('./middleware/auth')
 
 const authRouter = require('./routes/auth')
+const bookingsRouter = require('./routes/bookings')
+const companiesRouter = require('./routes/companies')
+const jobsRouter = require('./routes/jobs')
 const profilesRouter = require('./routes/profiles')
+const tasksRouter = require('./routes/tasks')
+const projectsRouter = require('./routes/projects')
+
+const Seed = require('./db/seeds')
 
 // Create server
 const server = express()
@@ -12,12 +19,24 @@ const server = express()
 // Middleware
 server.use(bodyParser.json())
 server.use(cors())
-server.use(authMiddleware.initialize)
-server.use('/api',authMiddleware.authenticateJWT)
+
+server.get('/setup', (req,res)=> {
+  Seed.fill()
+  res.json({message: 'hi'})
+})
+
 
 // Routes
-server.use('/auth',authMiddleware.ensureRole('admin'),authRouter)
+server.use(authRouter)
+server.use(bookingsRouter)
+server.use(companiesRouter)
+server.use(jobsRouter)
 server.use(profilesRouter)
+server.use(tasksRouter)
+server.use(projectsRouter)
+
+server.use(authMiddleware.initialize)
+server.use('/auth',authMiddleware.ensureRole('admin'),authRouter)
 
 // Handle errors by returning JSON
 server.use((error, req, res, next) => {

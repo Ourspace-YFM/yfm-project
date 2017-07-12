@@ -3,10 +3,10 @@ const mongoose = require('./init')
 
 const jobSchema = Schema({
   parentProject: { type: Schema.Types.ObjectId, ref: 'Project' },
-  jobOwner: { type: Schema.Types.ObjectId, ref: 'Company' },
-  jobName: String,
-  jobStatus: String,
-  jobDescription: String
+  owner: { type: Schema.Types.ObjectId, ref: 'Company' },
+  name: String,
+  status: String,
+  description: String
 })
 
 const Job = mongoose.model('Job', jobSchema)
