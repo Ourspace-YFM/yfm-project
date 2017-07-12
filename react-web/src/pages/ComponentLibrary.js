@@ -1,6 +1,7 @@
 import React from 'react'
 
 // Components
+import Icon from '../components/Icon'
 import Logo from '../components/Logo'
 import Subtitle from '../components/Subtitle'
 import LightText from '../components/LightText'
@@ -12,7 +13,6 @@ import DropDownMenuMain from '../molecules/DropDownMenu'
 
 // MUI Components
 import {Tabs, Tab} from 'material-ui/Tabs'
-import FontIcon from 'material-ui/FontIcon'
 import LinearProgress from 'material-ui/LinearProgress'
 import DatePicker from 'material-ui/DatePicker'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -36,7 +36,7 @@ const styles = {
     paddingTop: 16,
     marginBottom: 12,
     fontWeight: 400
-  },
+  }
 }
 
 export const ComponentLibrary = () => (
@@ -45,13 +45,17 @@ export const ComponentLibrary = () => (
         <h2>Atoms</h2>
 
         <div>
+          <Icon icon="home"/>
+        </div>
+
+        <div>
           <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="testClassName"/>
         </div>
 
         <div>
           <MuiThemeProvider>
             <Tabs>
-             <Tab label="Item One" >
+             <Tab label="Item One">
                <div>
                  <p style={styles.headline}>Tab One</p>
                  <p>
@@ -68,13 +72,6 @@ export const ComponentLibrary = () => (
                </div>
              </Tab>
             </Tabs>
-          </MuiThemeProvider>
-        </div>
-
-        <div>
-          <p>Icon:</p>
-          <MuiThemeProvider>
-            <FontIcon className="material-icons">home</FontIcon>
           </MuiThemeProvider>
         </div>
 
