@@ -1,6 +1,7 @@
 import React from 'react'
 
 // Components
+import ProgressBar from '../components/ProgressBar'
 import DatePick from '../components/DatePick'
 import Icon from '../components/Icon'
 import Logo from '../components/Logo'
@@ -14,7 +15,6 @@ import DropDownMenuMain from '../molecules/DropDownMenu'
 
 // MUI Components
 import {Tabs, Tab} from 'material-ui/Tabs'
-import LinearProgress from 'material-ui/LinearProgress'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
 
@@ -82,18 +82,11 @@ export const ComponentLibrary = () => (
         </div>
 
         <div>
-          <DatePick text="Date Picker" />
+          <ProgressBar completed="50" />
         </div>
 
         <div>
-        <p>Progress bar: </p>
-          <MuiThemeProvider>
-            <LinearProgress
-             mode="determinate"
-             value='50' />
-          </MuiThemeProvider>
-          <br/>
-          <br/>
+          <DatePick text="Date Picker" />
         </div>
 
         <div>
