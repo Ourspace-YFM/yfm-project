@@ -1,6 +1,9 @@
 import React from 'react'
 
 // Components
+import ProgressBar from '../components/ProgressBar'
+import DatePick from '../components/DatePick'
+import Icon from '../components/Icon'
 import Logo from '../components/Logo'
 import Subtitle from '../components/Subtitle'
 import LightText from '../components/LightText'
@@ -12,9 +15,6 @@ import DropDownMenuMain from '../molecules/DropDownMenu'
 
 // MUI Components
 import {Tabs, Tab} from 'material-ui/Tabs'
-import FontIcon from 'material-ui/FontIcon'
-import LinearProgress from 'material-ui/LinearProgress'
-import DatePicker from 'material-ui/DatePicker'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
 
@@ -37,7 +37,7 @@ const styles = {
     paddingTop: 16,
     marginBottom: 12,
     fontWeight: 400
-  },
+  }
 }
 
 export const ComponentLibrary = () => (
@@ -46,13 +46,17 @@ export const ComponentLibrary = () => (
         <h2>Atoms</h2>
 
         <div>
+          <Icon icon="home"/>
+        </div>
+
+        <div>
           <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="testClassName"/>
         </div>
 
         <div>
           <MuiThemeProvider>
             <Tabs>
-             <Tab label="Item One" >
+             <Tab label="Item One">
                <div>
                  <p style={styles.headline}>Tab One</p>
                  <p>
@@ -73,33 +77,17 @@ export const ComponentLibrary = () => (
         </div>
 
         <div>
-          <p>Icon:</p>
-          <MuiThemeProvider>
-            <FontIcon className="material-icons">home</FontIcon>
-          </MuiThemeProvider>
-        </div>
-
-        <div>
           <MuiThemeProvider>
             <DropDownMenuMain />
           </MuiThemeProvider>
         </div>
 
         <div>
-          <MuiThemeProvider>
-            <DatePicker hintText="Date Picker" />
-          </MuiThemeProvider>
+          <ProgressBar completed="50" />
         </div>
 
         <div>
-        <p>Progress bar: </p>
-          <MuiThemeProvider>
-            <LinearProgress
-             mode="determinate"
-             value='50' />
-          </MuiThemeProvider>
-          <br/>
-          <br/>
+          <DatePick text="Date Picker" />
         </div>
 
         <div>
