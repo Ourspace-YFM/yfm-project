@@ -11,7 +11,7 @@ import ErrorMessage from './components/ErrorMessage'
 import HomePage from './pages/HomePage'
 import SignInPage from './pages/SignInPage'
 import ComponentLibrary from './pages/ComponentLibrary'
-import Projects from './pages/Projects'
+import Projects from './pages/ProjectsPage'
 import * as authAPI from './api/auth'
 import { setApiToken } from './api/init'
 
