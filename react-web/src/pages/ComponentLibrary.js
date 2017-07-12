@@ -28,6 +28,7 @@ injectTapEventPlugin()
 
 const buttonStyle = {
   margin: 12,
+  color: 'red'
 };
 
 const styles = {
@@ -35,7 +36,7 @@ const styles = {
     fontSize: 24,
     paddingTop: 16,
     marginBottom: 12,
-    fontWeight: 400,
+    fontWeight: 400
   },
 }
 
@@ -127,7 +128,7 @@ export const ComponentLibrary = () => (
         <div>
           <MuiThemeProvider>
             <RaisedButton
-              className='dynamic-btn'
+              className='dynamic-btn green-btn'
               label='Dynamic Button'
               onClick={ () => {(console.log("Hello"))} }
               style={ buttonStyle } />
@@ -137,7 +138,7 @@ export const ComponentLibrary = () => (
         <div>
           <MuiThemeProvider>
             <RaisedButton
-              className='link-btn'
+              className='link-btn orange-btn'
               label='Link Button'
               href="/somelink"
               style={ buttonStyle } />
