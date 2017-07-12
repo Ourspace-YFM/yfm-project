@@ -13,10 +13,11 @@ const server = express()
 server.use(bodyParser.json())
 server.use(cors())
 server.use(authMiddleware.initialize)
+server.use('/api',authMiddleware.authenticateJWT)
 
 // Routes
-server.use('/auth',authRouter)
-server.use('/api',authMiddleware.authenticateJWT, profilesRouter)
+server.use('/auth',authMiddleware.ensureRole('admin'),authRouter)
+server.use(profilesRouter)
 
 // Handle errors by returning JSON
 server.use((error, req, res, next) => {

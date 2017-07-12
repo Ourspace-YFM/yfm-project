@@ -17,7 +17,7 @@ export default function ExpandableCard({
   return (
     <div>
       <MuiThemeProvider>
-        <Card>
+        <Card className="expandable-card">
           <CardHeader
             actAsExpander={true}
             showExpandableButton={true}
