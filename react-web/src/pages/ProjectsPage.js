@@ -1,6 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import Project from '../components/Project'
+import { Link } from 'react-router-dom'
 
 // MUI Components
 import ExpandableCard from '../molecules/ExpandableCard'
@@ -66,80 +65,62 @@ const Data = {
 
 const Projects = () => (
     <div>
-        <h1>Projects</h1>
+							<div>
+							<h1>Projects</h1>
+								{
+									Data.clients.map((client) => (
+										<div>
+											<ExpandableCard
+												title={ client.client }
+												logoSrc={ client.logo }
+												logoAlt="Test Logo"
+												logoClass="testClassName"
+												children="Test" >
+												{
+													client.projects.map((project) => (
+														<div>
+															<div>
+																<ProgressItem
+																	subtitle={ "Project: " + project.name }
+																	completed={ 35 }
+																	numerator={ 3 }
+																	denominator={ 10 }>
+																<div>
+																	<BoldText text="Type:" />  <br />
+																	<LightText text={ project.type } />
+																</div>
+															<br/>
+															<br/>
+																<div>
+																	<BoldText text="Status:" />  <br />
+																	<LightText text={ project.status } />
+																</div>
+															<br/>
+															<br/>
+																<div>
+																	<MuiThemeProvider>
+																	<Link to={`/projects/${project._id}`}>
+																		<RaisedButton
+																			className='link-btn'
+																			label={ "View: " + project.name }
+																			/>
+																	</Link>
+																	</MuiThemeProvider>
+																</div>
+															<br/>
+																</ProgressItem>
+															<br/>
+															</div>
+														</div>
+													))
+												}
 
-        {
-          Data.clients.map((client) => (
-            <div>
-              <div>
-                <ExpandableCard
-                  title={ client.client }
-                  logoSrc={ client.logo }
-                  logoAlt="Test Logo"
-                  logoClass="testClassName"
-                  children="Test" >
-
-                  {
-                    client.projects.map((project) => (
-                      <div>
-                        <div>
-                          <ProgressItem 
-                            subtitle={ "Project: " + project.name } 
-                            completed={ 35 } 
-                            numerator={ 3 } 
-                            denominator={ 10 }>
-                          <div>
-                            <BoldText text="Type:" />  <br />
-                            <LightText text={ project.type } />
-                          </div>
-                        <br/>
-                        <br/>
-                          <div>
-                            <BoldText text="Status:" />  <br />
-                            <LightText text={ project.status } />
-                          </div>												
-                        <br/>
-                        <br/>
-													<div>
-														<MuiThemeProvider>
-															<RaisedButton
-																className='link-btn'
-																label={ "View: " + project.name }
-																href={ `/projects/${project._id}` } />
-														</MuiThemeProvider>
-													</div>
-
-													<div>
-														<MuiThemeProvider>
-															<RaisedButton
-																className='dynamic-btn'
-																label='Dynamic Button'
-																onClick={ () => {
-																			<Route exact path="/projects/:id" render={
-																				<Project { ...project } />
-																			} />
-																	}														
-																} />
-														</MuiThemeProvider>
-													</div>
-
-
-                        <br/>
-                        <br/>
-                          </ProgressItem>  
-                        <br/>
-                        <br/>  
-                        </div>                      
-                      </div>
-                    ))
-                  }
-
-                </ExpandableCard>
-              </div>              
-            </div>
-          ))
-        }
-
+											</ExpandableCard>
+										</div>
+									))
+								}
+							</div>
+				} />
     </div>
 )
 

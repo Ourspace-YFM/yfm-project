@@ -14,6 +14,7 @@ import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import * as authAPI from './api/auth'
 import { setApiToken } from './api/init'
+import Project from './components/Project'
 
 const tokenKey = 'userToken'
 const savedToken = localStorage.getItem(tokenKey)
@@ -82,6 +83,19 @@ class App extends Component {
               () => (
                 <SignInPage token={ token } createAccount={ createAccount } toggleCreateAccount={ this.toggleCreateAccount } onSignIn={ this.handleSignIn } onCreateAccount={ this.handleCreateAccount} />
               )
+            } />
+            <Route path='/projects/:id' render={
+              ({ match }) => {
+    							const id = match.params.id
+                  const data = {"_id": "Dy3978rWy5dWrM",
+        					"name": "SCS Perth & LGL Burwood",
+        					"type": "New Truck",
+        					"status": "closed",
+        					"urgent": false}
+    							return (
+    									<Project {...data}/>
+    							)
+    						}
             } />
             <Route render={
               ({ location }) => <p>{ location.pathname } not found</p>
