@@ -37,35 +37,17 @@ function fill(){
           'priority': false,
           'startDate': Date.now(),
           'endDate': Date.now(),
-        },{
-          'clientId': '596634c0b925e80783c7721d',
-          'name': 'Mastercard 2',
+          },{
+          'clientId': '596634c0b925e80783c7721e',
+          'name': 'Micheal Jacksons',
           'type': 'Rebrand',
-          'description': 'Marketing Wants a new image',
+          'description': 'Billie jean is honestly, not my lovvveeerrr',
           'status': "I'm not sure what to put here",
-          'priority': false,
+          'priority': true,
           'startDate': Date.now(),
           'endDate': Date.now(),
-        },{
-        'clientId': '596634c0b925e80783c7721e',
-        'name': 'Maintainance',
-        'type': 'Maintainance',
-        'description': 'Fixing shit as per usual',
-        'status': "I'm not sure what to put here",
-        'priority': true,
-        'startDate': Date.now(),
-        'endDate': Date.now(),
-      },{
-        'clientId': '596634c0b925e80783c7721e',
-        'name': 'Micheal Jacksons',
-        'type': 'Rebrand',
-        'description': 'Billie jean is honestly, not my lovvveeerrr',
-        'status': "I'm not sure what to put here",
-        'priority': true,
-        'startDate': Date.now(),
-        'endDate': Date.now(),
-        }
-        ]
+          }
+      ]
     }
 ]
   seeder.connect('mongodb://localhost/yfm', () => {

@@ -9,7 +9,7 @@ router
   Project.distinct('clientId')
   .then(uniqueClientsIds => {
       console.log(uniqueClientsIds)
-      return Company.find({'_id': {$in: [ '596634c0b925e80783c7721d', '596634c0b925e80783c7721e' ]}})
+      return Company.find({'_id': {$in: uniqueClientsIds}})
     })
     .then((companies)=>{
       uniqueClients = companies
@@ -24,9 +24,9 @@ router
           }
         })
         return {
+          _id: client._id,
           client: client.name,
           logo: client.logo,
-          _id: client._id,
           projects: projectsWithClient
         }
       })
@@ -45,5 +45,11 @@ router
         .then(error => {
             res.json({ error })
         })
+})
+router
+.route('/project/:id')
+.get((req, res) => {
+  let params = req.params
+  Project.findById()
 })
 module.exports = router
