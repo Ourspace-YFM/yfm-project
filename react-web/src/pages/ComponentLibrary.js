@@ -12,6 +12,7 @@ import BoldText from '../components/BoldText'
 import Title from '../components/Title'
 import Link from '../components/Link'
 import TextArea from '../components/TextArea'
+import DynamicButton from '../components/DynamicButton'
 import DropDownMenuMain from '../molecules/DropDownMenu'
 
 // MUI Components
@@ -47,28 +48,9 @@ export const ComponentLibrary = () => (
         <h2>Atoms</h2>
 
         <div className='inline'>
-          <MuiThemeProvider>
-            <RaisedButton
-              className='dynamic-btn-green'
-              label='Green Button'
-              onClick={ () => {(console.log("Hello"))} }
-              backgroundColor='#7CB160'
-              labelColor='#FFFFFF'
-              style={ buttonStyle } />
-          </MuiThemeProvider>
-        </div>
-
-        <div className='inline'>    
-          <MuiThemeProvider>
-            <RaisedButton
-              className='dynamic-btn-orange'
-              label='Orange Button'
-              onClick={ () => {(console.log("Hello"))} }
-              backgroundColor='#F06734'
-              labelColor='#FFFFFF'
-              style={ buttonStyle } />
-          </MuiThemeProvider>
-        </div>              
+          <DynamicButton className='btn-green' action={ () => {(console.log('Green Button!'))} } />
+          <DynamicButton className='btn-orange' buttonColor='#F06734' action={ () => {(console.log("Orange Button!"))} } />
+        </div>      
 
         <div>
           <Icon icon="home"/>
