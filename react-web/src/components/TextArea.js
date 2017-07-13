@@ -8,7 +8,7 @@ export default function TextArea({
 
 }) {
   return (
-    <textarea classname={className} rows={ rows } cols={ columns }>
+    <textarea className={ className } rows={ rows } cols={ columns }>
       { text }
     </textarea>
   )

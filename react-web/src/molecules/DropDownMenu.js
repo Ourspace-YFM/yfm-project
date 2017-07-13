@@ -1,5 +1,6 @@
 import React from 'react';
 import DropDownMenu from 'material-ui/DropDownMenu';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import MenuItem from 'material-ui/MenuItem';
 
 const styles = {
@@ -20,19 +21,21 @@ export default class DropDownMenuMain extends React.Component {
   render() {
     return (
       <div>
-        <DropDownMenu
-          className="drop-down-menu"
-          value={this.state.value}
-          onChange={this.handleChange}
-          style={styles.customWidth}
-          autoWidth={false}
-        >
-          <MenuItem value={1} primaryText="Menu Item 1" />
-          <MenuItem value={2} primaryText="Menu Item 2" />
-          <MenuItem value={3} primaryText="Menu Item 3" />
-          <MenuItem value={4} primaryText="Menu Item 4" />
-          <MenuItem value={5} primaryText="Menu Item 5" />
-        </DropDownMenu>
+        <MuiThemeProvider>
+          <DropDownMenu
+            className="drop-down-menu"
+            value={this.state.value}
+            onChange={this.handleChange}
+            style={styles.customWidth}
+            autoWidth={false}
+          >
+            <MenuItem value={1} primaryText="Menu Item 1" />
+            <MenuItem value={2} primaryText="Menu Item 2" />
+            <MenuItem value={3} primaryText="Menu Item 3" />
+            <MenuItem value={4} primaryText="Menu Item 4" />
+            <MenuItem value={5} primaryText="Menu Item 5" />
+          </DropDownMenu>
+        </MuiThemeProvider>
       </div>
     );
   }

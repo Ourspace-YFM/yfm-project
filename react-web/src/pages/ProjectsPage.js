@@ -1,6 +1,4 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import Project from '../components/Project'
 
 // MUI Components
 import ExpandableCard from '../molecules/ExpandableCard'
@@ -11,14 +9,14 @@ import RaisedButton from 'material-ui/RaisedButton'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const Data = {
-	"clients": [
+	"projects": [
 		{
-			"_id": "kSXU6uZ42Ne69E",
-			"client": "Coles",
-			"logo": "https://i.imgur.com/zgANrVM.jpg",
-			"projects": [
+			"sortingBy": "Client",
+			"key": "Coles",
+			"items": [
 				{
 					"_id": "2EevR3XRpWcLDM",
+					clientId: "gasdf",
 					"name": "Click and Collect",
 					"type": "Rebrand",
 					"status": "open",
@@ -41,7 +39,7 @@ const Data = {
 			]
 		},
 		{
-			"_id": "EvV4uF2BzDG7pV",
+			"priority": "2",
 			"client": "Supercheap storage",
 			"logo": "https://i.imgur.com/lbPitNB.png",
 			"projects": [
