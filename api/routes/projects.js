@@ -49,7 +49,7 @@ router
 router
 .route('/project/:id')
 .get((req, res) => {
-  let params = req.params
+  let id = req.params.id
   Project.findById()
 })
 module.exports = router
