@@ -1,4 +1,5 @@
 import React from 'react'
+import '../custom.css'
 
 // Components
 import ProgressBar from '../components/ProgressBar'
@@ -11,79 +12,48 @@ import BoldText from '../components/BoldText'
 import Title from '../components/Title'
 import Link from '../components/Link'
 import TextArea from '../components/TextArea'
-import DropDownMenuMain from '../molecules/DropDownMenu'
-
-// MUI Components
-import {Tabs, Tab} from 'material-ui/Tabs'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import RaisedButton from 'material-ui/RaisedButton'
+import DynamicButton from '../components/DynamicButton'
+import LinkButton from '../components/LinkButton'
+import DropDownMenu from '../molecules/DropDownMenu'
 
 // Molecules
 import ExpandableCard from '../molecules/ExpandableCard'
 import SummaryItem from '../molecules/SummaryItem'
 import ProgressItem from '../molecules/ProgressItem'
 
+// MUI Dependencies
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
-const buttonStyle = {
-  margin: 12,
-  color: 'red'
-};
-
-const styles = {
-  headline: {
-    fontSize: 24,
-    paddingTop: 16,
-    marginBottom: 12,
-    fontWeight: 400
-  }
-}
 
 export const ComponentLibrary = () => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
 
+        <div className='inline'>
+          <DynamicButton className='btn-green' action={ () => {(console.log('Green Button!'))} } />
+          <DynamicButton className='btn-orange' buttonColor='#F06734' action={ () => {(console.log("Orange Button!"))} } />
+        </div>
+
+        <div>
+          <LinkButton className='btn-link' buttonColor='#626098' link='/home' />          
+        </div>
+
         <div>
           <Icon icon="home"/>
         </div>
+
+        <div>
+          <DropDownMenu />
+        </div>   
 
         <div>
           <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="testClassName"/>
         </div>
 
         <div>
-          <MuiThemeProvider>
-            <Tabs>
-             <Tab label="Item One">
-               <div>
-                 <p style={styles.headline}>Tab One</p>
-                 <p>
-                   Input children here
-                 </p>
-               </div>
-             </Tab>
-             <Tab label="Item Two" >
-               <div>
-                 <p style={styles.headline}>Tab Two</p>
-                 <p>
-                   Input children here
-                 </p>
-               </div>
-             </Tab>
-            </Tabs>
-          </MuiThemeProvider>
-        </div>
-
-        <div>
-          <MuiThemeProvider>
-            <DropDownMenuMain />
-          </MuiThemeProvider>
-        </div>
-
-        <div>
-          <ProgressBar completed="50" />
+          <ProgressBar completed={50} />
         </div>
 
         <div>
@@ -114,26 +84,6 @@ export const ComponentLibrary = () => (
         </div>
 
         <div>
-          <MuiThemeProvider>
-            <RaisedButton
-              className='dynamic-btn green-btn'
-              label='Dynamic Button'
-              onClick={ () => {(console.log("Hello"))} }
-              style={ buttonStyle } />
-          </MuiThemeProvider>
-        </div>
-
-        <div>
-          <MuiThemeProvider>
-            <RaisedButton
-              className='link-btn orange-btn'
-              label='Link Button'
-              href="/somelink"
-              style={ buttonStyle } />
-          </MuiThemeProvider>
-        </div>
-
-        <div>
           <Link redirectpath="/somelink" name="Link" />
         </div>
 
@@ -160,7 +110,7 @@ export const ComponentLibrary = () => (
         <br/>
         <br/>
         <div>
-          <ProgressItem title="Title" subtitle="Subtitle" completed="30" numerator="3" denominator="10">
+          <ProgressItem title="Title" subtitle="Subtitle" completed={30} numerator={3} denominator={10}>
             <p>Insert badge and other info here as children</p>
           </ProgressItem>
         </div>

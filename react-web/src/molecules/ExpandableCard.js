@@ -1,8 +1,7 @@
 import React from 'react';
 import LightText from '../components/LightText'
 import Logo from '../components/Logo'
-import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import {Card, CardHeader, CardText} from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 export default function ExpandableCard({
@@ -17,13 +16,17 @@ export default function ExpandableCard({
   return (
     <div>
       <MuiThemeProvider>
-        <Card className="expandable-card">
+        <Card className="expandable-card">       
           <CardHeader
+            title={ title }
             actAsExpander={true}
-            showExpandableButton={true}
-          />
-          <Logo src={ logoSrc } alt={ logoAlt } className={ logoClass }/>
-          <h3>{ title }</h3>
+            showExpandableButton={true} >
+              <Logo 
+              src={ logoSrc } 
+              alt={ logoAlt } 
+              className={ logoClass } />
+          </CardHeader>
+
           <LightText text={ subtitle }/>
           <CardText expandable={true}>
             { children }
