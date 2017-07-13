@@ -1,4 +1,5 @@
 import React from 'react'
+import '../custom.css'
 
 // Components
 import ProgressBar from '../components/ProgressBar'
@@ -44,6 +45,30 @@ export const ComponentLibrary = () => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
+
+        <div className='inline'>
+          <MuiThemeProvider>
+            <RaisedButton
+              className='dynamic-btn-green'
+              label='Green Button'
+              onClick={ () => {(console.log("Hello"))} }
+              backgroundColor='#7CB160'
+              labelColor='#FFFFFF'
+              style={ buttonStyle } />
+          </MuiThemeProvider>
+        </div>
+
+        <div className='inline'>    
+          <MuiThemeProvider>
+            <RaisedButton
+              className='dynamic-btn-orange'
+              label='Orange Button'
+              onClick={ () => {(console.log("Hello"))} }
+              backgroundColor='#F06734'
+              labelColor='#FFFFFF'
+              style={ buttonStyle } />
+          </MuiThemeProvider>
+        </div>              
 
         <div>
           <Icon icon="home"/>

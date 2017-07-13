@@ -76,7 +76,7 @@ const Projects = () => (
                   title={ client.client }
                   logoSrc={ client.logo }
                   logoAlt="Test Logo"
-                  logoClass="testClassName"
+                  logoClass="logo-class"
                   children="Test" >
 
                   {
@@ -84,10 +84,15 @@ const Projects = () => (
                       <div>
                         <div>
                           <ProgressItem 
-                            subtitle={ "Project: " + project.name } 
                             completed={ 35 } 
                             numerator={ 3 } 
                             denominator={ 10 }>
+                          <div>
+                            <BoldText text="Project:" />  <br />
+                            <LightText text={ project.name } />
+                          </div>
+                        <br/>
+                        <br/>														
                           <div>
                             <BoldText text="Type:" />  <br />
                             <LightText text={ project.type } />
@@ -108,22 +113,6 @@ const Projects = () => (
 																href={ `/projects/${project._id}` } />
 														</MuiThemeProvider>
 													</div>
-
-													<div>
-														<MuiThemeProvider>
-															<RaisedButton
-																className='dynamic-btn'
-																label='Dynamic Button'
-																onClick={ () => {
-																			<Route exact path="/projects/:id" render={
-																				<Project { ...project } />
-																			} />
-																	}														
-																} />
-														</MuiThemeProvider>
-													</div>
-
-
                         <br/>
                         <br/>
                           </ProgressItem>  

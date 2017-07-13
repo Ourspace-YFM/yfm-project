@@ -17,13 +17,17 @@ export default function ExpandableCard({
   return (
     <div>
       <MuiThemeProvider>
-        <Card className="expandable-card">
+        <Card className="expandable-card">       
           <CardHeader
+            title={ title }
             actAsExpander={true}
-            showExpandableButton={true}
-          />
-          <Logo src={ logoSrc } alt={ logoAlt } className={ logoClass }/>
-          <h3>{ title }</h3>
+            showExpandableButton={true} >
+              <Logo 
+              src={ logoSrc } 
+              alt={ logoAlt } 
+              className={ logoClass } />
+          </CardHeader>
+
           <LightText text={ subtitle }/>
           <CardText expandable={true}>
             { children }
