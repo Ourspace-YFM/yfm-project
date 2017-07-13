@@ -6,15 +6,15 @@ import {
 } from 'react-router-dom'
 import './App.css'
 import './custom.css'
-import PrimaryNav from './components/PrimaryNav'
-import ErrorMessage from './components/ErrorMessage'
+import PrimaryNav from './components/atoms/PrimaryNav'
+import ErrorMessage from './components/atoms/ErrorMessage'
 import HomePage from './pages/HomePage'
 import SignInPage from './pages/SignInPage'
 import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import * as authAPI from './api/auth'
 import { setApiToken } from './api/init'
-import Project from './components/Project'
+import Project from './components/atoms/Project'
 
 const tokenKey = 'userToken'
 const savedToken = localStorage.getItem(tokenKey)

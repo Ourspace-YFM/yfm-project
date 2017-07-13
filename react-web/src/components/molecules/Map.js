@@ -1,11 +1,18 @@
-import React from 'react'
-import GoogleMapReact from 'google-map-react'
+import React, { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
 
-export default function Map({
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-}) {
-  return (
-    <GoogleMapReact
+export default class SimpleMap extends Component {
+  static defaultProps = {
+    center: {lat: 59.95, lng: 30.33},
+    zoom: 11
+  };
+
+  render() {
+    return (
+      <div style={{height: '200px', width: '200px',marginLeft: 'auto', marginRight: 'auto'}}> 
+      <GoogleMapReact
         defaultCenter={this.props.center}
         defaultZoom={this.props.zoom}
       >
@@ -15,5 +22,7 @@ export default function Map({
           text={'Kreyser Avrora'}
         />
       </GoogleMapReact>
-  )
+      </div>
+    );
+  }
 }

@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // MUI Components
-import ExpandableCard from '../molecules/ExpandableCard'
-import ProgressItem from '../molecules/ProgressItem'
-import BoldText from '../components/BoldText'
-import LightText from '../components/LightText'
+import ExpandableCard from '../components/molecules/ExpandableCard'
+import ProgressItem from '../components/molecules/ProgressItem'
+import BoldText from '../components/atoms/BoldText'
+import LightText from '../components/atoms/LightText'
 import RaisedButton from 'material-ui/RaisedButton'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 

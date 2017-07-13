@@ -1,17 +1,17 @@
 import React from 'react'
 
 // Components
-import ProgressBar from '../components/ProgressBar'
-import DatePick from '../components/DatePick'
-import Icon from '../components/Icon'
-import Logo from '../components/Logo'
-import Subtitle from '../components/Subtitle'
-import LightText from '../components/LightText'
-import BoldText from '../components/BoldText'
-import Title from '../components/Title'
-import Link from '../components/Link'
-import TextArea from '../components/TextArea'
-import DropDownMenuMain from '../molecules/DropDownMenu'
+import ProgressBar from '../components/atoms/ProgressBar'
+import DatePick from '../components/atoms/DatePick'
+import Icon from '../components/atoms/Icon'
+import Logo from '../components/atoms/Logo'
+import Subtitle from '../components/atoms/Subtitle'
+import LightText from '../components/atoms/LightText'
+import BoldText from '../components/atoms/BoldText'
+import Title from '../components/atoms/Title'
+import Link from '../components/atoms/Link'
+import TextArea from '../components/atoms/TextArea'
+import DropDownMenuMain from '../components/molecules/DropDownMenu'
 
 // MUI Components
 import {Tabs, Tab} from 'material-ui/Tabs'
@@ -19,9 +19,10 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
 
 // Molecules
-import ExpandableCard from '../molecules/ExpandableCard'
-import SummaryItem from '../molecules/SummaryItem'
-import ProgressItem from '../molecules/ProgressItem'
+import ExpandableCard from '../components/molecules/ExpandableCard'
+import SummaryItem from '../components/molecules/SummaryItem'
+import ProgressItem from '../components/molecules/ProgressItem'
+import SimpleMap from '../components/molecules/Map'
 
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
@@ -138,6 +139,11 @@ export const ComponentLibrary = () => (
         </div>
 
         <h2>Molecules</h2>
+
+        <div>
+          <p>Map:</p>
+          <SimpleMap/>
+        </div>
 
         <div>
           <ExpandableCard title="JOBS" subtitle="6 jobs">
