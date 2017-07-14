@@ -5,7 +5,7 @@ const jobSchema = Schema({
   parentProject: { type: Schema.Types.ObjectId, ref: 'Project' },
   jobOwner: { type: Schema.Types.ObjectId, ref: 'Company' },
   jobName: String,
-  jobStatus: String,
+  status: String,
   jobDescription: String
 })
 

@@ -7,7 +7,7 @@ const projectSchema = Schema({
   projectName: String,
   projectType: String,
   projectDescription: String,
-  projectStatus: String,
+  status: String,
   projectPriority: Boolean,
   startDate: Date,
   endDate: Date

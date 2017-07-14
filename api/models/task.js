@@ -7,7 +7,7 @@ const taskSchema = Schema({
     type: String,
     required: [true, 'Task name required']
   }
-  taskStatus: {
+  status: {
     type: String,
     required: [true, 'Task status required']
   }
@@ -17,7 +17,7 @@ const taskSchema = Schema({
     type: Boolean,
     default: false
   }
-  completedBy: { type: Schema.Type.ObjectId, ref: 'Contact' } 
+  completedBy: { type: Schema.Type.ObjectId, ref: 'Contact' }
 })
 
 const Task = mongoose.model('Task', taskSchema)
