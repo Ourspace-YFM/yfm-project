@@ -1,31 +1,35 @@
 import React from 'react'
 
 // Components
-import Logo from '../components/Logo'
-import Subtitle from '../components/Subtitle'
-import LightText from '../components/LightText'
-import BoldText from '../components/BoldText'
-import Title from '../components/Title'
-import Link from '../components/Link'
-import TextArea from '../components/TextArea'
-import DropDownMenuMain from '../molecules/DropDownMenu'
+import ProgressBar from '../components/atoms/ProgressBar'
+import DatePick from '../components/atoms/DatePick'
+import Icon from '../components/atoms/Icon'
+import Logo from '../components/atoms/Logo'
+import Subtitle from '../components/atoms/Subtitle'
+import LightText from '../components/atoms/LightText'
+import BoldText from '../components/atoms/BoldText'
+import Title from '../components/atoms/Title'
+import Link from '../components/atoms/Link'
+import TextArea from '../components/atoms/TextArea'
+import DropDownMenuMain from '../components/molecules/DropDownMenu'
 
 // MUI Components
 import {Tabs, Tab} from 'material-ui/Tabs'
-import FontIcon from 'material-ui/FontIcon'
-import LinearProgress from 'material-ui/LinearProgress'
-import DatePicker from 'material-ui/DatePicker'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
 
 // Molecules
-import ExpandableCard from '../molecules/ExpandableCard'
+import ExpandableCard from '../components/molecules/ExpandableCard'
+import SummaryItem from '../components/molecules/SummaryItem'
+import ProgressItem from '../components/molecules/ProgressItem'
+import SimpleMap from '../components/molecules/Map'
 
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
 const buttonStyle = {
   margin: 12,
+  color: 'red'
 };
 
 const styles = {
@@ -33,8 +37,8 @@ const styles = {
     fontSize: 24,
     paddingTop: 16,
     marginBottom: 12,
-    fontWeight: 400,
-  },
+    fontWeight: 400
+  }
 }
 
 export const ComponentLibrary = () => (
@@ -43,13 +47,17 @@ export const ComponentLibrary = () => (
         <h2>Atoms</h2>
 
         <div>
+          <Icon icon="home"/>
+        </div>
+
+        <div>
           <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="testClassName"/>
         </div>
 
         <div>
           <MuiThemeProvider>
             <Tabs>
-             <Tab label="Item One" >
+             <Tab label="Item One">
                <div>
                  <p style={styles.headline}>Tab One</p>
                  <p>
@@ -70,33 +78,17 @@ export const ComponentLibrary = () => (
         </div>
 
         <div>
-          <p>Icon:</p>
-          <MuiThemeProvider>
-            <FontIcon className="material-icons">home</FontIcon>
-          </MuiThemeProvider>
-        </div>
-
-        <div>
           <MuiThemeProvider>
             <DropDownMenuMain />
           </MuiThemeProvider>
         </div>
 
         <div>
-          <MuiThemeProvider>
-            <DatePicker hintText="Date Picker" />
-          </MuiThemeProvider>
+          <ProgressBar completed="50" />
         </div>
 
         <div>
-        <p>Progress bar: </p>
-          <MuiThemeProvider>
-            <LinearProgress
-             mode="determinate"
-             value='50' />
-          </MuiThemeProvider>
-          <br/>
-          <br/>
+          <DatePick text="Date Picker" />
         </div>
 
         <div>
@@ -125,7 +117,7 @@ export const ComponentLibrary = () => (
         <div>
           <MuiThemeProvider>
             <RaisedButton
-              className='dynamic-btn'
+              className='dynamic-btn green-btn'
               label='Dynamic Button'
               onClick={ () => {(console.log("Hello"))} }
               style={ buttonStyle } />
@@ -135,7 +127,7 @@ export const ComponentLibrary = () => (
         <div>
           <MuiThemeProvider>
             <RaisedButton
-              className='link-btn'
+              className='link-btn orange-btn'
               label='Link Button'
               href="/somelink"
               style={ buttonStyle } />
@@ -149,6 +141,11 @@ export const ComponentLibrary = () => (
         <h2>Molecules</h2>
 
         <div>
+          <p>Map:</p>
+          <SimpleMap/>
+        </div>
+
+        <div>
           <ExpandableCard title="JOBS" subtitle="6 jobs">
             <p>Place children here</p>
           </ExpandableCard>
@@ -158,6 +155,20 @@ export const ComponentLibrary = () => (
           <ExpandableCard subtitle="6 jobs" logoSrc="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" logoAlt="Test Logo" logoClass="testClassName">
             <p>Place children here</p>
           </ExpandableCard>
+        </div>
+        <br/>
+        <br/>
+        <div>
+          <SummaryItem title="Title" subtitle="Subtitle" link="/somewhere">
+            <p>Insert badge and other info here as children</p>
+          </SummaryItem>
+        </div>
+        <br/>
+        <br/>
+        <div>
+          <ProgressItem title="Title" subtitle="Subtitle" completed="30" numerator="3" denominator="10">
+            <p>Insert badge and other info here as children</p>
+          </ProgressItem>
         </div>
     </div>
 )

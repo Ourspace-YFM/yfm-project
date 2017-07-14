@@ -6,11 +6,19 @@ const User = require('../models/User')
 const jwtSecret = 'SECRET!'
 const jwtAlgorithm = 'HS256'
 
+// For temporary password
+// https://stackoverflow.com/questions/36648350/passport-local-temporary-password-change-on-first-login
+function rolesForUser(user) {
+  let roles = []
+  // insert email conditions here
+}
+
 function signTokenHandler(req, res) {
   const user = req.user
   const token = jwt.sign(
     { // The payload: any additional information we want signed
-      email: user.email
+      email: user.email,
+      roles: rolesForUser(user)
     },
     jwtSecret, // The secret used to sign with
     {
@@ -40,7 +48,11 @@ passport.use(
       User.findById(userID)
         .then(user => {
           if (user) {
-            done(null, user)
+            done(null, {
+              _id: user.id,
+              email: user.email,
+              roles: jwtPayload.roles
+            })
           }
           else {
             done(null, false)
@@ -52,6 +64,18 @@ passport.use(
     }
   )
 )
+
+const ensureRole = (role) => (req,res,next) => {
+  const user = req.user
+  const roles = user.roles
+  if (roles.indexOf(role) === -1) {
+    let error = new Error(`User must have role ${role}`)
+    error.status = 401 //Unauthorized
+    next(error)
+    return
+  }
+  next()
+}
 
 function registerMiddleware(req, res, next) {
   const user = new User({ email: req.body.email })
@@ -71,5 +95,6 @@ module.exports = {
   authenticateSignIn: passport.authenticate('local', { session: false }),
   authenticateJWT: passport.authenticate('jwt', { session: false }),
   initialize: passport.initialize(),
-  register: registerMiddleware
+  register: registerMiddleware,
+  ensureRole
 }

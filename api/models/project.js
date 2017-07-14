@@ -1,0 +1,17 @@
+const mongoose = require('./init')
+    , Schema = mongoose.Schema
+
+const projectSchema = Schema({
+  clientId: { type: Schema.Types.ObjectId, ref: 'Company' },
+  name: String,
+  type: String,
+  description: String,
+  status: String,
+  priority: Boolean,
+  startDate: Date,
+  endDate: Date
+})
+
+const Project = mongoose.model('Project', projectSchema)
+
+module.exports = Project
