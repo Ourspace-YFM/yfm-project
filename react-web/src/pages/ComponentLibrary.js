@@ -22,7 +22,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import ExpandableCard from '../components/molecules/ExpandableCard'
 import SummaryItem from '../components/molecules/SummaryItem'
 import ProgressItem from '../components/molecules/ProgressItem'
-import SimpleMap from '../components/molecules/Map'
+import Map from '../components/molecules/Map'
 
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
@@ -40,6 +40,8 @@ const styles = {
     fontWeight: 400
   }
 }
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 export const ComponentLibrary = () => (
     <div>
@@ -141,8 +143,13 @@ export const ComponentLibrary = () => (
         <h2>Molecules</h2>
 
         <div>
-          <p>Map:</p>
-          <SimpleMap/>
+          <Map>
+            <AnyReactComponent
+              lat={-33.8688}
+              lng={151.2093}
+              text={'Sydney'}
+            />
+          </Map>
         </div>
 
         <div>
