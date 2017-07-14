@@ -1,5 +1,8 @@
 import React from 'react'
+<<<<<<< HEAD
 import { Link } from 'react-router-dom'
+=======
+>>>>>>> 3ea4fa89dfa54e8d2545dc9b6a5ad9ebe363ff00
 
 // MUI Components
 import ExpandableCard from '../components/molecules/ExpandableCard'
@@ -10,14 +13,14 @@ import RaisedButton from 'material-ui/RaisedButton'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const Data = {
-	"clients": [
+	"projects": [
 		{
-			"_id": "kSXU6uZ42Ne69E",
-			"client": "Coles",
-			"logo": "https://i.imgur.com/zgANrVM.jpg",
-			"projects": [
+			"sortingBy": "Client",
+			"key": "Coles",
+			"items": [
 				{
 					"_id": "2EevR3XRpWcLDM",
+					clientId: "gasdf",
 					"name": "Click and Collect",
 					"type": "Rebrand",
 					"status": "open",
@@ -40,7 +43,7 @@ const Data = {
 			]
 		},
 		{
-			"_id": "EvV4uF2BzDG7pV",
+			"priority": "2",
 			"client": "Supercheap storage",
 			"logo": "https://i.imgur.com/lbPitNB.png",
 			"projects": [
@@ -65,6 +68,7 @@ const Data = {
 
 const Projects = () => (
     <div>
+<<<<<<< HEAD
 							<div>
 							<h1>Projects</h1>
 								{
@@ -114,6 +118,70 @@ const Projects = () => (
 														</div>
 													))
 												}
+=======
+        <h1>Projects</h1>
+
+        {
+          Data.clients.map((client) => (
+            <div>
+              <div>
+                <ExpandableCard
+                  title={ client.client }
+                  logoSrc={ client.logo }
+                  logoAlt="Test Logo"
+                  logoClass="logo-class"
+                  children="Test" >
+
+                  {
+                    client.projects.map((project) => (
+                      <div>
+                        <div>
+                          <ProgressItem 
+                            completed={ 35 } 
+                            numerator={ 3 } 
+                            denominator={ 10 }>
+                          <div>
+                            <BoldText text="Project:" />  <br />
+                            <LightText text={ project.name } />
+                          </div>
+                        <br/>
+                        <br/>														
+                          <div>
+                            <BoldText text="Type:" />  <br />
+                            <LightText text={ project.type } />
+                          </div>
+                        <br/>
+                        <br/>
+                          <div>
+                            <BoldText text="Status:" />  <br />
+                            <LightText text={ project.status } />
+                          </div>												
+                        <br/>
+                        <br/>
+													<div>
+														<MuiThemeProvider>
+															<RaisedButton
+																className='link-btn'
+																label={ "View: " + project.name }
+																href={ `/projects/${project._id}` } />
+														</MuiThemeProvider>
+													</div>
+                        <br/>
+                        <br/>
+                          </ProgressItem>  
+                        <br/>
+                        <br/>  
+                        </div>                      
+                      </div>
+                    ))
+                  }
+
+                </ExpandableCard>
+              </div>              
+            </div>
+          ))
+        }
+>>>>>>> 3ea4fa89dfa54e8d2545dc9b6a5ad9ebe363ff00
 
 											</ExpandableCard>
 										</div>
