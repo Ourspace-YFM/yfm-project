@@ -3,7 +3,7 @@ const mongoose = require('./init')
 
 const bookingSchema = Schema ({
   jobId: { Schema.Type.ObjectId, ref: 'Job'}
-  taskId: { 
+  taskId: {
     [{ type: Schema.Type.ObjectId, ref: 'Task' }],
     required: true
   }
@@ -12,7 +12,7 @@ const bookingSchema = Schema ({
     type: String,
     required: true
   }
-  installerId: { Schema.Type.Object, ref: 'Company' } 
+  installerId: { Schema.Type.Object, ref: 'Company' }
   locationId: { Schema.Type.Object, ref: 'Location' }
   bookedDate: Date,
   bookedTime: {
@@ -20,7 +20,7 @@ const bookingSchema = Schema ({
     required: function() {
       return this.bookedTime? true : false
     }
-  estDurtion: Number,
+  estDuration: Number,
   instructions: String,
   attachments: [type: String],
   actualStartTime: Date,
