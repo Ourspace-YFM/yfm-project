@@ -23,7 +23,8 @@ const taskSchema = Schema({
   popShots: {
     type: String,
     required: function() {
-      return this.popShotsRequired === true ? true : false
+      return this.popShotsRequired === true ?
+        [true, 'popShots required'] : false
     }
   },
   completed: {
