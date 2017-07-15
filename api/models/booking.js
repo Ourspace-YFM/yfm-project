@@ -1,28 +1,46 @@
 const mongoose = require('./init')
     , Schema = mongoose.Schema
 
-const bookingSchema = mongoose.Schema ({
-  jobId: { type: Schema.Types.ObjectId,ref: 'Job' },
-
-  taskId: [
-    { type: Schema.Types.ObjectId, ref: 'Task',required: true }
-  ],
-  status: String,
-  name: { type: String, required: true },
-  installerId: [
-    { type: Schema.Types.ObjectId, ref: 'Company',required: true }
-  ],
-  locationId: [
-      { type: Schema.Types.ObjectId, ref: 'Location',required: true }
-    ],
-  bookedDate: Date,
-  bookedTime: {
-    type: Date,
-    required: function() {
-      return this.bookedTime? true : false
-    }
+const bookingSchema = Schema ({
+  jobId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Job'
   },
-  estDuration: Number,
+  taskId: { 
+    [{
+      type: Schema.Types.ObjectId,
+      ref: 'Task'
+    }]
+  },
+  name: {
+    type: String,
+    required:[true, 'Booking name required']
+  },
+  status: {
+    type: String,
+    required: [true, 'Booking status required']
+  }
+  installerConfirmed: {
+    type: Boolean,
+    default: false
+  },
+  clientConfirmed: {
+    type: Boolean,
+    default: false
+  },
+  changeRequests: [{
+    type: Schema.Types.ObjectId,
+    ref: 'ChangeRequest' 
+  }],
+  installerId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Company'
+  }, 
+  locationId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Location'
+  },
+  bookedDate: Date,
   instructions: String,
   attachments: [String],
   actualStartTime: Date,

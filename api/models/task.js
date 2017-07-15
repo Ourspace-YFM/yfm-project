@@ -2,7 +2,10 @@ const mongoose = require('./init')
   ,Schema = mongoose.Schema
 
 const taskSchema = Schema({
-  parentJob: { type: Schema.Types.ObjectId, ref: 'Job' },
+  parentJob: {
+    type: Schema.Types.ObjectId,
+    ref: 'Job'
+  },
   name: {
     type: String,
     required: [true, 'Task name required']
@@ -11,13 +14,27 @@ const taskSchema = Schema({
     type: String,
     required: [true, 'Task status required']
   },
-  yfmAttachment: String,
-  popShots: String,
+  attachments: [String],
+  estDuration: Number,
+  popShotsRequired: {
+    type: Boolean,
+    default: false
+  },
+  popShots: {
+    type: String,
+    required: function() {
+      return this.popShotsRequired === true ?
+        [true, 'popShots required'] : false
+    }
+  },
   completed: {
     type: Boolean,
     default: false
   },
-  completedBy: { type: Schema.Types.ObjectId, ref: 'Contact' }
+  completedBy: {
+    type: Schema.Type.ObjectId,
+    ref: 'Contact'
+  } 
 })
 
 const Task = mongoose.model('Task', taskSchema)

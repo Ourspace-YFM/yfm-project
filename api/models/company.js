@@ -1,8 +1,11 @@
 const mongoose = require('./init')
     , Schema = mongoose.Schema
 
-const companySchema = mongoose.Schema ({
-  name: String,
+const companySchema = Schema ({
+  name: {
+    type: String,
+    required: [true, 'Company name required']
+  },
   logo: String
 })
 
