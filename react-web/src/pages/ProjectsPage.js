@@ -65,57 +65,6 @@ const Data = {
 
 const Projects = () => (
     <div>
-<<<<<<< HEAD
-							<div>
-							<h1>Projects</h1>
-								{
-									Data.clients.map((client) => (
-										<div>
-											<ExpandableCard
-												title={ client.client }
-												logoSrc={ client.logo }
-												logoAlt="Test Logo"
-												logoClass="testClassName"
-												children="Test" >
-												{
-													client.projects.map((project) => (
-														<div>
-															<div>
-																<ProgressItem
-																	subtitle={ "Project: " + project.name }
-																	completed={ 35 }
-																	numerator={ 3 }
-																	denominator={ 10 }>
-																<div>
-																	<BoldText text="Type:" />  <br />
-																	<LightText text={ project.type } />
-																</div>
-															<br/>
-															<br/>
-																<div>
-																	<BoldText text="Status:" />  <br />
-																	<LightText text={ project.status } />
-																</div>
-															<br/>
-															<br/>
-																<div>
-																	<MuiThemeProvider>
-																	<Link to={`/projects/${project._id}`}>
-																		<RaisedButton
-																			className='link-btn'
-																			label={ "View: " + project.name }
-																			/>
-																	</Link>
-																	</MuiThemeProvider>
-																</div>
-															<br/>
-																</ProgressItem>
-															<br/>
-															</div>
-														</div>
-													))
-												}
-=======
         <h1>Projects</h1>
 
         {
@@ -178,15 +127,7 @@ const Projects = () => (
             </div>
           ))
         }
->>>>>>> 3ea4fa89dfa54e8d2545dc9b6a5ad9ebe363ff00
-
-											</ExpandableCard>
-										</div>
-									))
-								}
-							</div>
-				} />
-    </div>
+			</div>
 )
 
 export default Projects

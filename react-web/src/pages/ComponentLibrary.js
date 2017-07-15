@@ -14,10 +14,9 @@ import Link from '../components/atoms/Link'
 import TextArea from '../components/atoms/TextArea'
 import DynamicButton from '../components/atoms/DynamicButton'
 import LinkButton from '../components/atoms/LinkButton'
-import DropDownMenuMain from '../components/molecules/DropDownMenu'
+import DropDownMenu from '../components/molecules/DropDownMenu'
 
 // MUI Components
-import {Tabs, Tab} from 'material-ui/Tabs'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
 
