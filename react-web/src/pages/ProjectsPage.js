@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 // MUI Components
 import ExpandableCard from '../components/molecules/ExpandableCard'
@@ -10,14 +9,14 @@ import RaisedButton from 'material-ui/RaisedButton'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const Data = {
-	"projects": [
+	"clients": [
 		{
-			"sortingBy": "Client",
-			"key": "Coles",
-			"items": [
+			"_id": "kSXU6uZ42Ne69E",
+			"client": "Coles",
+			"logo": "https://i.imgur.com/zgANrVM.jpg",
+			"projects": [
 				{
 					"_id": "2EevR3XRpWcLDM",
-					clientId: "gasdf",
 					"name": "Click and Collect",
 					"type": "Rebrand",
 					"status": "open",
@@ -40,8 +39,8 @@ const Data = {
 			]
 		},
 		{
-			"priority": "2",
-			"client": "Supercheap storage",
+			"_id": "EvV4uF2BzDG7pV",
+			"client": "Supercheap Storage",
 			"logo": "https://i.imgur.com/lbPitNB.png",
 			"projects": [
 				{
@@ -82,16 +81,16 @@ const Projects = () => (
                     client.projects.map((project) => (
                       <div>
                         <div>
-                          <ProgressItem
-                            completed={ 35 }
-                            numerator={ 3 }
+                          <ProgressItem 
+                            completed={ 35 } 
+                            numerator={ 3 } 
                             denominator={ 10 }>
                           <div>
                             <BoldText text="Project:" />  <br />
                             <LightText text={ project.name } />
                           </div>
                         <br/>
-                        <br/>
+                        <br/>														
                           <div>
                             <BoldText text="Type:" />  <br />
                             <LightText text={ project.type } />
@@ -101,7 +100,7 @@ const Projects = () => (
                           <div>
                             <BoldText text="Status:" />  <br />
                             <LightText text={ project.status } />
-                          </div>
+                          </div>												
                         <br/>
                         <br/>
 													<div>
@@ -114,20 +113,21 @@ const Projects = () => (
 													</div>
                         <br/>
                         <br/>
-                          </ProgressItem>
+                          </ProgressItem>  
                         <br/>
-                        <br/>
-                        </div>
+                        <br/>  
+                        </div>                      
                       </div>
                     ))
                   }
 
                 </ExpandableCard>
-              </div>
+              </div>              
             </div>
           ))
         }
-			</div>
+
+    </div>
 )
 
 export default Projects

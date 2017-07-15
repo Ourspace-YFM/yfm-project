@@ -12,9 +12,9 @@ import HomePage from './pages/HomePage'
 import SignInPage from './pages/SignInPage'
 import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
+import Project from './pages/ProjectPage'
 import * as authAPI from './api/auth'
 import { setApiToken } from './api/init'
-import Project from './components/atoms/Project'
 
 const tokenKey = 'userToken'
 const savedToken = localStorage.getItem(tokenKey)
@@ -86,7 +86,6 @@ class App extends Component {
             } />
             <Route path='/projects/:id' render={
               ({ match }) => {
-    							const id = match.params.id
                   const data = {"_id": "Dy3978rWy5dWrM",
         					"name": "SCS Perth & LGL Burwood",
         					"type": "New Truck",

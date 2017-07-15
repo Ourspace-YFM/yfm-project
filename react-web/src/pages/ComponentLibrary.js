@@ -16,10 +16,6 @@ import DynamicButton from '../components/atoms/DynamicButton'
 import LinkButton from '../components/atoms/LinkButton'
 import DropDownMenu from '../components/molecules/DropDownMenu'
 
-// MUI Components
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import RaisedButton from 'material-ui/RaisedButton'
-
 // Molecules
 import ExpandableCard from '../components/molecules/ExpandableCard'
 import SummaryItem from '../components/molecules/SummaryItem'
