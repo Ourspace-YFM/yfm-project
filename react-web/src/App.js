@@ -14,6 +14,7 @@ import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import * as authAPI from './api/auth'
+import * as projectsAPI from './api/projects'
 import { setApiToken } from './api/init'
 
 const tokenKey = 'userToken'
@@ -106,7 +107,18 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // Asynchronous
+    // Test load projects
+    projectsAPI.list()
+      .then(projects => {
+        if(!projects){
+          console.log("no projects data to render")
+        } else {
+          this.setState({ projects })
+        }
+      })
+      .catch(error => {
+        this.setState({ error })
+      })
 
   }
 }

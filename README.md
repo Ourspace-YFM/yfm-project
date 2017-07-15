@@ -18,5 +18,6 @@
 - `material-ui`
 - `react-tap-event-plugin`
 - `gulp-sass`
+- `google-map-react`
 
 ## API Dependencies
