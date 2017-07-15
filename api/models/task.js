@@ -1,5 +1,5 @@
 const mongoose = require('./init')
-  ,Schema = mongoose.Schema
+    , Schema = mongoose.Schema
 
 const taskSchema = Schema({
   parentJob: {
@@ -9,11 +9,7 @@ const taskSchema = Schema({
   name: {
     type: String,
     required: [true, 'Task name required']
-<<<<<<< HEAD
   },
-=======
-  }
->>>>>>> origin/create-fetch-api
   status: {
     type: String,
     required: [true, 'Task status required']
@@ -34,16 +30,11 @@ const taskSchema = Schema({
   completed: {
     type: Boolean,
     default: false
-<<<<<<< HEAD
   },
   completedBy: {
     type: Schema.Type.ObjectId,
     ref: 'Contact'
   } 
-=======
-  }
-  completedBy: { type: Schema.Type.ObjectId, ref: 'Contact' }
->>>>>>> origin/create-fetch-api
 })
 
 const Task = mongoose.model('Task', taskSchema)

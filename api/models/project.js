@@ -2,7 +2,6 @@ const mongoose = require('./init')
     , Schema = mongoose.Schema
 
 const projectSchema = Schema({
-<<<<<<< HEAD
   clientId: {
     type: Schema.Types.ObjectId,
     ref: 'Company'
@@ -24,15 +23,6 @@ const projectSchema = Schema({
     type: Boolean,
     default: false
   },
-=======
-  _id: Number, //Unecessary?
-  clientId: [{ type: Schema.Types.ObjectId, ref: 'Company' }],
-  projectName: String,
-  projectType: String,
-  projectDescription: String,
-  status: String,
-  projectPriority: Boolean,
->>>>>>> origin/create-fetch-api
   startDate: Date,
   endDate: Date
 })
