@@ -1,8 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
 import { Link } from 'react-router-dom'
-=======
->>>>>>> 3ea4fa89dfa54e8d2545dc9b6a5ad9ebe363ff00
 
 // MUI Components
 import ExpandableCard from '../components/molecules/ExpandableCard'
@@ -136,16 +133,16 @@ const Projects = () => (
                     client.projects.map((project) => (
                       <div>
                         <div>
-                          <ProgressItem 
-                            completed={ 35 } 
-                            numerator={ 3 } 
+                          <ProgressItem
+                            completed={ 35 }
+                            numerator={ 3 }
                             denominator={ 10 }>
                           <div>
                             <BoldText text="Project:" />  <br />
                             <LightText text={ project.name } />
                           </div>
                         <br/>
-                        <br/>														
+                        <br/>
                           <div>
                             <BoldText text="Type:" />  <br />
                             <LightText text={ project.type } />
@@ -155,7 +152,7 @@ const Projects = () => (
                           <div>
                             <BoldText text="Status:" />  <br />
                             <LightText text={ project.status } />
-                          </div>												
+                          </div>
                         <br/>
                         <br/>
 													<div>
@@ -168,16 +165,16 @@ const Projects = () => (
 													</div>
                         <br/>
                         <br/>
-                          </ProgressItem>  
+                          </ProgressItem>
                         <br/>
-                        <br/>  
-                        </div>                      
+                        <br/>
+                        </div>
                       </div>
                     ))
                   }
 
                 </ExpandableCard>
-              </div>              
+              </div>
             </div>
           ))
         }

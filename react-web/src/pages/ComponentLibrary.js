@@ -2,7 +2,6 @@ import React from 'react'
 import '../custom.css'
 
 // Components
-<<<<<<< HEAD
 import ProgressBar from '../components/atoms/ProgressBar'
 import DatePick from '../components/atoms/DatePick'
 import Icon from '../components/atoms/Icon'
@@ -13,27 +12,14 @@ import BoldText from '../components/atoms/BoldText'
 import Title from '../components/atoms/Title'
 import Link from '../components/atoms/Link'
 import TextArea from '../components/atoms/TextArea'
+import DynamicButton from '../components/atoms/DynamicButton'
+import LinkButton from '../components/atoms/LinkButton'
 import DropDownMenuMain from '../components/molecules/DropDownMenu'
 
 // MUI Components
 import {Tabs, Tab} from 'material-ui/Tabs'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
-=======
-import ProgressBar from '../components/ProgressBar'
-import DatePick from '../components/DatePick'
-import Icon from '../components/Icon'
-import Logo from '../components/Logo'
-import Subtitle from '../components/Subtitle'
-import LightText from '../components/LightText'
-import BoldText from '../components/BoldText'
-import Title from '../components/Title'
-import Link from '../components/Link'
-import TextArea from '../components/TextArea'
-import DynamicButton from '../components/DynamicButton'
-import LinkButton from '../components/LinkButton'
-import DropDownMenu from '../molecules/DropDownMenu'
->>>>>>> 3ea4fa89dfa54e8d2545dc9b6a5ad9ebe363ff00
 
 // Molecules
 import ExpandableCard from '../components/molecules/ExpandableCard'
@@ -59,7 +45,7 @@ export const ComponentLibrary = () => (
         </div>
 
         <div>
-          <LinkButton className='btn-link' buttonColor='#626098' link='/home' />          
+          <LinkButton className='btn-link' buttonColor='#626098' link='/home' />
         </div>
 
         <div>
@@ -68,7 +54,7 @@ export const ComponentLibrary = () => (
 
         <div>
           <DropDownMenu />
-        </div>   
+        </div>
 
         <div>
           <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="testClassName"/>
