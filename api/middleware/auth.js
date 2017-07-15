@@ -18,7 +18,7 @@ function signTokenHandler(req, res) {
   const token = jwt.sign(
     { // The payload: any additional information we want signed
       email: user.email,
-      roles = rolesForUser(user)
+      roles: rolesForUser(user)
     },
     jwtSecret, // The secret used to sign with
     {

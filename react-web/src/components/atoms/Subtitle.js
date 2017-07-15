@@ -9,3 +9,4 @@ export default function Subtitle({
     </h2>
   )
 }
+

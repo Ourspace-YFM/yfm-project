@@ -1,6 +1,6 @@
 import React from 'react';
-import BoldText from '../components/BoldText'
-import LightText from '../components/LightText'
+import BoldText from '../atoms/BoldText'
+import LightText from '../atoms/LightText'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import LinearProgress from 'material-ui/LinearProgress'
 

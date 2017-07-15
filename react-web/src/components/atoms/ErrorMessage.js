@@ -7,7 +7,7 @@ export default function Field({
   let message = error.message
 
   if (error.response){
-    const status = error.sponse.status
+    const status = error.response.status
     if (status === 401){
       message = 'Please sign in to view this page'
     }

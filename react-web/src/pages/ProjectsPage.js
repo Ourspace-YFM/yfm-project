@@ -1,12 +1,10 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import Project from '../components/Project'
 
 // MUI Components
-import ExpandableCard from '../molecules/ExpandableCard'
-import ProgressItem from '../molecules/ProgressItem'
-import BoldText from '../components/BoldText'
-import LightText from '../components/LightText'
+import ExpandableCard from '../components/molecules/ExpandableCard'
+import ProgressItem from '../components/molecules/ProgressItem'
+import BoldText from '../components/atoms/BoldText'
+import LightText from '../components/atoms/LightText'
 import RaisedButton from 'material-ui/RaisedButton'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
@@ -42,7 +40,7 @@ const Data = {
 		},
 		{
 			"_id": "EvV4uF2BzDG7pV",
-			"client": "Supercheap storage",
+			"client": "Supercheap Storage",
 			"logo": "https://i.imgur.com/lbPitNB.png",
 			"projects": [
 				{
@@ -76,7 +74,7 @@ const Projects = () => (
                   title={ client.client }
                   logoSrc={ client.logo }
                   logoAlt="Test Logo"
-                  logoClass="testClassName"
+                  logoClass="logo-class"
                   children="Test" >
 
                   {
@@ -84,10 +82,15 @@ const Projects = () => (
                       <div>
                         <div>
                           <ProgressItem 
-                            subtitle={ "Project: " + project.name } 
                             completed={ 35 } 
                             numerator={ 3 } 
                             denominator={ 10 }>
+                          <div>
+                            <BoldText text="Project:" />  <br />
+                            <LightText text={ project.name } />
+                          </div>
+                        <br/>
+                        <br/>														
                           <div>
                             <BoldText text="Type:" />  <br />
                             <LightText text={ project.type } />
@@ -108,22 +111,6 @@ const Projects = () => (
 																href={ `/projects/${project._id}` } />
 														</MuiThemeProvider>
 													</div>
-
-													<div>
-														<MuiThemeProvider>
-															<RaisedButton
-																className='dynamic-btn'
-																label='Dynamic Button'
-																onClick={ () => {
-																			<Route exact path="/projects/:id" render={
-																				<Project { ...project } />
-																			} />
-																	}														
-																} />
-														</MuiThemeProvider>
-													</div>
-
-
                         <br/>
                         <br/>
                           </ProgressItem>  
