@@ -1,20 +1,38 @@
 const mongoose = require('./init')
     , Schema = mongoose.Schema
 
-const bookingSchema = mongoose.Schema ({
-  jobId: { type: Schema.Types.ObjectId,ref: 'Job' },
-
+const bookingSchema = Schema ({
+  jobId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Job'
+  },
   taskId: [
-    { type: Schema.Types.ObjectId, ref: 'Task',required: true }
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Task'
+    }
   ],
-  status: String,
-  name: { type: String, required: true },
-  installerId: [
-    { type: Schema.Types.ObjectId, ref: 'Company',required: true }
-  ],
-  locationId: [
-      { type: Schema.Types.ObjectId, ref: 'Location',required: true }
-    ],
+  name: {
+    type: String,
+    required:[true, 'Booking name required']
+  },
+  status: {
+    type: String,
+    required: [true, 'Booking status required']
+  },
+  installerConfirmed: {
+    type: Boolean,
+    default: false
+  },
+  clientConfirmed: {
+    type: Boolean,
+    default: false
+  },
+
+  locationId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Location'
+  },
   bookedDate: Date,
   bookedTime: {
     type: Date,

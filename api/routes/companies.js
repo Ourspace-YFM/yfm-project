@@ -9,7 +9,7 @@ router
         .then(company => {
             res.json(company)
         })
-        .then(error => {
+        .catch(error => {
             res.json({ error })
         })
 })
@@ -19,7 +19,7 @@ router
         .then(company => {
             res.json(company)
         })
-        .then(error => {
+        .catch(error => {
             res.json({ error })
         })
 })

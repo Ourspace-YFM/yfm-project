@@ -17,7 +17,10 @@ const taskSchema = Schema({
     type: Boolean,
     default: false
   },
-  completedBy: { type: Schema.Types.ObjectId, ref: 'Contact' }
+  completedBy: {
+    type: Schema.Types.ObjectId,
+    ref: 'Contact'
+  }
 })
 
 const Task = mongoose.model('Task', taskSchema)

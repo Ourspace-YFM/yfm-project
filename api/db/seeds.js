@@ -17,9 +17,11 @@ function fill(){
         ]
     },
     {
+
         'model': 'Project',
         'documents': [
           {
+          "_id": "596a093b8b062a980ae4c1da",
           'clientId': '596634c0b925e80783c7721d',
           'name': 'Mastercard 1',
           'type': 'Rebrand',
@@ -29,6 +31,7 @@ function fill(){
           'startDate': Date.now(),
           'endDate': Date.now(),
           },{
+          "_id": "596a093b8b062a980ae4c1db",
           'clientId': '596634c0b925e80783c7721d',
           'name': 'West Fleet',
           'type': 'Maintainance',
@@ -38,6 +41,7 @@ function fill(){
           'startDate': Date.now(),
           'endDate': Date.now(),
           },{
+          "_id": "596a093b8b062a980ae4c1dc",
           'clientId': '596634c0b925e80783c7721e',
           'name': 'Micheal Jacksons',
           'type': 'Rebrand',
@@ -47,6 +51,35 @@ function fill(){
           'startDate': Date.now(),
           'endDate': Date.now(),
           }
+      ]
+    },{
+        'model': 'Job',
+        'documents': [
+        {
+        'projectId': '596a093b8b062a980ae4c1dc',
+        'owner': '596634c0b925e80783c7721e',
+        'name': 'Jenny & Steve reskin',
+        'status': "I'm not sure what to put here",
+        'description': 'anoda day, anoda dolla',
+        },{
+        'projectId': '596a093b8b062a980ae4c1dc',
+        'owner': '596634c0b925e80783c7721e',
+        'name': 'Dave & John canvas refit',
+        'status': "I'm not sure what to put here",
+        'description': '3 Vynls',
+      }, {
+        'projectId': '596a093b8b062a980ae4c1db',
+        'owner': '596634c0b925e80783c7721d',
+        'name': 'Damage repair',
+        'status': "I'm not sure what to put here",
+        'description': 'DUI on our truck....',
+        }, {
+        'projectId': '596a093b8b062a980ae4c1db',
+        'owner': '596634c0b925e80783c7721d',
+        'name': 'Retighten vynl',
+        'status': "I'm not sure what to put here",
+        'description': 'Just needs plastic part',
+        }
       ]
     }
 ]
@@ -59,7 +92,7 @@ function fill(){
         './models/project.js',
         './models/task.js'
     ])
-    seeder.clearModels(['Company','Project'], function() {
+    seeder.clearModels(['Company','Project','Job'], function() {
 
       // Callback to populate DB once collections have been cleared
       seeder.populateModels(data, function() {

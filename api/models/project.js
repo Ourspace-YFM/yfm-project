@@ -6,8 +6,14 @@ const projectSchema = Schema({
   name: String,
   type: String,
   description: String,
-  status: String,
-  priority: Boolean,
+  status: {
+    type: String,
+    required: [true, 'Project status required']
+  },
+  priority: {
+    type: Boolean,
+    default: false
+  },
   startDate: Date,
   endDate: Date
 })

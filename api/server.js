@@ -22,7 +22,11 @@ server.use(cors())
 
 server.get('/setup', (req,res)=> {
   Seed.fill()
-  res.json({message: 'hi'})
+  res.json({message: 'dbPopulated'})
+})
+server.get('/test', (req,res)=> {
+  console.log(geocoder.asdf())
+  res.json({message: 'dbPopulated'})
 })
 
 

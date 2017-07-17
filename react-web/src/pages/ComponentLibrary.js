@@ -26,21 +26,10 @@ import ProgressItem from '../molecules/ProgressItem'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
-const buttonStyle = {
-  margin: 12,
-  color: 'red'
-};
-
-const styles = {
-  headline: {
-    fontSize: 24,
-    paddingTop: 16,
-    marginBottom: 12,
-    fontWeight: 400
-  }
-}
-
-export const ComponentLibrary = () => (
+export const ComponentLibrary = ({
+  setDrawerOpen,
+  setDrawerData
+}) => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
@@ -134,7 +123,15 @@ export const ComponentLibrary = () => (
         </div>
 
         <div>
-          <Link redirectpath="/somelink" name="Link" />
+          <Map
+            setDrawerOpen={setDrawerOpen}
+            setDrawerData={setDrawerData}
+          >
+          <div
+            lat={-26.2744} lng={133.7751}>
+            <h1>jasd</h1>
+          </div>
+        </Map>
         </div>
 
         <h2>Molecules</h2>

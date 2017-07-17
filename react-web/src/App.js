@@ -13,9 +13,21 @@ import SignInPage from './pages/SignInPage'
 import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import * as authAPI from './api/auth'
+<<<<<<< Updated upstream
+=======
+import * as projectsAPI from './api/projects'
+import * as bookingsAPI from './api/projects'
+import * as jobsAPI from './api/projects'
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 import { setApiToken } from './api/init'
 import Project from './components/Project'
 
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 const tokenKey = 'userToken'
 const savedToken = localStorage.getItem(tokenKey)
 setApiToken(savedToken)
@@ -25,7 +37,34 @@ class App extends Component {
   state = {
     error: null,
     token: savedToken,
-    createAccount: false
+    createAccount: false,
+    data: null,
+    drawerData: null,
+    drawerOpen: false
+  }
+
+  setDrawerData = (dataFunction) => {
+    dataFunction
+    .then(data => {
+      this.setState({data})
+    })
+    .catch(error => {
+      this.setState({ error })
+    })
+  }
+
+  setDrawerOpen = (boolean) => {
+    this.setState({drawerOpen: boolean})
+  }
+
+  setData = (dataFunction) => {
+    dataFunction
+    .then(data => {
+      this.setState({data})
+    })
+    .catch(error => {
+      this.setState({ error })
+    })
   }
 
   handleSignOut = () => {
@@ -67,18 +106,34 @@ class App extends Component {
   }
 
   render() {
-    const { error, token, createAccount=false } = this.state
+    const { error, token, createAccount=false, drawerData, drawerOpen } = this.state
     return (
 
       <Router>
         <main>
           <PrimaryNav isSignedIn={!!token} onSignOut={ this.handleSignOut } />
+          <button onClick={ () => {this.setData(jobsAPI.list())} }></button>
+            <MuiThemeProvider>
+              <Drawer
+                docked={false}
+                width={200}
+                open={drawerOpen}
+                onRequestChange={(value) => this.setDrawerOpen(value)}
+              >
+                <MenuItem onTouchTap={() => {this.setDrawerOpen(false)}}>Menu Item</MenuItem>
+                <MenuItem onTouchTap={() => {this.setDrawerOpen(false)}}>Menu Item 2</MenuItem>
+              </Drawer>
+            </MuiThemeProvider>
           { !!error && <ErrorMessage error={error}/> }
-
           <Switch>
             <Route exact path='/' component={ HomePage } />
-            <Route exact path='/componentlibrary' component={ ComponentLibrary } />
             <Route exact path='/projects' component={ Projects } />
+            <Route path='/componentlibrary' render={ () => (
+                <ComponentLibrary
+                  setDrawerOpen={this.setDrawerOpen}
+                  setDrawerData={this.setDrawerData}
+                  />
+              ) } />
             <Route path='/signin' render={
               () => (
                 <SignInPage token={ token } createAccount={ createAccount } toggleCreateAccount={ this.toggleCreateAccount } onSignIn={ this.handleSignIn } onCreateAccount={ this.handleCreateAccount} />
@@ -107,8 +162,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // Asynchronous
-
+    // Test load projects
+      this.setData(jobsAPI.list())
   }
 }
 
