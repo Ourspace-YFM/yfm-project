@@ -116,19 +116,19 @@ setDrawerOpen = (boolean) => {
                   setDrawerData={this.setDrawerData}
                   />
               ) } />
-            <Route exact path='/projects' component={ Projects } />
+            <Route exact path='/projects' render={() =>{
+                console.log(projectsAPI.list())
+                return <Projects />} } />
             <Route path='/signin' render={
               () => (
                 <SignInPage token={ token } createAccount={ createAccount } toggleCreateAccount={ this.toggleCreateAccount } onSignIn={ this.handleSignIn } onCreateAccount={ this.handleCreateAccount} />
               )
             } />
-            <Route path='/projects/:id' render={
+            <Route path='/project/:id' render={
               ({ match }) => {
-                  const data = {"_id": "Dy3978rWy5dWrM",
-        					"name": "SCS Perth & LGL Burwood",
-        					"type": "New Truck",
-        					"status": "closed",
-        					"urgent": false}
+                  const id = match.params.id
+                  const data = projectsAPI.listSingle(id)
+                  console.log(data)
     							return (
     									<Project {...data}/>
     							)
