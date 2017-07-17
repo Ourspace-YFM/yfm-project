@@ -87,13 +87,20 @@ class App extends Component {
             } />
             <Route path='/projects/:id' render={
               ({ match }) => {
-                  const data = {"_id": "Dy3978rWy5dWrM",
-        					"name": "SCS Perth & LGL Burwood",
-        					"type": "New Truck",
-        					"status": "closed",
-        					"urgent": false}
+                
+                  const data = {
+                    'clientId': '596634c0b925e80783c7721d',
+                    'name': 'Mastercard 1',
+                    'type': 'Rebrand',
+                    'description': 'Marketing Wants a new image',
+                    'status': "I'm not sure what to put here",
+                    'priority': true,
+                    'startDate': Date.now(),
+                    'endDate': Date.now(),
+                    }
+
     							return (
-    									<Project {...data}/>
+                    <Project { ...data } />
     							)
     						}
             } />
