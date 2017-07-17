@@ -80,9 +80,6 @@ function fill(){
         'description': 'Just needs plastic part',
         }
       ]
-    },{
-        'model': 'Location',
-        'documents': []
     }
 ]
   seeder.connect('mongodb://localhost/yfm', () => {
@@ -92,10 +89,9 @@ function fill(){
         './models/company.js',
         './models/job.js',
         './models/project.js',
-        './models/task.js',
-        './models/location.js'
+        './models/task.js'
     ])
-    seeder.clearModels(['Company','Project','Location'], function() {
+    seeder.clearModels(['Company','Project'], function() {
 
       // Callback to populate DB once collections have been cleared
       seeder.populateModels(data, function() {

@@ -117,7 +117,7 @@ setDrawerOpen = (boolean) => {
                   />
               ) } />
             <Route exact path='/projects' render={() =>{
-                console.log(projectsAPI.list())
+                console.log(projectsAPI.list().then(projects => {return projects}))
                 return <Projects />} } />
             <Route path='/signin' render={
               () => (
