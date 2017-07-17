@@ -16,6 +16,10 @@ import Project from './pages/ProjectPage'
 import * as authAPI from './api/auth'
 import { setApiToken } from './api/init'
 
+import Drawer from 'material-ui/Drawer'
+import MenuItem from 'material-ui/MenuItem'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+
 const tokenKey = 'userToken'
 const savedToken = localStorage.getItem(tokenKey)
 setApiToken(savedToken)
@@ -25,8 +29,23 @@ class App extends Component {
   state = {
     error: null,
     token: savedToken,
-    createAccount: false
+    createAccount: false,
+    drawerOpen: null,
+    drawerData: null
   }
+  setDrawerData = (dataFunction) => {
+  dataFunction
+  .then(data => {
+    this.setState({data})
+  })
+  .catch(error => {
+    this.setState({ error })
+  })
+}
+
+setDrawerOpen = (boolean) => {
+  this.setState({drawerOpen: boolean})
+}
 
   handleSignOut = () => {
     localStorage.removeItem(tokenKey)
@@ -67,37 +86,48 @@ class App extends Component {
   }
 
   render() {
-    const { error, token, createAccount=false } = this.state
+    const { error, token, createAccount=false,drawerOpen } = this.state
     return (
 
       <Router>
         <main>
           <PrimaryNav isSignedIn={!!token} onSignOut={ this.handleSignOut } />
+          <MuiThemeProvider>
+            <Drawer
+              docked={false}
+              width={200}
+              open={drawerOpen}
+              onRequestChange={(value) => this.setDrawerOpen(value)}
+            >
+              <MenuItem onTouchTap={() => {this.setDrawerOpen(false)}}>Menu Item</MenuItem>
+              <MenuItem onTouchTap={() => {this.setDrawerOpen(false)}}>Menu Item 2</MenuItem>
+            </Drawer>
+
+                        </MuiThemeProvider>
+
           { !!error && <ErrorMessage error={error}/> }
 
           <Switch>
             <Route exact path='/' component={ HomePage } />
-            <Route exact path='/componentlibrary' component={ ComponentLibrary } />
-            <Route exact path='/projects' component={ Projects } />
+              <Route path='/componentlibrary' render={ () => (
+                <ComponentLibrary
+                  setDrawerOpen={this.setDrawerOpen}
+                  setDrawerData={this.setDrawerData}
+                  />
+              ) } />
+            <Route exact path='/projects' render={() =>{
+                console.log(projectsAPI.list().then(projects => {return projects}))
+                return <Projects />} } />
             <Route path='/signin' render={
               () => (
                 <SignInPage token={ token } createAccount={ createAccount } toggleCreateAccount={ this.toggleCreateAccount } onSignIn={ this.handleSignIn } onCreateAccount={ this.handleCreateAccount} />
               )
             } />
-            <Route path='/projects/:id' render={
+            <Route path='/project/:id' render={
               ({ match }) => {
-
-                  const data = {
-                    'clientId': '596634c0b925e80783c7721d',
-                    'name': 'Mastercard 1',
-                    'type': 'Rebrand',
-                    'description': 'Marketing Wants a new image',
-                    'status': "I'm not sure what to put here",
-                    'priority': true,
-                    'startDate': Date.now(),
-                    'endDate': Date.now(),
-                    }
-
+                  const id = match.params.id
+                  const data = projectsAPI.listSingle(id)
+                  console.log(data)
     							return (
                     <Project { ...data } />
     							)
