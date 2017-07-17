@@ -17,6 +17,10 @@ import * as authAPI from './api/auth'
 import * as projectsAPI from './api/projects'
 import { setApiToken } from './api/init'
 
+import Drawer from 'material-ui/Drawer'
+import MenuItem from 'material-ui/MenuItem'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+
 const tokenKey = 'userToken'
 const savedToken = localStorage.getItem(tokenKey)
 setApiToken(savedToken)
@@ -26,8 +30,23 @@ class App extends Component {
   state = {
     error: null,
     token: savedToken,
-    createAccount: false
+    createAccount: false,
+    drawerOpen: null,
+    drawerData: null
   }
+  setDrawerData = (dataFunction) => {
+  dataFunction
+  .then(data => {
+    this.setState({data})
+  })
+  .catch(error => {
+    this.setState({ error })
+  })
+}
+
+setDrawerOpen = (boolean) => {
+  this.setState({drawerOpen: boolean})
+}
 
   handleSignOut = () => {
     localStorage.removeItem(tokenKey)
@@ -68,17 +87,35 @@ class App extends Component {
   }
 
   render() {
-    const { error, token, createAccount=false } = this.state
+    const { error, token, createAccount=false,drawerOpen } = this.state
     return (
 
       <Router>
         <main>
           <PrimaryNav isSignedIn={!!token} onSignOut={ this.handleSignOut } />
+          <MuiThemeProvider>
+            <Drawer
+              docked={false}
+              width={200}
+              open={drawerOpen}
+              onRequestChange={(value) => this.setDrawerOpen(value)}
+            >
+              <MenuItem onTouchTap={() => {this.setDrawerOpen(false)}}>Menu Item</MenuItem>
+              <MenuItem onTouchTap={() => {this.setDrawerOpen(false)}}>Menu Item 2</MenuItem>
+            </Drawer>
+
+                        </MuiThemeProvider>
+
           { !!error && <ErrorMessage error={error}/> }
 
           <Switch>
             <Route exact path='/' component={ HomePage } />
-            <Route exact path='/componentlibrary' component={ ComponentLibrary } />
+              <Route path='/componentlibrary' render={ () => (
+                <ComponentLibrary
+                  setDrawerOpen={this.setDrawerOpen}
+                  setDrawerData={this.setDrawerData}
+                  />
+              ) } />
             <Route exact path='/projects' component={ Projects } />
             <Route path='/signin' render={
               () => (

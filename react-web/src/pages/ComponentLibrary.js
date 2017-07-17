@@ -29,7 +29,10 @@ injectTapEventPlugin()
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-export const ComponentLibrary = () => (
+export const ComponentLibrary = ({
+  setDrawerOpen,
+  setDrawerData
+}) => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
@@ -93,7 +96,10 @@ export const ComponentLibrary = () => (
         <h2>Molecules</h2>
 
         <div>
-          <Map>
+          <Map
+            setDrawerOpen={setDrawerOpen}
+            setDrawerData={setDrawerData}
+            >
             <AnyReactComponent
               lat={-33.8688}
               lng={151.2093}
