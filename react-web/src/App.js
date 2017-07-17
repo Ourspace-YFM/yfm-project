@@ -13,15 +13,10 @@ import SignInPage from './pages/SignInPage'
 import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import * as authAPI from './api/auth'
-<<<<<<< Updated upstream
-=======
-import * as projectsAPI from './api/projects'
-import * as bookingsAPI from './api/projects'
-import * as jobsAPI from './api/projects'
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
+// import * as bookingsAPI from './api/projects'
+// import * as jobsAPI from './api/projects'
+
 import { setApiToken } from './api/init'
 import Project from './components/Project'
 
@@ -112,7 +107,6 @@ class App extends Component {
       <Router>
         <main>
           <PrimaryNav isSignedIn={!!token} onSignOut={ this.handleSignOut } />
-          <button onClick={ () => {this.setData(jobsAPI.list())} }></button>
             <MuiThemeProvider>
               <Drawer
                 docked={false}
@@ -163,7 +157,7 @@ class App extends Component {
 
   componentDidMount() {
     // Test load projects
-      this.setData(jobsAPI.list())
+      // this.setData(jobsAPI.list())
   }
 }
 

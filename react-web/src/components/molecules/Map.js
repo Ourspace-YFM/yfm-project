@@ -22,11 +22,6 @@ export default function SummaryItem({
         defaultCenter={{lat: -26.2744, lng: 133.7751}}
         defaultZoom={5}
       >
-<<<<<<< Updated upstream
-
-=======
-      
->>>>>>> Stashed changes
       {children}
       </GoogleMapReact>
     </div>
