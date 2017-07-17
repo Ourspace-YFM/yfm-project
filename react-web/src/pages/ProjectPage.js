@@ -1,22 +1,64 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {
+  Table,
+  TableBody,
+  TableHeader,
+  TableHeaderColumn,
+  TableRow,
+  TableRowColumn,
+} from 'material-ui/Table'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 export default function Project({
-  _id,
+  clientId,
   name,
   type,
+  description,
   status,
-  urgent
+  priority,
+  startDate,
+  endDate
+
 }) {
   return (
     <div>
-      <h2>
-        <Link to={ `/projects/${_id}` }>
-          { name }
-        </Link>
-        {' '}
-        <small>({ type })</small>
-      </h2>
+
+      <div>
+        <h1>{ name }</h1>
+      </div>
+
+      <MuiThemeProvider>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHeaderColumn>Client ID</TableHeaderColumn>
+              <TableHeaderColumn>Project Name</TableHeaderColumn>
+              <TableHeaderColumn>Type</TableHeaderColumn>
+              <TableHeaderColumn>Description</TableHeaderColumn>
+              <TableHeaderColumn>Status</TableHeaderColumn>
+              <TableHeaderColumn>Priority</TableHeaderColumn>
+              <TableHeaderColumn>Start Date</TableHeaderColumn>
+              <TableHeaderColumn>End Date</TableHeaderColumn>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableRowColumn>{ clientId }</TableRowColumn>
+              <TableRowColumn>{ name }</TableRowColumn>
+              <TableRowColumn>{ type }</TableRowColumn>
+              <TableRowColumn>{ description }</TableRowColumn>
+              <TableRowColumn>{ status }</TableRowColumn>
+              <TableRowColumn>VALUES TO BE DISCUSSED</TableRowColumn>
+              <TableRowColumn>{ startDate }</TableRowColumn>
+              <TableRowColumn>{ endDate }</TableRowColumn>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </MuiThemeProvider>
+
+      <div>
+        {/* Insert Project Jobs Here */}
+      </div>
     </div>
   )
 }

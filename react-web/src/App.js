@@ -14,7 +14,6 @@ import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import * as authAPI from './api/auth'
-import * as projectsAPI from './api/projects'
 import { setApiToken } from './api/init'
 
 import Drawer from 'material-ui/Drawer'
@@ -130,7 +129,7 @@ setDrawerOpen = (boolean) => {
                   const data = projectsAPI.listSingle(id)
                   console.log(data)
     							return (
-    									<Project {...data}/>
+                    <Project { ...data } />
     							)
     						}
             } />
@@ -141,22 +140,6 @@ setDrawerOpen = (boolean) => {
         </main>
       </Router>
     )
-  }
-
-  componentDidMount() {
-    // Test load projects
-    projectsAPI.list()
-      .then(projects => {
-        if(!projects){
-          console.log("no projects data to render")
-        } else {
-          this.setState({ projects })
-        }
-      })
-      .catch(error => {
-        this.setState({ error })
-      })
-
   }
 }
 

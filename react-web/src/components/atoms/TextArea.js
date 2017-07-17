@@ -3,13 +3,13 @@ import React from 'react'
 export default function TextArea({
   rows,
   columns,
-  text,
+  value,
   className
 
 }) {
   return (
-    <textarea classname={className} rows={ rows } cols={ columns }>
-      { text }
+    <textarea className={className} rows={ rows } cols={ columns }>
+      { value }
     </textarea>
   )
 }
