@@ -20,7 +20,7 @@ const Data = {
 					"name": "Click and Collect",
 					"type": "Rebrand",
 					"status": "open",
-					"urgent": true
+					"urgent": false
 				},
 				{
 					"_id": "jmjjpYW48E3azj",
@@ -68,7 +68,7 @@ const Projects = () => (
 
         {
           Data.clients.map((client) => (
-            <div>
+            <div key={client._id}>
               <div>
                 <ExpandableCard
                   title={ client.client }
@@ -79,18 +79,18 @@ const Projects = () => (
 
                   {
                     client.projects.map((project) => (
-                      <div>
+                      <div key={project._id}>
                         <div>
-                          <ProgressItem 
-                            completed={ 35 } 
-                            numerator={ 3 } 
+                          <ProgressItem
+                            completed={ 35 }
+                            numerator={ 3 }
                             denominator={ 10 }>
                           <div>
                             <BoldText text="Project:" />  <br />
                             <LightText text={ project.name } />
                           </div>
                         <br/>
-                        <br/>														
+                        <br/>
                           <div>
                             <BoldText text="Type:" />  <br />
                             <LightText text={ project.type } />
@@ -100,7 +100,7 @@ const Projects = () => (
                           <div>
                             <BoldText text="Status:" />  <br />
                             <LightText text={ project.status } />
-                          </div>												
+                          </div>
                         <br/>
                         <br/>
 													<div>
@@ -113,16 +113,16 @@ const Projects = () => (
 													</div>
                         <br/>
                         <br/>
-                          </ProgressItem>  
+                          </ProgressItem>
                         <br/>
-                        <br/>  
-                        </div>                      
+                        <br/>
+                        </div>
                       </div>
                     ))
                   }
 
                 </ExpandableCard>
-              </div>              
+              </div>
             </div>
           ))
         }

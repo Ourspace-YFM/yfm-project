@@ -48,7 +48,7 @@ export default function Project({
               <TableRowColumn>{ type }</TableRowColumn>
               <TableRowColumn>{ description }</TableRowColumn>
               <TableRowColumn>{ status }</TableRowColumn>
-              <TableRowColumn>{ priority }</TableRowColumn>
+              <TableRowColumn>VALUES TO BE DISCUSSED</TableRowColumn>
               <TableRowColumn>{ startDate }</TableRowColumn>
               <TableRowColumn>{ endDate }</TableRowColumn>
             </TableRow>
