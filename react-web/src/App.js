@@ -14,6 +14,7 @@ import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import * as authAPI from './api/auth'
+import * as projectsAPI from './api/projects'
 import { setApiToken } from './api/init'
 
 import Drawer from 'material-ui/Drawer'
@@ -31,8 +32,68 @@ class App extends Component {
     token: savedToken,
     createAccount: false,
     drawerOpen: null,
-    drawerData: null
+    drawerData: null,
+    projects: null,
+    singleProject: null,
+    mapData: null
   }
+
+  loadPromises = {}
+
+  loadUsing({
+    makePromise,
+    stateKey,
+    reload = false
+  }) {
+    // If we have already loaded and we are not being asked to reload, then bail
+    if (!!this.loadPromises[stateKey] && !reload) {
+      return
+    }
+
+    // Load from API
+    this.loadPromises[stateKey] = makePromise()
+      // Our then will be called in the future
+      .then(data => {
+        // Update state with projects
+        this.setState({ [stateKey]: data })
+      })
+      .catch(error => {
+        this.setState({ error })
+      })
+  }
+
+  loadProjects({ reload = false } = {}) {
+    return this.loadUsing({
+      makePromise: projectsAPI.list,
+      stateKey: 'projects',
+      reload
+    })
+  }
+
+  // loadSingleProject({ reload = false } = {}) {
+  //   return this.loadUsing({
+  //     makePromise: projectsAPI.listSingle(id),
+  //     stateKey: 'projects',
+  //     reload
+  //   })
+  // }
+
+
+  /* loadProjects({ reload = false } = {}) {
+    // If we have already loaded and we are not being asked to reload, then bail
+    if (!!loadPromises.listProjects && !reload) {
+      return
+    }
+
+    // Load from API
+    loadPromises.listProjects = projectsAPI.list()
+      // Our then will be called in the future
+      .then(projects => {
+        // Update state with projects
+        this.setState({ projects })
+      })
+  } */
+
   setDrawerData = (dataFunction) => {
   dataFunction
   .then(data => {
@@ -85,6 +146,17 @@ setDrawerOpen = (boolean) => {
       })
   }
 
+  // handleCreateProject = ({ email, password }) => {
+  //   projectsAPI.create({ email, password })
+  //     .then(json => {
+  //       this.setToken(json.token)
+  //       this.loadProjects({ reload: true })
+  //     })
+  //     .catch(error => {
+  //       this.setState({ error })
+  //     })
+  // }
+
   render() {
     const { error, token, createAccount=false,drawerOpen } = this.state
     return (
@@ -116,8 +188,10 @@ setDrawerOpen = (boolean) => {
                   />
               ) } />
             <Route exact path='/projects' render={() =>{
-                console.log(projectsAPI.list().then(projects => {return projects}))
-                return <Projects />} } />
+                this.loadProjects()
+
+                // console.log(projectsAPI.list().then())
+                return <Projects projects={ this.state.projects } />} } />
             <Route path='/signin' render={
               () => (
                 <SignInPage token={ token } createAccount={ createAccount } toggleCreateAccount={ this.toggleCreateAccount } onSignIn={ this.handleSignIn } onCreateAccount={ this.handleCreateAccount} />

@@ -62,72 +62,77 @@ const Data = {
 	]
 }
 
-const Projects = () => (
-    <div>
-        <h1>Projects</h1>
+const Projects = ({
+	projects
+}) => {
+	!!projects ? console.log(projects) : ''
+	return (
+	    <div>
+	        <h1>Projects</h1>
 
-        {
-          Data.clients.map((client) => (
-            <div key={client._id}>
-              <div>
-                <ExpandableCard
-                  title={ client.client }
-                  logoSrc={ client.logo }
-                  logoAlt="Test Logo"
-                  logoClass="logo-class"
-                  children="Test" >
+	        {
+	          Data.clients.map((client) => (
+	            <div key={client._id}>
+	              <div>
+	                <ExpandableCard
+	                  title={ client.client }
+	                  logoSrc={ client.logo }
+	                  logoAlt="Test Logo"
+	                  logoClass="logo-class"
+	                  children="Test" >
 
-                  {
-                    client.projects.map((project) => (
-                      <div key={project._id}>
-                        <div>
-                          <ProgressItem
-                            completed={ 35 }
-                            numerator={ 3 }
-                            denominator={ 10 }>
-                          <div>
-                            <BoldText text="Project:" />  <br />
-                            <LightText text={ project.name } />
-                          </div>
-                        <br/>
-                        <br/>
-                          <div>
-                            <BoldText text="Type:" />  <br />
-                            <LightText text={ project.type } />
-                          </div>
-                        <br/>
-                        <br/>
-                          <div>
-                            <BoldText text="Status:" />  <br />
-                            <LightText text={ project.status } />
-                          </div>
-                        <br/>
-                        <br/>
-													<div>
-														<MuiThemeProvider>
-															<RaisedButton
-																className='link-btn'
-																label={ "View: " + project.name }
-																href={ `/projects/${project._id}` } />
-														</MuiThemeProvider>
-													</div>
-                        <br/>
-                        <br/>
-                          </ProgressItem>
-                        <br/>
-                        <br/>
-                        </div>
-                      </div>
-                    ))
-                  }
+	                  {
+	                    client.projects.map((project) => (
+	                      <div key={project._id}>
+	                        <div>
+	                          <ProgressItem
+	                            completed={ 35 }
+	                            numerator={ 3 }
+	                            denominator={ 10 }>
+	                          <div>
+	                            <BoldText text="Project:" />  <br />
+	                            <LightText text={ project.name } />
+	                          </div>
+	                        <br/>
+	                        <br/>
+	                          <div>
+	                            <BoldText text="Type:" />  <br />
+	                            <LightText text={ project.type } />
+	                          </div>
+	                        <br/>
+	                        <br/>
+	                          <div>
+	                            <BoldText text="Status:" />  <br />
+	                            <LightText text={ project.status } />
+	                          </div>
+	                        <br/>
+	                        <br/>
+														<div>
+															<MuiThemeProvider>
+																<RaisedButton
+																	className='link-btn'
+																	label={ "View: " + project.name }
+																	href={ `/projects/${project._id}` } />
+															</MuiThemeProvider>
+														</div>
+	                        <br/>
+	                        <br/>
+	                          </ProgressItem>
+	                        <br/>
+	                        <br/>
+	                        </div>
+	                      </div>
+	                    ))
+	                  }
 
-                </ExpandableCard>
-              </div>
-            </div>
-          ))
-        }
+	                </ExpandableCard>
+	              </div>
+	            </div>
+	          ))
+	        }
 
-    </div>
-)
+	    </div>
+	)
+}
 
 export default Projects
