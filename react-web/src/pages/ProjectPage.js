@@ -13,6 +13,7 @@ import ProgressItem from '../components/molecules/ProgressItem'
 import BoldText from '../components/atoms/BoldText'
 import LightText from '../components/atoms/LightText'
 import RaisedButton from 'material-ui/RaisedButton'
+import CircularProgress from 'material-ui/CircularProgress'
 
 export default function Project({
   data
@@ -56,40 +57,39 @@ export default function Project({
                 data.jobs.map((job)=>(
                 <MuiThemeProvider>
                   <ExpandableCard
-                    title={ client.client }
-                    logoSrc={ client.logo }
+                    title={ job.name }
                     logoAlt="Test Logo"
                     logoClass="logo-class"
                     children="Test" >
                     {
-                        <div key={project._id}>
+                        <div key={job._id}>
                             <ProgressItem
                               completed={ 35 }
                               numerator={ 3 }
                               denominator={ 10 }>
                             <div>
-                              <BoldText text="Project:" />  <br />
-                              <LightText text={ project.name } />
+                              <BoldText text="Job Name:" />  <br />
+                              <LightText text={ job.name } />
                             </div>
                           <br/>
                           <br/>
                             <div>
                               <BoldText text="Type:" />  <br />
-                              <LightText text={ project.type } />
+                              <LightText text={ job.type } />
                             </div>
                           <br/>
                           <br/>
                             <div>
                               <BoldText text="Status:" />  <br />
-                              <LightText text={ project.status } />
+                              <LightText text={ job.status } />
                             </div>
                           <br/>
                           <br/>
                             <div>
                               <RaisedButton
                                 className='link-btn'
-                                label={ "View: " + project.name }
-                                href={ `/projects/${project._id}` } />
+                                label={ "View Task: " + job.name }
+                                href={ `/jobs/${job._id}` } />
                             </div>
                           <br/>
                           <br/>
@@ -106,7 +106,7 @@ export default function Project({
             </div>
           </div>
         ) : (
-          'Loading Data'
+          'Loading Project'
         )
       }
     </div>
