@@ -37,13 +37,14 @@ export const ComponentLibrary = ({
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
 
-        <div className='inline'>
-          <DynamicButton className='btn-green' action={ () => {(console.log('Green Button!'))} } />
-          <DynamicButton className='btn-orange' buttonColor='#F06734' action={ () => {(console.log("Orange Button!"))} } />
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>Green button set as default</p>
+          <DynamicButton action={ () => {(console.log('Green Button!'))} } />
         </div>
 
-        <div>
-          <LinkButton className='btn-link' buttonColor='#626098' link='/home' />
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>buttonColor="#F06734"</p>
+          <LinkButton buttonColor='#F06734' link='/home' />
         </div>
 
         <div style={{marginTop: "15px", marginBottom: "15px"}}>
