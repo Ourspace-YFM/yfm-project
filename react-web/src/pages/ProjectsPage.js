@@ -1,6 +1,8 @@
 import React from 'react'
+import '../custom.css'
 
-// MUI Components
+
+// Components
 import ExpandableCard from '../components/molecules/ExpandableCard'
 import ProgressItem from '../components/molecules/ProgressItem'
 import BoldText from '../components/atoms/BoldText'

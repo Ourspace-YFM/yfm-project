@@ -2,12 +2,13 @@ import React from 'react'
 
 export default function Link({
   redirectpath,
-  name
-  
+  name,
+  className
+
 }) {
   return (
-      <a href={ redirectpath }>
-        { name }
-      </a>
+    <a href={ redirectpath } className={"links " + className}>
+      { name }
+    </a>
   )
 }
