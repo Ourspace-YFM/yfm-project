@@ -14,6 +14,7 @@ import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import * as authAPI from './api/auth'
+import * as projectsAPI from './api/projects'
 import { setApiToken } from './api/init'
 
 import Drawer from 'material-ui/Drawer'

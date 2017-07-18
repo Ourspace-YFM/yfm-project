@@ -46,8 +46,38 @@ export const ComponentLibrary = ({
           <LinkButton className='btn-link' buttonColor='#626098' link='/home' />
         </div>
 
-        <div>
-          <Icon icon="home"/>
+        <div style={{marginTop: "15px", marginBottom: "15px"}}>
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>size="25px"</p>
+            <Icon icon="home" size="25px"/>
+          </div>
+
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>size="40px"</p>
+            <Icon icon="home" size="40px"/>
+          </div>
+
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>size="60px"</p>
+            <Icon icon="home" size="60px"/>
+          </div>
+        </div>
+
+        <div style={{marginTop: "15px", marginBottom: "15px"}}>
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>fillColor="#F1F2F2"</p>
+            <Icon icon="home" size="40px" fillColor="#F1F2F2"/>
+          </div>
+
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>fillColor="#D1D3D4"</p>
+            <Icon icon="home" size="40px" fillColor="#D1D3D4"/>
+          </div>
+
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>fillColor="#414042"</p>
+            <Icon icon="home" size="40px" fillColor="#414042"/>
+          </div>
         </div>
 
         <div>

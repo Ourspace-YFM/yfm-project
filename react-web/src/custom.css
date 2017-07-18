@@ -9,19 +9,3 @@ span.light {
 
 body {
   text-align: center; }
-
-.inline {
-  display: inline-block;
-}
-
-.logo-class {
-  height: 20px;
-  float: left;
-  margin-left: 20px;
-}
-
-.expandable-card {
-  width: 90%;
-  margin: auto;
-  margin-bottom: 20px;
-}
