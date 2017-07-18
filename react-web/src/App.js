@@ -70,13 +70,13 @@ class App extends Component {
     })
   }
 
-  // loadSingleProject({ reload = false } = {}) {
-  //   return this.loadUsing({
-  //     makePromise: projectsAPI.listSingle(id),
-  //     stateKey: 'projects',
-  //     reload
-  //   })
-  // }
+  loadSingleProject({ reload = false, id } = {}) {
+    return this.loadUsing({
+      makePromise: () => projectsAPI.listSingle(id),
+      stateKey: 'singleProject',
+      reload
+    })
+  }
 
 
   /* loadProjects({ reload = false } = {}) {
@@ -200,10 +200,9 @@ setDrawerOpen = (boolean) => {
             <Route path='/project/:id' render={
               ({ match }) => {
                   const id = match.params.id
-                  const data = projectsAPI.listSingle(id)
-                  console.log(data)
+                  this.loadSingleProject({id: id})
     							return (
-                    <Project { ...data } />
+                    <Project data={this.state.singleProject } />
     							)
     						}
             } />

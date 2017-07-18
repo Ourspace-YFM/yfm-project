@@ -1,7 +1,7 @@
 const mongoose = require('./init')
     , Schema = mongoose.Schema
 
-const projectSchema = Schema({
+const locationSchema = Schema({
   name: {
     type: String,
     required: [true, 'Location name required']
@@ -16,6 +16,6 @@ const projectSchema = Schema({
   primaryContacts: [String]
 })
 
-const Project = mongoose.model('Project', projectSchema)
+const Location = mongoose.model('Location', locationSchema)
 
-module.exports = Project
+module.exports = Location
