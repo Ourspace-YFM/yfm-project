@@ -94,85 +94,85 @@ function fill(){
           'status': 'Complete',
           'completed': true,
         },{
-          '_id': '596dc1db10dc3a08f61be9f7'
+          '_id': '596dc1db10dc3a08f61be9f7',
           'parentJob': '596c6c85c5dbc447854c9a60',
           'name': 'Remove/replace PS skin',
           'status': 'Complete',
           'completed': true,
         },{
-          '_id': '596dc1db10dc3a08f61be9f8'
+          '_id': '596dc1db10dc3a08f61be9f8',
           'parentJob': '596c6c85c5dbc447854c9a60',
           'name': 'Remove/replace DS skin',
           'status': 'Incomplete',
           'completed': false,
         },{
-          '_id': '596dc1db10dc3a08f61be9f9'
+          '_id': '596dc1db10dc3a08f61be9f9',
           'parentJob': '596c6c85c5dbc447854c9a62',
           'name': 'Install D/S skin',
           'status': 'Complete',
           'completed': true,
         },{
-          '_id': '596dc1db10dc3a08f61be9fa'
+          '_id': '596dc1db10dc3a08f61be9fa',
           'parentJob': '596c6c85c5dbc447854c9a62',
           'name': 'Install P/S skin',
           'status': 'Complete',
           'completed': true,
         },{
-          '_id': '1db10dc3a08f61be9fb'
+          '_id': '1db10dc3a08f61be9fb',
           'parentJob': '596c6c85c5dbc447854c9a62',
           'name': 'Remove/Replace D/S door decal',
           'status': 'Complete',
           'completed': true,
         },{
-          '_id': '596dc1db10dc3a08f61be9fc'
+          '_id': '596dc1db10dc3a08f61be9fc',
           'parentJob': '596c6c85c5dbc447854c9a62',
           'name': 'Replace missing/damaged corner covers',
           'status': 'Complete',
           'completed': true,
         },{
-          '_id': '596dc1db10dc3a08f61be9fd'
+          '_id': '596dc1db10dc3a08f61be9fd',
           'parentJob': '596c6c85c5dbc447854c9a5f',
           'name': 'Reglue front vertical D/S base frame',
           'status': 'Complete',
           'completed': true,
         },{
-          '_id': '596dc1db10dc3a08f61be9fe'
+          '_id': '596dc1db10dc3a08f61be9fe',
           'parentJob': '596c6c85c5dbc447854c9a5f',
           'name': 'Replace damaged/missing corner covers',
           'status': 'Complete',
           'completed': false,
         },{
-          '_id': '596dc1db10dc3a08f61be9ff' 
+          '_id': '596dc1db10dc3a08f61be9ff',
           'parentJob': '596c6c85c5dbc447854c9a5f',
           'name': 'Remove/replace D/S weight decal',
           'status': 'Incomplete',
           'completed': false,
         },{
-          '_id': '596dc1db10dc3a08f61bea00'
+          '_id': '596dc1db10dc3a08f61bea00',
           'parentJob': '596c6c85c5dbc447854c9a61',
           'name': 'Remove/replace P/S skin',
           'status': 'Complete',
           'completed': true,
         },{
-          '_id': '596dc1db10dc3a08f61bea01'
+          '_id': '596dc1db10dc3a08f61bea01',
           'parentJob': '596c6c85c5dbc447854c9a61',
           'name': 'Replace damaged/missing corner covers',
           'status': 'Complete',
           'completed': false,
         },{
-          '_id': '596dc1db10dc3a08f61bea02'
+          '_id': '596dc1db10dc3a08f61bea02',
           'parentJob': '596c6c85c5dbc447854c9a61',
           'name': 'Install D/S base frame',
           'status': 'Incomplete',
           'completed': false,
         },{
-          '_id': '596dc1db10dc3a08f61bea03'
+          '_id': '596dc1db10dc3a08f61bea03',
           'parentJob': '596c6c85c5dbc447854c9a61',
           'name': 'Remove/replace P/S skin',
           'status': 'Complete',
           'completed': true,
         },{
-          '_id': '596dc1db10dc3a08f61bea04'
+          '_id': '596dc1db10dc3a08f61bea04',
           'parentJob': '596c6c85c5dbc447854c9a61',
           'name': 'Install P/S ID decal',
           'status': 'Incomplete',
