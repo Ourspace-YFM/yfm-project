@@ -13,11 +13,12 @@ export default function DynamicButton({
   return (
     <MuiThemeProvider>
       <RaisedButton
-        className={ className }
+        className={ 'button ' + className }
         label={ label }
-        labelColor={ labelColor }        
+        labelColor={ labelColor }
         onClick={ action }
-        backgroundColor={ buttonColor } />
+        backgroundColor={ buttonColor }
+        />
     </MuiThemeProvider>
   )
 }
