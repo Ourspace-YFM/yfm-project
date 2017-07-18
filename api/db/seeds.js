@@ -55,24 +55,28 @@ function fill(){
         'model': 'Job',
         'documents': [
         {
+          "_id": "596c6c85c5dbc447854c9a60",
         'projectId': '596a093b8b062a980ae4c1dc',
         'owner': '596634c0b925e80783c7721e',
         'name': 'Jenny & Steve reskin',
         'status': "I'm not sure what to put here",
         'description': 'anoda day, anoda dolla',
         },{
+          "_id": "596c6c85c5dbc447854c9a62",
         'projectId': '596a093b8b062a980ae4c1dc',
         'owner': '596634c0b925e80783c7721e',
         'name': 'Dave & John canvas refit',
         'status': "I'm not sure what to put here",
         'description': '3 Vynls',
       }, {
+        "_id": "596c6c85c5dbc447854c9a5f",
         'projectId': '596a093b8b062a980ae4c1db',
         'owner': '596634c0b925e80783c7721d',
         'name': 'Damage repair',
         'status': "I'm not sure what to put here",
         'description': 'DUI on our truck....',
         }, {
+        "_id": "596c6c85c5dbc447854c9a61",
         'projectId': '596a093b8b062a980ae4c1db',
         'owner': '596634c0b925e80783c7721d',
         'name': 'Retighten vynl',
@@ -84,29 +88,30 @@ function fill(){
         'model': 'Task',
         'documents': [
         {
-        'projectId': '596a093b8b062a980ae4c1dc',
-        'owner': '596634c0b925e80783c7721e',
-        'name': 'Jenny & Steve reskin',
-        'status': "I'm not sure what to put here",
-        'description': 'anoda day, anoda dolla',
+        'parentJob': '596c6c85c5dbc447854c9a60',
+        'name': 'Add plastic corners',
+        'status': 'Complete',
+        'completed': true,
         },{
-        'projectId': '596a093b8b062a980ae4c1dc',
-        'owner': '596634c0b925e80783c7721e',
-        'name': 'Dave & John canvas refit',
-        'status': "I'm not sure what to put here",
-        'description': '3 Vynls',
-      }, {
-        'projectId': '596a093b8b062a980ae4c1db',
-        'owner': '596634c0b925e80783c7721d',
-        'name': 'Damage repair',
-        'status': "I'm not sure what to put here",
-        'description': 'DUI on our truck....',
-        }, {
-        'projectId': '596a093b8b062a980ae4c1db',
-        'owner': '596634c0b925e80783c7721d',
-        'name': 'Retighten vynl',
-        'status': "I'm not sure what to put here",
-        'description': 'Just needs plastic part',
+        'parentJob': '596c6c85c5dbc447854c9a60',
+        'name': 'Change reskin',
+        'status': 'Complete',
+        'completed': false,
+        },{
+        'parentJob': '596c6c85c5dbc447854c9a60',
+        'name': 'Add reskin',
+        'status': 'Incomplete',
+        'completed': false,
+        }
+      ]
+    },{
+        'model': 'Booking',
+        'documents': [
+        {
+        'parentJob': '596c6c85c5dbc447854c9a60',
+        'name': 'Add plastic corners',
+        'status': 'Complete',
+        'completed': true,
         }
       ]
     },{
