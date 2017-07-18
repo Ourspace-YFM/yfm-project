@@ -85,12 +85,24 @@ export const ComponentLibrary = ({
           <DropDownMenu />
         </div>
 
-        <div>
-          <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="mini"/>
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="mini"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="mini"/>
         </div>
 
-        <div>
-          <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="testClassName"/>
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="sml"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="sml"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="md"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="md"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="lrg"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="lrg"/>
         </div>
 
         <div>

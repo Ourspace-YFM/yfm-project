@@ -1,5 +1,15 @@
-img.logo {
-  .mini {
-    max-height: 30px
-  }
+img.logo.mini {
+  max-height: 20px
+}
+
+img.logo.sml {
+  max-height: 40px
+}
+
+img.logo.md {
+  max-height: 100px
+}
+
+img.logo.lrg {
+  max-height: 190px
 }
