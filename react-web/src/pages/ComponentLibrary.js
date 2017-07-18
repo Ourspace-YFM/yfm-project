@@ -106,7 +106,8 @@ export const ComponentLibrary = ({
         </div>
 
         <div>
-          <ProgressBar completed={50} />
+          <p>width="50%" - determines the width of the progress bar relative to the parent div (parent div rendered outside of the component)</p>
+          <ProgressBar completed={50} width="50%"/>
         </div>
 
         <div>
