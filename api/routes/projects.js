@@ -11,7 +11,7 @@ router
   })
 })
 router
-.route('/project/:id')
+.route('/projects/:id')
 .get((req, res) => {
   let id = req.params.id
   let project = null

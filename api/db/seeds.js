@@ -55,20 +55,20 @@ function fill(){
         'model': 'Job',
         'documents': [
         {
-          "_id": "596c6c85c5dbc447854c9a60",
+        "_id": "596c6c85c5dbc447854c9a60",
         'projectId': '596a093b8b062a980ae4c1dc',
         'owner': '596634c0b925e80783c7721e',
         'name': 'Jenny & Steve reskin',
         'status': "I'm not sure what to put here",
         'description': 'anoda day, anoda dolla',
         },{
-          "_id": "596c6c85c5dbc447854c9a62",
+        "_id": "596c6c85c5dbc447854c9a62",
         'projectId': '596a093b8b062a980ae4c1dc',
         'owner': '596634c0b925e80783c7721e',
         'name': 'Dave & John canvas refit',
         'status': "I'm not sure what to put here",
         'description': '3 Vynls',
-      }, {
+        },{
         "_id": "596c6c85c5dbc447854c9a5f",
         'projectId': '596a093b8b062a980ae4c1db',
         'owner': '596634c0b925e80783c7721d',

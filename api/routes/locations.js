@@ -10,7 +10,7 @@ router
   })
 })
 router
-.route('/location/:id')
+.route('/locations/:id')
 .get((req, res) => {
   const id = req.params.id
   Location.findById(id)
