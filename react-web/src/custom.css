@@ -18,6 +18,26 @@ span.light {
 body {
   text-align: center; }
 
+.cardInfoContainer {
+  text-align: left;
+  margin-left: 15px; }
+
+.projectsPageProgressItem {
+  padding: 20px;
+  border-bottom: solid 1px #D1D3D4; }
+  .projectsPageProgressItem div.progressItemButtonContainer {
+    max-width: 20%;
+    float: right; }
+  .projectsPageProgressItem div.progressItemBarContainer {
+    display: inline-block;
+    min-width: 30%; }
+
+div.progressItemInfo {
+  text-align: center;
+  display: inline-block;
+  min-width: 18%;
+  max-width: 18%; }
+
 img.logo.mini {
   max-height: 20px; }
 

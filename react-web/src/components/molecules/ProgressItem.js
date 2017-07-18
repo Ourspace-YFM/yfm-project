@@ -3,29 +3,37 @@ import BoldText from '../atoms/BoldText'
 import LightText from '../atoms/LightText'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import ProgressBar from '../atoms/ProgressBar'
+import LinkButton from '../atoms/LinkButton'
 
 export default function ProgressItem({
+  className,
   title,
   subtitle,
   completed,
   numerator,
   denominator,
   children,
-  width
+  width,
+  buttonColor = "#F06734",
+  link,
+  buttonLabel
 
 }) {
   return (
-    <div>
+    <div className={ className }>
       <div>
         <BoldText text={ title }/>
         <span>   </span>
         <LightText text={ subtitle }/>
       </div>
       { children }
-      <div>
+      <div className="progressItemBarContainer">
         <ProgressBar
          completed={ completed } width={ width }/>
         <LightText text={ numerator + '/' + denominator }/>
+      </div>
+      <div className="progressItemButtonContainer">
+        <LinkButton buttonColor={ buttonColor } link={ link } label={ buttonLabel } />
       </div>
     </div>
   )
