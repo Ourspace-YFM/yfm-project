@@ -137,8 +137,34 @@ export const ComponentLibrary = ({
           <Title text="Page Title"/>
         </div>
 
-        <div>
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>Default</p>
           <Link redirectpath="/somelink" name="Link" />
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="green"</p>
+          <Link redirectpath="/somelink" name="Link" className="green"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="orange"</p>
+          <Link redirectpath="/somelink" name="Link" className="orange"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="white"</p>
+          <Link redirectpath="/somelink" name="Link" className="white"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="underlined"</p>
+          <Link redirectpath="/somelink" name="Link" className="underlined"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="orange underlined"</p>
+          <Link redirectpath="/somelink" name="Link" className="orange underlined"/>
         </div>
 
         <h2>Molecules</h2>

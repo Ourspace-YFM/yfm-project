@@ -29,3 +29,15 @@ img.logo.md {
 
 img.logo.lrg {
   max-height: 190px; }
+
+a.links {
+  text-decoration: none;
+  color: #414042; }
+  a.links.green {
+    color: #7CB160; }
+  a.links.orange {
+    color: #F06734; }
+  a.links.white {
+    color: #F1F2F2; }
+  a.links.underlined {
+    text-decoration: underline; }

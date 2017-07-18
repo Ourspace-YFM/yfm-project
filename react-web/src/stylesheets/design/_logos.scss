@@ -1,15 +1,19 @@
-img.logo.mini {
-  max-height: 20px
-}
+img.logo {
 
-img.logo.sml {
-  max-height: 40px
-}
+  &.mini {
+    max-height: 20px
+  }
 
-img.logo.md {
-  max-height: 100px
-}
+  &.sml {
+    max-height: 40px
+  }
 
-img.logo.lrg {
-  max-height: 190px
+  &.md {
+    max-height: 100px
+  }
+
+  &.lrg {
+    max-height: 190px
+  }
+
 }
