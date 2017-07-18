@@ -1,9 +1,23 @@
 body {
   text-align: center;
 }
-.ankfgnj {
-  text-align: center;
+
+.cardInfoContainer {
+  text-align: left;
+  margin-left: 15px;
 }
-.sjahdfgh {
-  color:red;
+
+.projectsPageProgressItem {
+  padding: 20px;
+  border-bottom: solid 1px #D1D3D4;
+
+  div.progressItemButtonContainer{
+    max-width: 20%;
+    float: right;
+  }
+
+  div.progressItemBarContainer{
+    display: inline-block;
+    min-width: 30%;
+  }
 }
