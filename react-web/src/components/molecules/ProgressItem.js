@@ -2,7 +2,7 @@ import React from 'react';
 import BoldText from '../atoms/BoldText'
 import LightText from '../atoms/LightText'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import LinearProgress from 'material-ui/LinearProgress'
+import ProgressBar from '../atoms/ProgressBar'
 
 export default function ProgressItem({
   title,
@@ -10,7 +10,8 @@ export default function ProgressItem({
   completed,
   numerator,
   denominator,
-  children
+  children,
+  width
 
 }) {
   return (
@@ -22,11 +23,8 @@ export default function ProgressItem({
       </div>
       { children }
       <div>
-        <MuiThemeProvider>
-          <LinearProgress
-           mode="determinate"
-           value={ completed } />
-        </MuiThemeProvider>
+        <ProgressBar
+         completed={ completed } width={ width }/>
         <LightText text={ numerator + '/' + denominator }/>
       </div>
     </div>

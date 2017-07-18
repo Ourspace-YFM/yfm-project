@@ -1,0 +1,20 @@
+a.links {
+  text-decoration: none;
+  color: $darkgrey;
+
+  &.green {
+    color: $green;
+  }
+
+  &.orange {
+    color: $orange;
+  }
+
+  &.white {
+    color: $white;
+  }
+
+  &.underlined {
+    text-decoration: underline;
+  }
+}

@@ -85,16 +85,29 @@ export const ComponentLibrary = ({
           <DropDownMenu />
         </div>
 
-        <div>
-          <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="mini"/>
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="mini"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="mini"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="sml"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="sml"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="md"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="md"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="lrg"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="lrg"/>
         </div>
 
         <div>
-          <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="testClassName"/>
-        </div>
-
-        <div>
-          <ProgressBar completed={50} />
+          <p>width="50%" - determines the width of the progress bar relative to the parent div (parent div rendered outside of the component)</p>
+          <ProgressBar completed={50} width="50%"/>
         </div>
 
         <div>
@@ -124,8 +137,34 @@ export const ComponentLibrary = ({
           <Title text="Page Title"/>
         </div>
 
-        <div>
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>Default</p>
           <Link redirectpath="/somelink" name="Link" />
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="green"</p>
+          <Link redirectpath="/somelink" name="Link" className="green"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="orange"</p>
+          <Link redirectpath="/somelink" name="Link" className="orange"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="white"</p>
+          <Link redirectpath="/somelink" name="Link" className="white"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="underlined"</p>
+          <Link redirectpath="/somelink" name="Link" className="underlined"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="orange underlined"</p>
+          <Link redirectpath="/somelink" name="Link" className="orange underlined"/>
         </div>
 
         <h2>Molecules</h2>
