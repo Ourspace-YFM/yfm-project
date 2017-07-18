@@ -15,6 +15,7 @@ import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import * as authAPI from './api/auth'
 import * as projectsAPI from './api/projects'
+import * as jobsAPI from './api/jobs'
 import { setApiToken } from './api/init'
 
 import Drawer from 'material-ui/Drawer'
@@ -35,7 +36,8 @@ class App extends Component {
     drawerData: null,
     projects: null,
     singleProject: null,
-    mapData: null
+    mapData: null,
+    singleJob: null
   }
 
   loadPromises = {}
@@ -74,6 +76,14 @@ class App extends Component {
     return this.loadUsing({
       makePromise: () => projectsAPI.listSingle(id),
       stateKey: 'singleProject',
+      reload
+    })
+  }
+
+  loadSingleJob({ reload = false, id } = {}) {
+    return this.loadUsing({
+      makePromise: () => jobsAPI.listSingle(id),
+      stateKey: 'singleJob',
       reload
     })
   }
@@ -203,6 +213,16 @@ setDrawerOpen = (boolean) => {
                   this.loadSingleProject({id: id})
     							return (
                     <Project data={this.state.singleProject } />
+    							)
+    						}
+            } />
+          <Route path='/job/:id' render={
+              ({ match }) => {
+                  const id = match.params.id
+                  this.loadSingleJob({id: id})
+                  !!this.state.singleJob ? console.log(this.state.singleJob) : ''
+    							return (
+                    <Project data={this.state.singleJob } />
     							)
     						}
             } />
