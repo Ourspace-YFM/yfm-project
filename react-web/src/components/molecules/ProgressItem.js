@@ -1,7 +1,6 @@
 import React from 'react';
 import BoldText from '../atoms/BoldText'
 import LightText from '../atoms/LightText'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import ProgressBar from '../atoms/ProgressBar'
 import LinkButton from '../atoms/LinkButton'
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import LinkButton from '../components/atoms/LinkButton'
 import ExpandableCard from '../components/molecules/ExpandableCard'
 
