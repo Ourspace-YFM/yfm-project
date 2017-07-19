@@ -12,15 +12,18 @@ export default ({
             <NavLink to='/' onClick={ onSignOut } activeClassName='active' key='sign-out'>Sign Out</NavLink>
             // <button onClick={ onSignOut }></button>
         ] : [
-          <NavLink to='/signin'  activeClassName='active' key='sign-in'>Sign In/Create Account</NavLink>,
+          <NavLink to='/signin' activeClassName='active' key='sign-in'>Sign In/Create Account</NavLink>,
           <div key="other-links-div">
-            <NavLink to='/componentlibrary'  activeClassName='active' key='component-library'>YFM Component Library</NavLink>
+            <NavLink to='/componentlibrary' activeClassName='active' key='component-library'>YFM Component Library</NavLink>
             <div  key='projects-div'>
-              <NavLink to='/projects'  activeClassName='active' key='projects'>Projects</NavLink>
+              <NavLink to='/projects' activeClassName='active' key='projects'>Projects</NavLink>
             </div>
             <div>
-              <NavLink to='/assets'  activeClassName='active'>Assets</NavLink>
+              <NavLink to='/assets' activeClassName='active'>Assets</NavLink>
             </div>
+            <div>
+              <NavLink to='/contacts' activeClassName='active'>Contacts</NavLink>
+            </div>            
           </div>
         ]
         }
