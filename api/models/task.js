@@ -32,9 +32,9 @@ const taskSchema = Schema({
     default: false
   },
   completedBy: {
-    type: Schema.Type.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: 'Contact'
-  } 
+  }
 })
 
 const Task = mongoose.model('Task', taskSchema)
