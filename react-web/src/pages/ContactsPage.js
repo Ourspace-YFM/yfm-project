@@ -16,7 +16,6 @@ const Assets = () => (
           email='jhancock@coles.com.au'
         />
       </div>
-
     </div>
 )
 
