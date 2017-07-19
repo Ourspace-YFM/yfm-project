@@ -33,14 +33,14 @@ export default function Task({
 
             <br />
 
-              { /* (data.bookings) information to go here when bookings seeds have been added. */
+              { /* If there are bookings, display the expandable card. If there aren't, display a message */
                 !!data.bookings._id ? (
+                  /* (data.bookings) information to go here when bookings seeds have been added. */
                   <div className='tasks'>
                     <ExpandableCard
                       title="Bookings"
                       logoClass="logo-class"
                       children={
-                      /* If there are bookings, display a link button. If there aren't, display a message */
                         <div>
                           <LinkButton buttonColor='#F06734' link={ `/bookings/${data.bookings._id}` } />
                         </div>
