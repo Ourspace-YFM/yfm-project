@@ -9,7 +9,7 @@ export default function AssetCard({
   client,
   location,
   name,
-  id,
+  companyID,
   registration,
   operationalStatus,
   chassisMake,

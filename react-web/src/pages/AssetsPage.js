@@ -9,9 +9,9 @@ const Assets = () => (
 		client="Coles"
 		location="Burwood"
 		name="Mitchell"
-		id="11.15, 11.173"
+		companyID="11.15, 11.173"
 		registration="BK34XP"
-		operationalStatus="'Operation', 'Retired', 'In-build'"
+		operationalStatus="'Operational', 'Retired', 'In-build'"
 		chassisMake="Hino"
 		chassisModel="300 Series"
 		bodyManufacturer="Thermaxx"
@@ -19,8 +19,8 @@ const Assets = () => (
 		bodyCode="TRS"
 		truckTypeCode="H3-TRS"
 		leaseEnd="Date"
-		dsCampaign="FDMC1-Sides, FDMC2-Sides"
-		psCampaign="FDMC1-Sides, FDMC2-Sides"
+		dsCampaign="FDMC1-Sides"
+		psCampaign="FDMC1-Sides"
 		rCampaign="DCCD7D"/>
 )
 
