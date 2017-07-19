@@ -14,6 +14,7 @@ import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import Assets from './pages/AssetsPage'
+import Job from './pages/JobPage'
 import Task from './pages/TaskPage'
 import Contacts from './pages/ContactsPage'
 
@@ -202,7 +203,7 @@ setDrawerOpen = (boolean) => {
                         </MuiThemeProvider>
 
           { !!error && <ErrorMessage error={error}/> }
-          
+
           <Switch>
             <Route exact path='/' component={ HomePage } />
             <Route exact path='/assets' component={ Assets } />
@@ -236,9 +237,8 @@ setDrawerOpen = (boolean) => {
               ({ match }) => {
                   const id = match.params.id
                   this.loadSingleJob({id: id})
-                  !!this.state.singleJob ? this.state.singleJob : ''
     							return (
-                    <Project data={this.state.singleJob } />
+                    <Job data={this.state.singleJob } />
     							)
     						}
             } />
