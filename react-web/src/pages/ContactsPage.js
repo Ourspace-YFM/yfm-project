@@ -1,7 +1,5 @@
 import React from 'react'
 import ContactCard from '../components/molecules/ContactCard'
-import BoldText from '../components/atoms/BoldText'
-import LightText from '../components/atoms/LightText'
 
 const Assets = () => (
     <div>
