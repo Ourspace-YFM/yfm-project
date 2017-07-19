@@ -12,6 +12,10 @@ import BoldText from '../components/atoms/BoldText'
 import Title from '../components/atoms/Title'
 import Link from '../components/atoms/Link'
 import TextArea from '../components/atoms/TextArea'
+import TextInput from '../components/atoms/TextInput'
+import GreyedInput from '../components/atoms/GreyedInput'
+import DropDownInput from '../components/atoms/DropDownInput'
+import DropDownOption from '../components/atoms/DropDownOption'
 import DynamicButton from '../components/atoms/DynamicButton'
 import LinkButton from '../components/atoms/LinkButton'
 import DropDownMenu from '../components/molecules/DropDownMenu'
@@ -111,17 +115,6 @@ export const ComponentLibrary = ({
         </div>
 
         <div>
-          <DatePick text="Date Picker" />
-        </div>
-
-        <div>
-          <TextArea
-            rows="4"
-            columns="50"
-            text="Text Area"/>
-        </div>
-
-        <div>
           <Subtitle text="Subtitle"/>
         </div>
 
@@ -165,6 +158,42 @@ export const ComponentLibrary = ({
         <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
           <p>className="orange underlined"</p>
           <Link redirectpath="/somelink" name="Link" className="orange underlined"/>
+        </div>
+
+        <h2>Form Atoms</h2>
+
+        <div>
+          <DatePick label="Date Picker" />
+        </div>
+
+        <div>
+          <TextArea
+            label="Comments"
+            rows="4"
+            columns="50"
+            text="Text Area"/>
+        </div>
+
+        <div>
+          <TextInput
+            label="Callout Name"
+            value="Insert default values"/>
+        </div>
+
+        <div>
+          <DropDownInput
+            label="State">
+            <DropDownOption value="WA" label="WA"/>
+            <DropDownOption value="VIC" label="VIC"/>
+            <DropDownOption value="Queensland" label="Queensland"/>
+            <DropDownOption value="NSW" label="NSW"/>
+            <DropDownOption value="Tasmania" label="Tasmania"/>
+          </DropDownInput>
+        </div>
+
+        <div>
+          <GreyedInput
+            label="Job Id" text="123456"/>
         </div>
 
         <h2>Molecules</h2>
