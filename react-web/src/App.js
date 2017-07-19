@@ -14,11 +14,13 @@ import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import Assets from './pages/AssetsPage'
+import Task from './pages/TaskPage'
 import Contacts from './pages/ContactsPage'
 
 import * as authAPI from './api/auth'
 import * as projectsAPI from './api/projects'
 import * as jobsAPI from './api/jobs'
+import * as tasksAPI from './api/tasks'
 import { setApiToken } from './api/init'
 
 import Drawer from 'material-ui/Drawer'
@@ -40,7 +42,8 @@ class App extends Component {
     projects: null,
     singleProject: null,
     mapData: null,
-    singleJob: null
+    singleJob: null,
+    singleTask: null
   }
 
   loadPromises = {}
@@ -90,6 +93,14 @@ class App extends Component {
       reload
     })
   }
+
+  loadSingleTask({ reload = false, id } = {}) {
+    return this.loadUsing({
+      makePromise: () => tasksAPI.listSingle(id),
+      stateKey: 'singleTask',
+      reload
+    })
+  }  
 
 
   /* loadProjects({ reload = false } = {}) {
@@ -225,12 +236,22 @@ setDrawerOpen = (boolean) => {
               ({ match }) => {
                   const id = match.params.id
                   this.loadSingleJob({id: id})
-                  !!this.state.singleJob ? console.log(this.state.singleJob) : ''
+                  !!this.state.singleJob ? this.state.singleJob : ''
     							return (
                     <Project data={this.state.singleJob } />
     							)
     						}
             } />
+          <Route path='/tasks/:id' render={
+              ({ match }) => {
+                  const id = match.params.id
+                  this.loadSingleTask({id: id})
+                  !!this.state.singleTask ? this.state.singleTask : ''
+    							return (
+                    <Task data={ this.state.singleTask } />
+    							)
+    						}
+            } />            
             <Route render={
               ({ location }) => <p>{ location.pathname } not found</p>
             } />
