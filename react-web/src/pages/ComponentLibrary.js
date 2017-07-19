@@ -163,7 +163,7 @@ export const ComponentLibrary = ({
         <h2>Form Atoms</h2>
 
         <div>
-          <DatePick text="Date Picker" />
+          <DatePick label="Date Picker" />
         </div>
 
         <div>

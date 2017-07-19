@@ -3,12 +3,15 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import DatePicker from 'material-ui/DatePicker'
 
 export default function DatePick({
-  text,
+  label,
   className
 }) {
   return (
-    <MuiThemeProvider>
-      <DatePicker hintText={ text } className={ className }/>
-    </MuiThemeProvider>
+    <div>
+      <p className="inputLabel">{ label }</p>
+      <MuiThemeProvider>
+        <DatePicker className={ className }/>
+      </MuiThemeProvider>
+    </div>
   )
 }
