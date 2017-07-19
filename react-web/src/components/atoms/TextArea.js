@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function TextArea({
+  label, 
   rows,
   columns,
   value,
@@ -8,8 +9,11 @@ export default function TextArea({
 
 }) {
   return (
-    <textarea className={className} rows={ rows } cols={ columns }>
-      { value }
-    </textarea>
+    <div>
+      <p className="inputLabel">{ label }</p>
+      <textarea className={className} rows={ rows } cols={ columns }>
+        { value }
+      </textarea>
+    </div>
   )
 }
