@@ -10,6 +10,7 @@ const jobsRouter = require('./routes/jobs')
 const profilesRouter = require('./routes/profiles')
 const tasksRouter = require('./routes/tasks')
 const projectsRouter = require('./routes/projects')
+const locationsRouter = require('./routes/locations')
 
 const Seed = require('./db/seeds')
 
@@ -34,9 +35,10 @@ server.use(jobsRouter)
 server.use(profilesRouter)
 server.use(tasksRouter)
 server.use(projectsRouter)
+server.use(locationsRouter)
 
+server.use('/auth',authRouter)
 server.use(authMiddleware.initialize)
-server.use('/auth',authMiddleware.ensureRole('admin'),authRouter)
 
 // Handle errors by returning JSON
 server.use((error, req, res, next) => {

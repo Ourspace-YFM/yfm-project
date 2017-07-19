@@ -29,34 +29,85 @@ injectTapEventPlugin()
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-export const ComponentLibrary = () => (
+export const ComponentLibrary = ({
+  setDrawerOpen,
+  setDrawerData
+}) => (
     <div>
         <h1>YFM Component Library</h1>
         <h2>Atoms</h2>
 
-        <div className='inline'>
-          <DynamicButton className='btn-green' action={ () => {(console.log('Green Button!'))} } />
-          <DynamicButton className='btn-orange' buttonColor='#F06734' action={ () => {(console.log("Orange Button!"))} } />
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>Green button set as default</p>
+          <DynamicButton action={ () => {(console.log('Green Button!'))} } />
         </div>
 
-        <div>
-          <LinkButton className='btn-link' buttonColor='#626098' link='/home' />
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>buttonColor="#F06734"</p>
+          <LinkButton buttonColor='#F06734' link='/home' />
         </div>
 
-        <div>
-          <Icon icon="home"/>
+        <div style={{marginTop: "15px", marginBottom: "15px"}}>
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>size="25px"</p>
+            <Icon icon="home" size="25px"/>
+          </div>
+
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>size="40px"</p>
+            <Icon icon="home" size="40px"/>
+          </div>
+
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>size="60px"</p>
+            <Icon icon="home" size="60px"/>
+          </div>
+        </div>
+
+        <div style={{marginTop: "15px", marginBottom: "15px"}}>
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>fillColor="#F1F2F2"</p>
+            <Icon icon="home" size="40px" fillColor="#F1F2F2"/>
+          </div>
+
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>fillColor="#D1D3D4"</p>
+            <Icon icon="home" size="40px" fillColor="#D1D3D4"/>
+          </div>
+
+          <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+            <p>fillColor="#414042"</p>
+            <Icon icon="home" size="40px" fillColor="#414042"/>
+          </div>
         </div>
 
         <div>
           <DropDownMenu />
         </div>
 
-        <div>
-          <Logo src="https://static.wixstatic.com/media/eea06a_7d3b5db08196495294d713a1ef98f4aa.jpg_256" alt="Test Logo" className="testClassName"/>
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="mini"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="mini"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="sml"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="sml"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="md"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="md"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="lrg"</p>
+          <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png" alt="Test Logo" className="lrg"/>
         </div>
 
         <div>
-          <ProgressBar completed={50} />
+          <p>width="50%" - determines the width of the progress bar relative to the parent div (parent div rendered outside of the component)</p>
+          <ProgressBar completed={50} width="50%"/>
         </div>
 
         <div>
@@ -86,14 +137,43 @@ export const ComponentLibrary = () => (
           <Title text="Page Title"/>
         </div>
 
-        <div>
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>Default</p>
           <Link redirectpath="/somelink" name="Link" />
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="green"</p>
+          <Link redirectpath="/somelink" name="Link" className="green"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="orange"</p>
+          <Link redirectpath="/somelink" name="Link" className="orange"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="white"</p>
+          <Link redirectpath="/somelink" name="Link" className="white"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="underlined"</p>
+          <Link redirectpath="/somelink" name="Link" className="underlined"/>
+        </div>
+
+        <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
+          <p>className="orange underlined"</p>
+          <Link redirectpath="/somelink" name="Link" className="orange underlined"/>
         </div>
 
         <h2>Molecules</h2>
 
         <div>
-          <Map>
+          <Map
+            setDrawerOpen={setDrawerOpen}
+            setDrawerData={setDrawerData}
+            >
             <AnyReactComponent
               lat={-33.8688}
               lng={151.2093}
