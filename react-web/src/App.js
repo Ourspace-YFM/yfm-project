@@ -14,6 +14,9 @@ import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import Assets from './pages/AssetsPage'
+import Job from './pages/JobPage'
+import Contacts from './pages/ContactsPage'
+
 import * as authAPI from './api/auth'
 import * as projectsAPI from './api/projects'
 import * as jobsAPI from './api/jobs'
@@ -189,10 +192,11 @@ setDrawerOpen = (boolean) => {
                         </MuiThemeProvider>
 
           { !!error && <ErrorMessage error={error}/> }
-          
+
           <Switch>
             <Route exact path='/' component={ HomePage } />
             <Route exact path='/assets' component={ Assets } />
+            <Route exact path='/contacts' component={ Contacts } />
               <Route path='/componentlibrary' render={ () => (
                 <ComponentLibrary
                   setDrawerOpen={this.setDrawerOpen}
@@ -222,9 +226,8 @@ setDrawerOpen = (boolean) => {
               ({ match }) => {
                   const id = match.params.id
                   this.loadSingleJob({id: id})
-                  !!this.state.singleJob ? console.log(this.state.singleJob) : ''
     							return (
-                    <Project data={this.state.singleJob } />
+                    <Job data={this.state.singleJob } />
     							)
     						}
             } />

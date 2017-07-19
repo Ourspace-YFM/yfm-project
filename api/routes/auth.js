@@ -15,6 +15,7 @@ router
     res.status(401).json({ error: 'Please sign in' })
   }
 })
+
 // Sign in
 .post(authMiddleware.authenticateSignIn, authMiddleware.signTokenHandler)
 
