@@ -30,13 +30,14 @@ body {
     float: right; }
   .projectsPageProgressItem div.progressItemBarContainer {
     display: inline-block;
-    min-width: 30%; }
+    min-width: 25%;
+    max-width: 25%; }
 
 div.progressItemInfo {
   text-align: center;
   display: inline-block;
-  min-width: 18%;
-  max-width: 18%; }
+  min-width: 15%;
+  max-width: 15%; }
 
 img.logo.mini {
   max-height: 20px; }
