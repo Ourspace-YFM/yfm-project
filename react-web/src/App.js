@@ -13,6 +13,7 @@ import SignInPage from './pages/SignInPage'
 import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
+import Assets from './pages/AssetsPage'
 import * as authAPI from './api/auth'
 import * as projectsAPI from './api/projects'
 import { setApiToken } from './api/init'
@@ -80,6 +81,7 @@ class App extends Component {
             <Route exact path='/' component={ HomePage } />
             <Route exact path='/componentlibrary' component={ ComponentLibrary } />
             <Route exact path='/projects' component={ Projects } />
+            <Route exact path='/assets' component={ Assets } />
             <Route path='/signin' render={
               () => (
                 <SignInPage token={ token } createAccount={ createAccount } toggleCreateAccount={ this.toggleCreateAccount } onSignIn={ this.handleSignIn } onCreateAccount={ this.handleCreateAccount} />

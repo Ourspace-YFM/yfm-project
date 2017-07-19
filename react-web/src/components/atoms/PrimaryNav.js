@@ -19,6 +19,9 @@ export default ({
             <div>
               <NavLink to='/projects'  activeClassName='active'>Projects</NavLink>
             </div>
+            <div>
+              <NavLink to='/assets'  activeClassName='active'>Assets</NavLink>
+            </div>
           </div>
         ]
         }
