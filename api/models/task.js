@@ -33,7 +33,7 @@ const taskSchema = Schema({
   },
   completedBy: {
     type: Schema.Types.ObjectId,
-    ref: 'Contact'
+    ref: 'Company'
   }
 })
 

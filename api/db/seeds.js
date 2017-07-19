@@ -56,28 +56,28 @@ function fill(){
         'documents': [
         {
         "_id": "596c6c85c5dbc447854c9a60",
-        'projectId': '596a093b8b062a980ae4c1dc',
+        'parentProject': '596a093b8b062a980ae4c1dc',
         'owner': '596634c0b925e80783c7721e',
         'name': 'Jenny & Steve reskin',
         'status': "Open",
         'description': 'anoda day, anoda dolla',
         },{
         "_id": "596c6c85c5dbc447854c9a62",
-        'projectId': '596a093b8b062a980ae4c1dc',
+        'parentProject': '596a093b8b062a980ae4c1dc',
         'owner': '596634c0b925e80783c7721e',
         'name': 'Dave & John canvas refit',
         'status': "Open",
         'description': '3 Vynls',
         },{
         "_id": "596c6c85c5dbc447854c9a5f",
-        'projectId': '596a093b8b062a980ae4c1db',
+        'parentProject': '596a093b8b062a980ae4c1db',
         'owner': '596634c0b925e80783c7721d',
         'name': 'Damage repair',
         'status': "I'm not sure what to put here",
         'description': 'DUI on our truck....',
         }, {
         "_id": "596c6c85c5dbc447854c9a61",
-        'projectId': '596a093b8b062a980ae4c1db',
+        'parentProject': '596a093b8b062a980ae4c1db',
         'owner': '596634c0b925e80783c7721d',
         'name': 'Retighten vynl',
         'status': "I'm not sure what to put here",
@@ -88,7 +88,7 @@ function fill(){
         'model': 'Task',
         'documents': [
         {
-          '_id': '596dc1db10dc3a08f61be9f6', 
+          '_id': '596dc1db10dc3a08f61be9f6',
           'parentJob': '596c6c85c5dbc447854c9a60',
           'name': 'Remove/replace read door SAV',
           'status': 'Complete',
@@ -2336,7 +2336,7 @@ function fill(){
         './models/project.js',
         './models/task.js'
     ])
-    seeder.clearModels(['Company','Project','Location'], function() {
+    seeder.clearModels(['Company','Project','Location','Jobs','Task'], function() {
 
       // Callback to populate DB once collections have been cleared
       seeder.populateModels(data, function() {
