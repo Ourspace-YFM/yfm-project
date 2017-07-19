@@ -14,6 +14,8 @@ import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import Assets from './pages/AssetsPage'
+import Contacts from './pages/ContactsPage'
+
 import * as authAPI from './api/auth'
 import * as projectsAPI from './api/projects'
 import * as jobsAPI from './api/jobs'
@@ -193,6 +195,7 @@ setDrawerOpen = (boolean) => {
           <Switch>
             <Route exact path='/' component={ HomePage } />
             <Route exact path='/assets' component={ Assets } />
+            <Route exact path='/contacts' component={ Contacts } />
               <Route path='/componentlibrary' render={ () => (
                 <ComponentLibrary
                   setDrawerOpen={this.setDrawerOpen}

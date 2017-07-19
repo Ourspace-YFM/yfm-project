@@ -39,7 +39,7 @@ export default function AssetCard({
           <div className="assetCardInfo">
             <BoldText text="Name" />
             <br/><br/>
-            <LightText text={ id } />
+            <LightText text={ companyID } />
           </div>
           <div className="assetCardInfo">
             <BoldText text="Coles ID" />
