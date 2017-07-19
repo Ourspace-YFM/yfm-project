@@ -42,13 +42,11 @@ const Projects = ({
 						'Loading Projects'
 					)
 				}
-
-<<<<<<< HEAD
 		</div>
 	)
 }
-=======
-        {
+
+        {/*
           Data.clients.map((client) => (
             <div key={client._id}>
               <div>
@@ -94,10 +92,6 @@ const Projects = ({
               </div>
             </div>
           ))
-        }
-
-    </div>
-)
->>>>>>> origin/add-sass-styling
+        */}
 
 export default Projects

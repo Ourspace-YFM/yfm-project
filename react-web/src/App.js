@@ -188,7 +188,7 @@ setDrawerOpen = (boolean) => {
                         </MuiThemeProvider>
 
           { !!error && <ErrorMessage error={error}/> }
-
+          
           <Switch>
             <Route exact path='/' component={ HomePage } />
               <Route path='/componentlibrary' render={ () => (
@@ -207,7 +207,7 @@ setDrawerOpen = (boolean) => {
                 <SignInPage token={ token } createAccount={ createAccount } toggleCreateAccount={ this.toggleCreateAccount } onSignIn={ this.handleSignIn } onCreateAccount={ this.handleCreateAccount} />
               )
             } />
-            <Route path='/project/:id' render={
+          <Route path='/projects/:id' render={
               ({ match }) => {
                   const id = match.params.id
                   this.loadSingleProject({id: id})
@@ -216,7 +216,7 @@ setDrawerOpen = (boolean) => {
     							)
     						}
             } />
-          <Route path='/job/:id' render={
+          <Route path='/jobs/:id' render={
               ({ match }) => {
                   const id = match.params.id
                   this.loadSingleJob({id: id})
