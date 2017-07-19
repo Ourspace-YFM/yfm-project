@@ -2,7 +2,7 @@ import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
 
-export default function DynamicButton({
+export default function LinkButton({
   className,
   label="Link Button",
   link,
@@ -15,7 +15,7 @@ export default function DynamicButton({
       <RaisedButton
         className={ className }
         label={ label }
-        labelColor={ labelColor }   
+        labelColor={ labelColor }
         href={ link }
         backgroundColor={ buttonColor } />
     </MuiThemeProvider>

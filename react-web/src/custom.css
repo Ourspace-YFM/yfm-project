@@ -1,6 +1,14 @@
 body {
   font-family: Arial, sans-serif; }
 
+h1 {
+  letter-spacing: 1px; }
+
+h2.subtitle {
+  font-style: italic;
+  font-weight: 100;
+  font-size: 28px; }
+
 span.bold {
   font-weight: bold; }
 
@@ -10,18 +18,46 @@ span.light {
 body {
   text-align: center; }
 
-.inline {
+.cardInfoContainer {
+  text-align: left;
+  margin-left: 15px; }
+
+.projectsPageProgressItem {
+  padding: 20px;
+  border-bottom: solid 1px #D1D3D4; }
+  .projectsPageProgressItem div.progressItemButtonContainer {
+    max-width: 20%;
+    float: right; }
+  .projectsPageProgressItem div.progressItemBarContainer {
+    display: inline-block;
+    min-width: 30%; }
+
+div.progressItemInfo {
+  text-align: center;
   display: inline-block;
-}
+  min-width: 18%;
+  max-width: 18%; }
 
-.logo-class {
-  height: 20px;
-  float: left;
-  margin-left: 20px;
-}
+img.logo.mini {
+  max-height: 20px; }
 
-.expandable-card {
-  width: 90%;
-  margin: auto;
-  margin-bottom: 20px;
-}
+img.logo.sml {
+  max-height: 40px; }
+
+img.logo.md {
+  max-height: 100px; }
+
+img.logo.lrg {
+  max-height: 190px; }
+
+a.links {
+  text-decoration: none;
+  color: #414042; }
+  a.links.green {
+    color: #7CB160; }
+  a.links.orange {
+    color: #F06734; }
+  a.links.white {
+    color: #F1F2F2; }
+  a.links.underlined {
+    text-decoration: underline; }

@@ -3,12 +3,13 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import FontIcon from 'material-ui/FontIcon'
 
 export default function Icon({
-  className,
-  icon
+  icon,
+  size,
+  fillColor
 }) {
   return (
     <MuiThemeProvider>
-      <FontIcon  className={"material-icons " + className}>{ icon }</FontIcon>
+      <FontIcon  className={"material-icons"} style={{fontSize: size, color: fillColor}}>{ icon }</FontIcon>
     </MuiThemeProvider>
   )
 }

@@ -16,14 +16,14 @@ export default function ExpandableCard({
   return (
     <div>
       <MuiThemeProvider>
-        <Card className="expandable-card">       
+        <Card className="expandable-card">
           <CardHeader
             title={ title }
             actAsExpander={true}
             showExpandableButton={true} >
-              <Logo 
-              src={ logoSrc } 
-              alt={ logoAlt } 
+              <Logo
+              src={ logoSrc }
+              alt={ logoAlt }
               className={ logoClass } />
           </CardHeader>
 
