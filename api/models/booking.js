@@ -6,7 +6,7 @@ const bookingSchema = Schema ({
     type: Schema.Types.ObjectId,
     ref: 'Job'
   },
-  taskId: { 
+  taskId: {
     [{
       type: Schema.Types.ObjectId,
       ref: 'Task'
@@ -30,12 +30,12 @@ const bookingSchema = Schema ({
   },
   changeRequests: [{
     type: Schema.Types.ObjectId,
-    ref: 'ChangeRequest' 
+    ref: 'ChangeRequest'
   }],
   installerId: {
     type: Schema.Types.ObjectId,
     ref: 'Company'
-  }, 
+  },
   locationId: {
     type: Schema.Types.ObjectId,
     ref: 'Location'
