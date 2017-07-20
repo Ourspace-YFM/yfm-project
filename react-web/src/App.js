@@ -13,6 +13,7 @@ import SignInPage from './pages/SignInPage'
 import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
+import CreateBooking from'./pages/CreateBookingPage'
 import Assets from './pages/AssetsPage'
 import Job from './pages/JobPage'
 import Task from './pages/TaskPage'
@@ -208,6 +209,8 @@ setDrawerOpen = (boolean) => {
             <Route exact path='/' component={ HomePage } />
             <Route exact path='/assets' component={ Assets } />
             <Route exact path='/contacts' component={ Contacts } />
+            <Route exact path='/createbooking' component={ CreateBooking } />
+
               <Route path='/componentlibrary' render={ () => (
                 <ComponentLibrary
                   setDrawerOpen={this.setDrawerOpen}

@@ -10,7 +10,8 @@ export default function DatePick({
     <div>
       <p className="inputLabel">{ label }</p>
       <MuiThemeProvider>
-        <DatePicker className={ className }/>
+        <DatePicker
+        className={ className }/>
       </MuiThemeProvider>
     </div>
   )

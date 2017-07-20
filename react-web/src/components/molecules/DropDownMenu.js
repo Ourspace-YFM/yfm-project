@@ -5,35 +5,48 @@ import MenuItem from 'material-ui/MenuItem';
 
 const styles = {
   customWidth: {
-    width: 200,
+    width: 300,
   },
 };
 
 export default class DropDownMenuMain extends React.Component {
+  listItems
 
   constructor(props) {
     super(props);
-    this.state = {value: 1};
+    this.state = {
+      value: 0
+    };
   }
 
-  handleChange = (event, index, value) => this.setState({value});
+  handleChange = (event, index, value) => this.setState({ value });
 
   render() {
+
+    const listItems = this.props.listItems
+    const list = []
+
+    for (let i = 1; i < listItems.length; i ++) {
+      list.push(listItems[i])
+    }
+
     return (
       <MuiThemeProvider>
         <div>
           <DropDownMenu
             className="drop-down-menu"
-            value={this.state.value}
-            onChange={this.handleChange}
-            style={styles.customWidth}
-            autoWidth={false}
+            value={ this.state.value }
+            onChange={ this.handleChange }
+            style={ styles.customWidth }
+            autoWidth={ false }
           >
-            <MenuItem value={1} primaryText="Menu Item 1" />
-            <MenuItem value={2} primaryText="Menu Item 2" />
-            <MenuItem value={3} primaryText="Menu Item 3" />
-            <MenuItem value={4} primaryText="Menu Item 4" />
-            <MenuItem value={5} primaryText="Menu Item 5" />
+          {/* Get the first item and list as default, then get the remaining items and list in order of index */}
+
+            <MenuItem value={ 0 } primaryText={ this.props.listItems[0] } />
+            { list.map((menu, index) => {
+              return <MenuItem key={ index } value={ (index) + 1 } primaryText={ menu } />
+            })}
+            
           </DropDownMenu>
         </div>
     </MuiThemeProvider>

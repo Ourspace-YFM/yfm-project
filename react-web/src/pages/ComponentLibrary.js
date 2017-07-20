@@ -86,7 +86,7 @@ export const ComponentLibrary = ({
         </div>
 
         <div>
-          <DropDownMenu />
+          <DropDownMenu listItems={['Alfred','Vinny','Ann','Ben']} />
         </div>
 
         <div style={{display: "inline-block", marginLeft: "15px", marginRight: "15px"}}>
