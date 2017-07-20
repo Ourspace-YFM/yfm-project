@@ -6,10 +6,8 @@ import GreyedInput from '../components/atoms/GreyedInput'
 import DropDownMenu from '../components/molecules/DropDownMenu'
 import DatePick from '../components/atoms/DatePick'
 
-const CreateBooking = () => (
+const NewBooking = () => (
     <div>
-      <Title className='newBooking' text='Enter Booking Details' />
-
       <div className='bookingName'>
         <Text text='Booking Name'/>
       </div>      
@@ -57,10 +55,9 @@ const CreateBooking = () => (
 
       <div className='bookingDate'>
         <DatePick label={ <BoldText text='Select Booking Date: ' /> } className='bookingDatePicker' />    
-        <Text text='Time (HH:MM)'/>   
+        <Text text='Time (HH:MM AM/PM)'/>   
       </div>      
-
     </div>
 )
 
-export default CreateBooking
+export default NewBooking

@@ -22,6 +22,9 @@ export default ({
               <NavLink to='/assets' activeClassName='active'>Assets</NavLink>
             </div>
             <div>
+              <NavLink to='/createbooking' activeClassName='active'>CreateBooking</NavLink>
+            </div>            
+            <div>
               <NavLink to='/contacts' activeClassName='active'>Contacts</NavLink>
             </div>            
           </div>
