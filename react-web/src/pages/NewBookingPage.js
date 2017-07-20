@@ -1,5 +1,4 @@
 import React from 'react'
-import Title from '../components/atoms/Title'
 import Text from '../components/atoms/TextField'
 import BoldText from '../components/atoms/BoldText'
 import GreyedInput from '../components/atoms/GreyedInput'
