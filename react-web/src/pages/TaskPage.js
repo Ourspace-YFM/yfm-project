@@ -34,7 +34,7 @@ export default function Task({
             <br />
 
               { /* If there are bookings, display the expandable card. If there aren't, display a message */
-                !!data.bookings._id ? (
+                !!data.bookings ? (
                   /* (data.bookings) information to go here when bookings seeds have been added. */
                   <div className='tasks'>
                     <ExpandableCard
