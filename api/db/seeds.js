@@ -2,17 +2,59 @@ function fill(){
   var seeder = require('mongoose-seed')
   var data = [
     {
-        model: 'Company',
-        documents: [
-            {
-                _id: '596634c0b925e80783c7721d',
-                name: 'Coles',
-                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png'
+    model: 'Company',
+    documents: [
+         {
+           _id: '596634c0b925e80783c7721d',
+           name: 'Coles',
+           logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png'
+         },{
+           _id: '596634c0b925e80783c7721e',
+           name: 'Super Cheap Storage',
+           logo: 'https://pbs.twimg.com/profile_images/503746566574718976/DaszppQV.jpeg'
+         },{
+           name: 'Bokay',
+           logo: ''
+         },{
+           name: 'Myer',
+           logo: ''
+         },{
+           name: 'City of Onkaparinga',
+           logo: ''
+         },{
+           name: 'LBE Signs',
+           logo: ''
+         },{
+           name: 'Genuine Truck Bodies',
+           logo: ''
+         },{
+         },{
+           name: 'Mercedes Benz Australia',
+           logo: ''
+         },{
+           name: 'Sika Australia',
+           logo: ''
+         }
+       ]
+     },{
+       model: 'Services',
+       documents: [
+         {
+           companyId: '596634c0b925e80783c7721d',
+         }
+       ]
+     },{
+       model: 'Company',
+         documents: [
+           {
+             _id: '596634c0b925e80783c7721d',
+             name: 'Coles',
+             logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png'
             },
             {
-                _id: '596634c0b925e80783c7721e',
-                name: 'Super Cheap Storage',
-                logo: 'https://pbs.twimg.com/profile_images/503746566574718976/DaszppQV.jpeg'
+              _id: '596634c0b925e80783c7721e',
+              name: 'Super Cheap Storage',
+              logo: 'https://pbs.twimg.com/profile_images/503746566574718976/DaszppQV.jpeg'
             }
         ]
     },
@@ -20,25 +62,25 @@ function fill(){
         'model': 'Project',
         'documents': [
           {
-          "_id": "596c52e6cfa78333529928fe",
-          'clientId': '596634c0b925e80783c7721d',
-          'name': 'Mastercard 1',
-          'type': 'Rebrand',
-          'description': 'Marketing Wants a new image',
-          'status': "I'm not sure what to put here",
-          'priority': true,
-          'startDate': Date.now(),
-          'endDate': Date.now(),
+            "_id": "596c52e6cfa78333529928fe",
+            'clientId': '596634c0b925e80783c7721d',
+            'name': 'Mastercard 1',
+            'type': 'Rebrand',
+            'description': 'Marketing Wants a new image',
+            'status': "I'm not sure what to put here",
+            'priority': true,
+            'startDate': Date.now(),
+            'endDate': Date.now(),
           },{
-          "_id": "596c52e6cfa78333529928ff",
-          'clientId': '596634c0b925e80783c7721d',
-          'name': 'West Fleet',
-          'type': 'Maintainance',
-          'description': 'People keep crashig their shit',
-          'status': "I'm not sure what to put here",
-          'priority': false,
-          'startDate': Date.now(),
-          'endDate': Date.now(),
+            "_id": "596c52e6cfa78333529928ff",
+            'clientId': '596634c0b925e80783c7721d',
+            'name': 'West Fleet',
+            'type': 'Maintainance',
+            'description': 'People keep crashig their shit',
+            'status': "I'm not sure what to put here",
+            'priority': false,
+            'startDate': Date.now(),
+            'endDate': Date.now(),
           },{
           "_id": "596c52e6cfa7833352992900",
           'clientId': '596634c0b925e80783c7721e',
