@@ -9,6 +9,8 @@ import {
   TableRowColumn,
 } from 'material-ui/Table';
 
+const array = []
+
 const WorkDetails = () => (
   <div>
     <h1>Select Tasks for Booking</h1>

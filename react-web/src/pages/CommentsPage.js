@@ -4,8 +4,8 @@ import Text from '../components/atoms/TextField'
 const Comments = () => (
   <div>
     <div>
-      <h1>Installer Comments</h1>
-      <Text text={ 'Installer Comments' } />
+      <h1>Installer Instructions</h1>
+      <Text text={ 'Installer Instructions' } />
     </div>
 
     <br />
