@@ -115,7 +115,7 @@ function fill(){
         'model': 'Task',
         'documents': [
         {
-          '_id': '596dc1db10dc3a08f61be9f6', 
+          '_id': '596dc1db10dc3a08f61be9f6',
           'parentJob': '596c6c85c5dbc447854c9a60',
           'name': 'Remove/replace read door SAV',
           'status': 'Complete',
@@ -2364,7 +2364,8 @@ function fill(){
         './models/task.js',
         './models/service.js'
     ])
-    seeder.clearModels(['Service','Company','Project','Location'], function() {
+
+    seeder.clearModels(['Service','Company','Project','Location', 'Job', 'Task'], function() {
 
       // Callback to populate DB once collections have been cleared
       seeder.populateModels(data, function() {

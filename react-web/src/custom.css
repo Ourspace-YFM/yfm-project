@@ -30,13 +30,14 @@ body {
     float: right; }
   .projectsPageProgressItem div.progressItemBarContainer {
     display: inline-block;
-    min-width: 30%; }
+    min-width: 25%;
+    max-width: 25%; }
 
 div.progressItemInfo {
   text-align: center;
   display: inline-block;
-  min-width: 18%;
-  max-width: 18%; }
+  min-width: 15%;
+  max-width: 15%; }
 
 img.logo.mini {
   max-height: 20px; }
@@ -61,3 +62,13 @@ a.links {
     color: #F1F2F2; }
   a.links.underlined {
     text-decoration: underline; }
+
+div.greyedInput {
+  display: inline-block;
+  padding-left: 100px;
+  padding-right: 20px;
+  background-color: #d1d3d4;
+  border: solid 1.2px #bcbec0; }
+  div.greyedInput p {
+    margin: 5px 0;
+    color: #939598; }
