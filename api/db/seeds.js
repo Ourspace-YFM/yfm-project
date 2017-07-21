@@ -13,18 +13,23 @@ function fill(){
           name: 'Super Cheap Storage',
           logo: 'https://pbs.twimg.com/profile_images/503746566574718976/DaszppQV.jpeg'
         },{
+          _id: '59719d405f8ee87150225b8f'
           name: 'Bokay',
           logo: ''
         },{
+          _id: '59719d405f8ee87150225b90'
           name: 'Myer',
           logo: ''
         },{
+          _id: '59719d405f8ee87150225b91'
           name: 'City of Onkaparinga',
           logo: ''
         },{
+          _id: '59719d405f8ee87150225b92'
           name: 'LBE Signs',
           logo: ''
         },{
+          _id: '59719d405f8ee87150225b93'
           name: 'Genuine Truck Bodies',
           logo: ''
         },{
@@ -32,6 +37,7 @@ function fill(){
           name: 'Mercedes Benz Australia',
           logo: ''
         },{
+          _id: '59719d405f8ee87150225b96'
           name: 'Sika Australia',
           logo: ''
         }
