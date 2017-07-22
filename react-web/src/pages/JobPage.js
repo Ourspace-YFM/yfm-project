@@ -19,8 +19,14 @@ export default function Job({
       {
         !!data ? (
           <div>
-          <h1>{ data.job.name }</h1>
-          <Logo src={data.job.owner.logo} alt={data.job.owner.name + " Logo"} className="lrg"/>
+          <div className="jobHeader">
+            <div className="jobNameTitle">
+              <h1>{ data.job.name }</h1>
+            </div>
+            <div className="jobLogo">
+              <Logo src={data.job.owner.logo} alt={data.job.owner.name + " Logo"} className="lrg"/>
+            </div>
+          </div>
           <div>
             <BoldText text="Project: "/>
             <LightText text={data.job.owner.name}/>
@@ -54,9 +60,9 @@ export default function Job({
                       <BoldText text="Status: " />
                       <LightText text={ task.status } /> <br />
                       <LinkButton label='View' buttonColor='#F06734' link={ `/tasks/${task._id}` }/>
-                    </div>                    
+                    </div>
                   } />
-              </div>              
+              </div>
             ))}
 
           </div>

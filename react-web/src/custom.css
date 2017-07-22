@@ -33,6 +33,24 @@ body {
     min-width: 25%;
     max-width: 25%; }
 
+div.jobHeader {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 10px 20% 50px 20%; }
+
+div.jobNameTitle {
+  display: inline-block;
+  min-width: 50%; }
+
+div.jobLogo {
+  display: inline-block;
+  min-width: 50%; }
+
 div.progressItemInfo {
   text-align: center;
   display: inline-block;
