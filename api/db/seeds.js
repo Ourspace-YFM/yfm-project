@@ -142,13 +142,13 @@ function fill(){
           owner: '59719d405f8ee87150225b98',
           name: 'Reapir 3 vans for COL Albury',
           status: 'Incomplete',
-          description: 'jkl'
+          description: 'Van \'Terry\' (M-CB): Corners; Van \'Meagan\' (M-CB): SKN, FRA repairs; Van \'Jonathon\': SKN, SAV repairs'
         },{
           _id: '596c6c85c5dbc447854c9a60',
           projectId: '596c52e6cfa78333529928f',
           owner: '59719d405f8ee87150225b9a',
           name: 'Repair 2 vans for COL Alice Springs',
-          status: 'Complete',
+          status: 'Incomplete',
           description: 'Van Alicia (H-G2): SKN, FRA repairs; Van Stan (H-G2): SKN, SAV repairs'
         },{
           _id: '596c6c85c5dbc447854c9a62',
@@ -159,11 +159,11 @@ function fill(){
           description: 'MC1 Rebrand of 6x vans: 3x H-G1, 3x M-CB'
         },{
           _id: '596c6c85c5dbc447854c9a5f',
-          projectId: '596c52e6cfa78333529928fe',
+          projectId: '596c52e6cfa7833352992900',
           owner: '596634c0b925e80783c7721d',
-          name: 'Rebrand all vans for COL ',
+          name: 'Rebrand SCS VIC Truck #1',
           status: 'On-hold',
-          description: 'DUI on our truck....'
+          description: '\'Ex-PM\' rebrand of 1st of 2 VIC trucks - rear SKN only, no SAV.'
         },{
           _id: '596c6c85c5dbc447854c9a61',
           projectId: '5972ae520792a1c46ebee7cf',
@@ -171,7 +171,7 @@ function fill(){
           name: 'Install FRA & SKN on new 30m3 hard-waste truck',
           status: 'Incomplete',
           description: ' '
-        },{
+         },{
           _id: '5972b18f151a63e4ea041308',
           projectId: '596a093b8b062a980ae4c1dc',
           owner: '596634c0b925e80783c7721e',
@@ -184,95 +184,131 @@ function fill(){
       model: 'Task',
       documents: [
         {
+          _id: '5973165c71af1a36b66126ef'
+          parentJob: '5972d38877e3597c6a578c27',
+          name: 'Remove/replace rear door SAV',
+          status: 'Incomplete',
+          completed: false
+        },{
+          _id: '5973165c71af1a36b66126f0'
+          parentJob: '5972d38877e3597c6a578c27',
+          name: 'Replaced damaged DS front vertical tensioner',
+          status: 'Incomplete',
+          completed: false
+        },{
+          _id: '5973165c71af1a36b66126f1'
+          parentJob: '5972d38877e3597c6a578c27',
+          name: 'Remove/replace PS skin',
+          status: 'Incomplete',
+          completed: false
+        },{
+          _id: '5973165c71af1a36b66126f2'
+          parentJob: '5972d38877e3597c6a578c27',
+          name: 'Replace all damaged/missing corner pieces',
+          status: 'Incomplete',
+          completed: false
+        },{
           _id: '596dc1db10dc3a08f61be9f6',
           parentJob: '596c6c85c5dbc447854c9a60',
-          name: 'Remove/replace read door SAV',
+          name: 'Remove/replace rear door SAV',
           status: 'Complete',
-          completed: true,
+          completed: true
         },{
           _id: '596dc1db10dc3a08f61be9f7',
           parentJob: '596c6c85c5dbc447854c9a60',
           name: 'Remove/replace PS skin',
           status: 'Complete',
-          completed: true,
+          completed: true
         },{
           _id: '596dc1db10dc3a08f61be9f8',
           parentJob: '596c6c85c5dbc447854c9a60',
           name: 'Remove/replace DS skin',
+          status: 'Complete',
+          completed: true
+        },{
+          _id: '5973165c71af1a36b66126f3',
+          parentJob: '596c6c85c5dbc447854c9a60',
+          name: 'Reglue front vertical D/S base frame',
           status: 'Incomplete',
-          completed: false,
+          completed: false
         },{
-          _id: '596dc1db10dc3a08f61be9f9',
+          _id: '5973165c71af1a36b66126f4'
           parentJob: '596c6c85c5dbc447854c9a62',
-          name: 'Install D/S skin',
+          name: 'Remove/replace rear door SAV',
           status: 'Complete',
-          completed: true,
+          completed: true
         },{
-          _id: '596dc1db10dc3a08f61be9fa',
+          _id: '5973165c71af1a36b66126f5',
           parentJob: '596c6c85c5dbc447854c9a62',
-          name: 'Install P/S skin',
+          name: 'Remove/replace PS skin',
           status: 'Complete',
-          completed: true,
+          completed: true
         },{
-          _id: '596dc1db10dc3a08f61be9fb',
+          _id: '5973165c71af1a36b66126f6'
           parentJob: '596c6c85c5dbc447854c9a62',
-          name: 'Remove/replace D/S door decal',
+          name: 'Remove/replace DS skin',
           status: 'Complete',
-          completed: true,
+          completed: true
         },{
-          _id: '596dc1db10dc3a08f61be9fc',
+          _id: '596dc1db10dc3a08f61bea01',
           parentJob: '596c6c85c5dbc447854c9a62',
-          name: 'Replace missing/damaged corner covers',
+          name: 'Replace damaged/missing corner covers',
           status: 'Complete',
           completed: true,
         },{
           _id: '596dc1db10dc3a08f61be9fd',
           parentJob: '596c6c85c5dbc447854c9a5f',
-          name: 'Reglue front vertical D/S base frame',
+          name: 'Remove replace rear skin',
           status: 'Complete',
-          completed: true,
+          completed: true
         },{
           _id: '596dc1db10dc3a08f61be9fe',
           parentJob: '596c6c85c5dbc447854c9a5f',
           name: 'Replace damaged/missing corner covers',
           status: 'Complete',
-          completed: false,
-        },{
-          _id: '596dc1db10dc3a08f61be9ff',
-          parentJob: '596c6c85c5dbc447854c9a5f',
-          name: 'Remove/replace D/S weight decal',
-          status: 'Incomplete',
-          completed: false,
+          completed: false
         },{
           _id: '596dc1db10dc3a08f61bea00',
           parentJob: '596c6c85c5dbc447854c9a61',
-          name: 'Remove/replace P/S skin',
-          status: 'Complete',
-          completed: true,
-        },{
-          _id: '596dc1db10dc3a08f61bea01',
-          parentJob: '596c6c85c5dbc447854c9a61',
-          name: 'Replace damaged/missing corner covers',
-          status: 'Complete',
-          completed: false,
+          name: 'Install P/S Traxx-Curve frame',
+          status: 'Incomplete',
+          completed: false
         },{
           _id: '596dc1db10dc3a08f61bea02',
           parentJob: '596c6c85c5dbc447854c9a61',
-          name: 'Install D/S base frame',
+          name: 'Install D/S Traxx-Curve frame',
           status: 'Incomplete',
-          completed: false,
+          completed: false
         },{
           _id: '596dc1db10dc3a08f61bea03',
           parentJob: '596c6c85c5dbc447854c9a61',
-          name: 'Remove/replace P/S skin',
-          status: 'Complete',
-          completed: true,
+          name: 'Install P/S skin',
+          status: 'Incomplete',
+          completed: false
         },{
           _id: '596dc1db10dc3a08f61bea04',
           parentJob: '596c6c85c5dbc447854c9a61',
-          name: 'Install P/S ID decal',
+          name: 'Insatall D/S skin',
           status: 'Incomplete',
-          completed: false,
+          completed: false
+        },{
+          _id: '5973165c71af1a36b66126f7',
+          parentJob: '5972b18f151a63e4ea041308',
+          name: 'Measure and produce diagram of P/S panel01',
+          status: 'Incomplete',
+          completed: false
+        },{
+          _id: '5973165c71af1a36b66126f8',
+          parentJob: '5972b18f151a63e4ea041308',
+          name: 'Measure and produce diagram of D/S panel',
+          status: 'Incomplete',
+          completed: false
+        },{
+          _id: '5973165c71af1a36b66126f9',
+          parentJob: '5972b18f151a63e4ea041308',
+          name: 'Measure and produce diagram of rear panel',
+          status: 'Incomplete',
+          completed: false
         }
       ]
     },{
