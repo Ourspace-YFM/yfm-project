@@ -23,10 +23,13 @@ export default ({
             </div>
             <div>
               <NavLink to='/createbooking' activeClassName='active'>CreateBooking</NavLink>
-            </div>            
+            </div>
             <div>
               <NavLink to='/contacts' activeClassName='active'>Contacts</NavLink>
-            </div>            
+            </div>
+            <div>
+              <NavLink to='/bookings' activeClassName='active'>Bookings</NavLink>
+            </div>
           </div>
         ]
         }
