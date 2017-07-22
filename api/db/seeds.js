@@ -181,6 +181,13 @@ function fill(){
         }
       ]
     },{
+      model: 'Booking',
+      documents: [
+        {
+          companyId: '596634c0b925e80783c7721d',
+        }
+      ]
+    },{
       model: 'Task',
       documents: [
         {
