@@ -113,11 +113,21 @@ function fill(){
           'startDate': Date.now(),
           'endDate': Date.now(),
         },{
-          _id: '5972ac80e45696b15021a3b3'
+          _id: '5972ac80e45696b15021a3b3',
           clientId: '59719d405f8ee87150225b90',
           'name': 'New truck setup',
           'type': 'New-build',
           'description': 'New truck setup (Traxx & SAV) in various states for Myer/Linfox.',
+          'status': 'Closed',
+          'priority': false,
+          'startDate': Date.now(),
+          'endDate': Date.now(),
+        },{
+          _id: '5972ae520792a1c46ebee7cf',
+          clientId: '59719d405f8ee87150225b91',
+          'name': 'New truck setup',
+          'type': 'New-build',
+          'description': 'New truck setup (Traxx-curve) for Onkaparinga Council.',
           'status': 'Closed',
           'priority': false,
           'startDate': Date.now(),
@@ -132,29 +142,36 @@ function fill(){
           'projectId': '596a093b8b062a980ae4c1dc',
           'owner': '596634c0b925e80783c7721e',
           'name': '',
-          'status': "Open",
-          'description': 'anoda day, anoda dolla',
+          'status': 'Open',
+          'description': ' '
         },{
           '_id': '596c6c85c5dbc447854c9a62',
           'projectId': '596a093b8b062a980ae4c1dc',
           'owner': '596634c0b925e80783c7721e',
           'name': 'Dave & John canvas refit',
-          'status': "Open",
-          'description': '3 Vynls',
+          'status': 'Open',
+          'description': '3 Vynls'
         },{
           '_id': '596c6c85c5dbc447854c9a5f',
           'projectId': '596a093b8b062a980ae4c1db',
           'owner': '596634c0b925e80783c7721d',
           'name': 'Damage repair',
-          'status': "I'm not sure what to put here",
-          'description': 'DUI on our truck....',
+          'status': 'Im not sure what to put here',
+          'description': 'DUI on our truck....'
         },{
           '_id': '596c6c85c5dbc447854c9a61',
           'projectId': '596a093b8b062a980ae4c1db',
           'owner': '596634c0b925e80783c7721d',
-          'name': 'Retighten vynl',
-          'status': "I'm not sure what to put here",
-          'description': 'Just needs plastic part',
+          'name': 'Refit poorly installed Skin at COL',
+          'status': ' ',
+          'description': 'Just needs plastic part'
+        },{
+          _id: '5972b18f151a63e4ea041308',
+          'projectId': '596a093b8b062a980ae4c1dc',
+          'owner': '596634c0b925e80783c7721e',
+          'name': 'New truck measure up (NSW)',
+          'status': 'Closed',
+          'description': 'New truck measure up @ Eastern Creek DC (NSW)'
         }
       ]
     },{
