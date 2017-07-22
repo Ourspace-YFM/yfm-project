@@ -184,25 +184,25 @@ function fill(){
       model: 'Task',
       documents: [
         {
-          _id: '5973165c71af1a36b66126ef'
+          _id: '5973165c71af1a36b66126ef',
           parentJob: '5972d38877e3597c6a578c27',
           name: 'Remove/replace rear door SAV',
           status: 'Incomplete',
           completed: false
         },{
-          _id: '5973165c71af1a36b66126f0'
+          _id: '5973165c71af1a36b66126f0',
           parentJob: '5972d38877e3597c6a578c27',
           name: 'Replaced damaged DS front vertical tensioner',
           status: 'Incomplete',
           completed: false
         },{
-          _id: '5973165c71af1a36b66126f1'
+          _id: '5973165c71af1a36b66126f1',
           parentJob: '5972d38877e3597c6a578c27',
           name: 'Remove/replace PS skin',
           status: 'Incomplete',
           completed: false
         },{
-          _id: '5973165c71af1a36b66126f2'
+          _id: '5973165c71af1a36b66126f2',
           parentJob: '5972d38877e3597c6a578c27',
           name: 'Replace all damaged/missing corner pieces',
           status: 'Incomplete',
@@ -232,7 +232,7 @@ function fill(){
           status: 'Incomplete',
           completed: false
         },{
-          _id: '5973165c71af1a36b66126f4'
+          _id: '5973165c71af1a36b66126f4',
           parentJob: '596c6c85c5dbc447854c9a62',
           name: 'Remove/replace rear door SAV',
           status: 'Complete',
@@ -244,7 +244,7 @@ function fill(){
           status: 'Complete',
           completed: true
         },{
-          _id: '5973165c71af1a36b66126f6'
+          _id: '5973165c71af1a36b66126f6',
           parentJob: '596c6c85c5dbc447854c9a62',
           name: 'Remove/replace DS skin',
           status: 'Complete',
