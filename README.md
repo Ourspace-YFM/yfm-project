@@ -27,6 +27,8 @@
 
 ### Desktop View
 ![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/sign-in-desktop.jpg "Sign In Desktop View")
+![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/new-password-desktop.jpg "New Password Desktop View")
+![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/dashboard-and-form-desktop.jpg "Dashboard and Form Desktop View")
 
 
 
