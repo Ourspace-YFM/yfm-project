@@ -40,6 +40,10 @@ function fill(){
           _id: '59719d405f8ee87150225b96',
           name: 'Sika Australia',
           logo: ''
+        },{
+          _id: '597413e439e98c0769da5a65',
+          name: 'Alice Crash Repairs',
+          logo: ''
         }
       ]
     },{
@@ -47,7 +51,30 @@ function fill(){
       documents: [
         {
           companyId: '596634c0b925e80783c7721d',
+          location: '59719d405f8ee87150225b9a',
+          role: 'Client',
+          type: 'Install Location',
+          description: 'COL Alice Springs'
+        },{
+          companyId: '596634c0b925e80783c7721d',
+          location: '59719d405f8ee87150225b9a',
+          role: 'Client',
+          type: 'COL Store',
+          description: 'COL Alice Springs'
+        },{
+          companyId: '59719d405f8ee87150225b92',
+          location: '',
+          role: 'Installer',
+          type: 'HQ',
+          description: 'LBE Signs'
+        },{
+          companyId: '597413e439e98c0769da5a65',
+          location: '597414fa98a3a71116fe07c1',
+          role: 'Installer',
+          type: 'HQ',
+          description: 'Alice Crash Repairs HQ'
         }
+
       ]
     },{
       model: 'Project',
@@ -178,6 +205,26 @@ function fill(){
           name: 'New truck measure up (NSW)',
           status: 'Complete',
           description: 'New truck measure up @ Eastern Creek DC (NSW)'
+        }
+      ]
+    },{
+      model: 'Booking',
+      documents: [
+        {
+          jobId: '5972d38877e3597c6a578c27',
+          taskId: ['5973165c71af1a36b66126ef', '5973165c71af1a36b66126f0', '5973165c71af1a36b66126f1', '5973165c71af1a36b66126f2'],
+          name: 'D A Signs @ COL Albury - Mon 31 Jull 2017 @ 11AM',
+          status: 'Tentative',
+          installerConfirmed: false,
+          clientConfirmed: false,
+          changeRequests: [''], 
+          installerId: '',
+          locationId: '',
+          bookedDate: Date,
+          instructions: '',
+          attachments: [''],
+          actualStartTime: Date,
+          actualFinishTime: Date
         }
       ]
     },{
@@ -314,6 +361,19 @@ function fill(){
     },{
       model: 'Location',
       documents: [  
+        {
+          _id: '597414fa98a3a71116fe07c1',
+          name: 'Alice Crash Repairs',
+          street: '7 Brown Street',
+          city: "Alice Springs",
+          state: "NT",
+          postcode: "0870",
+          email: 'alexi@alicecrashrepairs.com.au',
+          __v: 0,
+          primaryContacts: ['Alexi Hatzimihail'],
+          phoneNumber: ['+61 8 8952 1600'],
+          coordinates: [-23.690220, 133.869832]
+        },
          {  
                _id: '59719d405f8ee87150225b9a',
                name: 'COL Alice Springs',
