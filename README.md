@@ -13,7 +13,7 @@
 
 ### Design Layout
 - Pulled from
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/document_photos/Style-guide.jpg "Homepage sliders")
+![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/Style-guide.jpg "Style Guide")
 
 ## Tools used
 - Trello
