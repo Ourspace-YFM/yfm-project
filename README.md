@@ -14,7 +14,7 @@
 ### Style Guide
 - Pulled from YFM Brand Guideline:
 
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/Brand-guide.jpg "Brand Guideline")
+![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/brand-guide.jpg "Brand Guideline")
 
 - Our Style Guide
 
@@ -22,6 +22,8 @@
 
 ### Mobile View
 ![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/sign-in-mobile.jpg "Sign In Page Mobile View")
+![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/new-password-mobile.jpg "New Password Mobile View")
+![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/dashboard-mobile.jpg "Dashboard Mobile View")
 
 
 
