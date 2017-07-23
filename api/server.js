@@ -11,6 +11,7 @@ const profilesRouter = require('./routes/profiles')
 const tasksRouter = require('./routes/tasks')
 const projectsRouter = require('./routes/projects')
 const locationsRouter = require('./routes/locations')
+const servicesRouter = require('./routes/services')
 
 const Seed = require('./db/seeds')
 
@@ -36,6 +37,7 @@ server.use(profilesRouter)
 server.use(tasksRouter)
 server.use(projectsRouter)
 server.use(locationsRouter)
+server.use(servicesRouter)
 
 server.use('/auth',authRouter)
 server.use(authMiddleware.initialize)
