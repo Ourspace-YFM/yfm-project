@@ -5,8 +5,10 @@ const Task = require('../models/task')
 router
 .route('/jobs')
 .get((req, res) => {
-  let id = req.params.id
+  // let id = req.params.id
   Job.find()
+  .populate('parentProject')
+  .populate('owner')
   .then((jobs)=>{
     res.json(jobs)
   })

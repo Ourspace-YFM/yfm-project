@@ -44,37 +44,58 @@ function fill(){
           _id: '597413e439e98c0769da5a65',
           name: 'Alice Crash Repairs',
           logo: ''
+        },{
+          _id: '597435e196906a669414fa27',
+          name: 'D A Signs',
+          logo: ''
         }
       ]
     },{
       model: 'Service',
       documents: [
         {
+          _id: '597438f1ec0f19855b6921b8',
           companyId: '596634c0b925e80783c7721d',
-          location: '59719d405f8ee87150225b9a',
+          locationId: '59719d405f8ee87150225b9a',
           role: 'Client',
           type: 'Install Location',
           description: 'COL Alice Springs'
         },{
+          _id: '597438f1ec0f19855b6921b9',
           companyId: '596634c0b925e80783c7721d',
-          location: '59719d405f8ee87150225b9a',
+          locationId: '59719d405f8ee87150225b9a',
           role: 'Client',
           type: 'COL Store',
           description: 'COL Alice Springs'
         },{
+          _id: '597438f1ec0f19855b6921ba',
           companyId: '59719d405f8ee87150225b92',
-          location: '',
+          locationId: '597434a5d8c8205405cca7ae',
           role: 'Installer',
           type: 'HQ',
-          description: 'LBE Signs'
+          description: 'LBE Signs HQ'
         },{
+          _id: '597438f1ec0f19855b6921bb',
           companyId: '597413e439e98c0769da5a65',
-          location: '597414fa98a3a71116fe07c1',
+          locationId: '597414fa98a3a71116fe07c1',
           role: 'Installer',
           type: 'HQ',
           description: 'Alice Crash Repairs HQ'
+        },{
+          _id: '597438f1ec0f19855b6921bc',
+          companyId: '597413e439e98c0769da5a65',
+          locationId: '597414fa98a3a71116fe07c1',
+          role: 'Installer',
+          type: 'Workshop',
+          description: 'Alice Crash Repairs Workshop'
+        },{
+          _id: '597438f1ec0f19855b6921bd',
+          companyId: '597435e196906a669414fa27',
+          locationId: '59743795e834d174405a6574',
+          role: 'Installer',
+          type: 'HQ',
+          description: 'D A Signs HQ'
         }
-
       ]
     },{
       model: 'Project',
@@ -84,7 +105,7 @@ function fill(){
           clientId: '596634c0b925e80783c7721d',
           name: '\'Mastercard 1\' Rebrand',
           type: 'Rebrand',
-          description: 'Nation wide rebrand of all SKN vans with new MasterCard campaign.',
+          description: 'Nation wide rebrand of all SKN vans with new MasterCard campaign',
           status: 'Closed',
           priority: true,
           startDate: Date.now(),
@@ -94,7 +115,7 @@ function fill(){
           clientId: '596634c0b925e80783c7721d',
           name: 'COL fleet reapirs & maintenance',
           type: 'Maintainance',
-          description: 'Ongoing nationwide repairs and maintenance of the COL fleet.',
+          description: 'Ongoing nationwide repairs and maintenance of the COL fleet',
           status: 'Open',
           priority: false,
           startDate: Date.now(),
@@ -104,7 +125,7 @@ function fill(){
           clientId: '596634c0b925e80783c7721e',
           name: '\'Ex-PM\' campaign rebrand',
           type: 'Rebrand',
-          description: 'Full fleet (7x trucks) rear skin rebrand.',
+          description: 'Full fleet (7x trucks) rear skin rebrand',
           status: 'Closed',
           priority: true,
           startDate: Date.now(),
@@ -130,8 +151,9 @@ function fill(){
           startDate: Date.now(),
           endDate: Date.now(),
         },{
+          _id: '59743bd952973f13d720b4d0',
           clientId: '59719d405f8ee87150225b90',
-          name: 'Ongoing repairs and maintenance of Myer fleet.',
+          name: 'Ongoing repairs and maintenance of Myer fleet',
           type: 'Maintenance',
           description: '',
           status: 'Open',
@@ -143,7 +165,7 @@ function fill(){
           clientId: '59719d405f8ee87150225b90',
           name: 'New truck setup',
           type: 'New-build',
-          description: 'New truck setup (Traxx & SAV) in various states for Myer/Linfox.',
+          description: 'New truck setup (Traxx & SAV) in various states for Myer/Linfox',
           status: 'Closed',
           priority: false,
           startDate: Date.now(),
@@ -153,7 +175,7 @@ function fill(){
           clientId: '59719d405f8ee87150225b91',
           name: 'New truck setup',
           type: 'New-build',
-          description: 'New truck setup (Traxx-curve) for Onkaparinga Council.',
+          description: 'New truck setup (Traxx-curve) for Onkaparinga Council',
           status: 'Closed',
           priority: false,
           startDate: Date.now(),
@@ -165,42 +187,42 @@ function fill(){
       documents: [
         {
           _id: '5972d38877e3597c6a578c27',
-          projectId: '596c52e6cfa78333529928f',
+          parentProject: '596c52e6cfa78333529928ff',
           owner: '59719d405f8ee87150225b98',
           name: 'Reapir 3 vans for COL Albury',
           status: 'Incomplete',
           description: 'Van \'Terry\' (M-CB): Corners; Van \'Meagan\' (M-CB): SKN, FRA repairs; Van \'Jonathon\': SKN, SAV repairs'
         },{
           _id: '596c6c85c5dbc447854c9a60',
-          projectId: '596c52e6cfa78333529928f',
+          parentProject: '596c52e6cfa78333529928ff',
           owner: '59719d405f8ee87150225b9a',
           name: 'Repair 2 vans for COL Alice Springs',
           status: 'Incomplete',
           description: 'Van Alicia (H-G2): SKN, FRA repairs; Van Stan (H-G2): SKN, SAV repairs'
         },{
           _id: '596c6c85c5dbc447854c9a62',
-          projectId: '596c52e6cfa78333529928fe',
+          parentProject: '596c52e6cfa78333529928fe',
           owner: '59719d405f8ee87150225b99',
           name: 'Rebrand 6x vans for COL Alexandra Heights',
           status: 'Incomplete',
           description: 'MC1 Rebrand of 6x vans: 3x H-G1, 3x M-CB'
         },{
           _id: '596c6c85c5dbc447854c9a5f',
-          projectId: '596c52e6cfa7833352992900',
+          parentProject: '596c52e6cfa7833352992900',
           owner: '596634c0b925e80783c7721d',
           name: 'Rebrand SCS VIC Truck #1',
           status: 'On-hold',
           description: '\'Ex-PM\' rebrand of 1st of 2 VIC trucks - rear SKN only, no SAV.'
         },{
           _id: '596c6c85c5dbc447854c9a61',
-          projectId: '5972ae520792a1c46ebee7cf',
+          parentProject: '5972ae520792a1c46ebee7cf',
           owner: '596634c0b925e80783c7721d',
           name: 'Install FRA & SKN on new 30m3 hard-waste truck',
           status: 'Incomplete',
           description: ' '
          },{
           _id: '5972b18f151a63e4ea041308',
-          projectId: '596a093b8b062a980ae4c1dc',
+          parentProject: '5972ac80e45696b15021a3b3',
           owner: '596634c0b925e80783c7721e',
           name: 'New truck measure up (NSW)',
           status: 'Complete',
@@ -217,14 +239,14 @@ function fill(){
           status: 'Tentative',
           installerConfirmed: false,
           clientConfirmed: false,
-          changeRequests: [''], 
-          installerId: '',
-          locationId: '',
-          bookedDate: Date,
+          changeRequests: [], 
+          installerId: '597438f1ec0f19855b6921bd',
+          locationId: '59719d405f8ee87150225b98',
+          bookedDate: Date.now(),
           instructions: '',
           attachments: [''],
-          actualStartTime: Date,
-          actualFinishTime: Date
+          actualStartTime: Date.now(),
+          actualFinishTime: Date.now()
         }
       ]
     },{
@@ -373,8 +395,31 @@ function fill(){
           primaryContacts: ['Alexi Hatzimihail'],
           phoneNumber: ['+61 8 8952 1600'],
           coordinates: [-23.690220, 133.869832]
-        },
-         {  
+        },{  
+          _id: '597434a5d8c8205405cca7ae',
+          name: 'LBE Signs',
+          street: '121 The Gateway',
+          city: 'Lilydale',
+          state: 'VIC',
+          postcode: '3140',
+          email: '',
+          __v: 0,
+          primaryContacts: ['Brett Enever'],
+          phoneNumber: [''],
+          coordinates: [-37.743437, 145.340579]
+        },{  
+          _id: '59743795e834d174405a6574',
+          name: 'D A Signs',
+          street: '52 High Street',
+          city: 'Wodonga',
+          state: 'VIC',
+          postcode: '3690',
+          email: 'info@dasigns.com.au',
+          __v: 0,
+          primaryContacts: [''],
+          phoneNumber: ['+61 2 6056 6060'],
+          coordinates: [-36.116037, 146.891318]
+        },{
                _id: '59719d405f8ee87150225b9a',
                name: 'COL Alice Springs',
                street: 'Alice Springs S/C Cnr Gregory Tce & Bath St',

@@ -3,11 +3,11 @@ const mongoose = require('./init')
     , Schema = mongoose.Schema
 
 const servicesSchema = Schema({
-  company:  {
+  companyId:  {
     type: Schema.Types.ObjectId,
     ref: 'Company'
   },
-  location:  {
+  locationId:  {
     type: Schema.Types.ObjectId,
     ref: 'Job'
   },
