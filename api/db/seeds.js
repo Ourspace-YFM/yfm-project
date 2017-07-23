@@ -631,7 +631,7 @@ function fill(){
           "city":"Banksia Grove",
           "state":"WA",
           "postcode":"6031",
-          "email":"Coles.0260.online.manager@coles.com.au ",
+          "email":"Coles.0260.Online.Manager@coles.com.au ",
           "__v":0,
           "primaryContacts":[  
             "Mark Ewing",
@@ -825,7 +825,7 @@ function fill(){
           "city":"Byford",
           "state":"WA",
           "postcode":"6122",
-          "email":"Coles.0263.online.manager@coles.com.au",
+          "email":"Coles.0263.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Tracey MacMillan",
@@ -932,7 +932,7 @@ function fill(){
           "city":"Carlingford",
           "state":"NSW",
           "postcode":"2118",
-          "email":"Coles.0872.online.manager@coles.com.au",
+          "email":"Coles.0872.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Cathy Arcuri",
@@ -954,7 +954,7 @@ function fill(){
           "city":"Deer Park",
           "state":"VIC",
           "postcode":"3023",
-          "email":"coles.7612.Online.Manager@coles.com.au",
+          "email":"Coles.7612.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Sally Clough",
@@ -1040,7 +1040,7 @@ function fill(){
           "city":"Emerald",
           "state":"QLD",
           "postcode":"4720",
-          "email":"Coles.4541.online.manager@coles.com.au ",
+          "email":"Coles.4541.Online.Manager@coles.com.au ",
           "__v":0,
           "primaryContacts":[  
             "Bec Reynolds",
@@ -1621,7 +1621,7 @@ function fill(){
           "city":"Mango Hill",
           "state":"QLD",
           "postcode":"4509",
-          "email":"Coles.4436.online.manager@coles.com.au",
+          "email":"Coles.4436.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Paula Fitzgerald",
@@ -1686,7 +1686,7 @@ function fill(){
           "city":"Mona Vale",
           "state":"NSW",
           "postcode":"2103",
-          "email":"Coles.0884.online.manager@coles.com.au",
+          "email":"Coles.0884.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Heidi Schofield",
@@ -1708,7 +1708,7 @@ function fill(){
           "city":"Morwell",
           "state":"VIC",
           "postcode":"3841",
-          "email":"coles.7899.Online.Manager@coles.com.au",
+          "email":"Coles.7899.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Meagan",
@@ -1730,7 +1730,7 @@ function fill(){
           "city":"Mowbray",
           "state":"TAS",
           "postcode":"7248",
-          "email":"Coles.7502.online.manager@coles.com.au",
+          "email":"Coles.7502.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Beau Ward",
@@ -1752,7 +1752,7 @@ function fill(){
           "city":"Mt Gambier",
           "state":"SA",
           "postcode":"5290",
-          "email":"coles.0433.online.manager@coles.com.au",
+          "email":"Coles.0433.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Rebecca Bell"
@@ -1794,7 +1794,7 @@ function fill(){
           "city":"Narellan",
           "state":"NSW",
           "postcode":"2567",
-          "email":"coles.5800.online.manager@coles.com.au",
+          "email":"Coles.5800.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Jessica Nielson",
@@ -1880,7 +1880,7 @@ function fill(){
           "city":"Sebastapol",
           "state":"VIC",
           "postcode":"3356",
-          "email":"Coles.0580.online.manager@coles.com.au",
+          "email":"Coles.0580.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Lyndell Eshuag",
@@ -2271,7 +2271,7 @@ function fill(){
           "city":"Riverton",
           "state":"WA",
           "postcode":"6147",
-          "email":"coles.0465.online.manager@coles.com.au",
+          "email":"Coles.0465.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "David Deb",
