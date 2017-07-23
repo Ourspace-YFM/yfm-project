@@ -18,6 +18,62 @@
 - Search and filter client assets, locations, companies and contacts
 - Add a booking
 
+### Starting the application
+#### Start API Server
+1. `$ cd yfm-project/api`
+2. `$ yarn`
+3. `$ yarn dev`
+4. Stage seeds: `localhost:7000/setup`
+
+#### Start React Front-End
+1. `$ cd yfm-project/react-web`
+2. `$ yarn`
+3. `$ yarn start`
+
+#### Project Dependencies & Libraries
+**Front-End**
+| Dependency | Version |
+| --- | --- |
+| axios | 0.16.2 |
+| google-map-react | 0.24.0 |
+| lodash | 4.17.4 |
+| material-ui | 0.18.6 |
+| react | 15.6.1 |
+| react-a11y | 0.3.4 |
+| react-dom | 15.6.1 |
+| react-router-dom | 4.1.1 |
+| react-tap-event-plugin | 2.0.1 |
+| recompose | 0.24.0 |
+| eslint | 3.19.0 |
+| eslint-config-airbnb | 15.0.2 |
+| eslint-plugin-import | 2.7.0 |
+| eslint-plugin-jsx-a11y | 5.1.1 |
+| eslint-plugin-react | 7.1.0 |
+| gulp | 3.9.1 |
+| gulp-coffee | 2.3.4 |
+| gulp-concat | 2.6.1 |
+| gulp-sass | 3.1.0 |
+
+**Back-End**
+| Dependency | Version |
+| --- | --- |
+| eslint | 3.19.0 |
+| eslint-config-airbnb | 15.0.2 |
+| eslint-plugin-import | 2.7.0 |
+| eslint-plugin-jsx-a11y | 5.1.1 |
+| eslint-plugin-react | 7.1.0 |
+| nodemon | 1.11.0 |
+| body-parser | 1.17.2 |
+| cors | 2.8.3 |
+| express | 4.15.3 |
+| mongoose | 4.11.0 |
+| mongoose-seed | 0.3.2 |
+| passport | 0.3.2 |
+| passport-jwt | 2.2.1 |
+| passport-local | 1.0.0 |
+| passport-local-mongoose | 4.0.0 |
+
+
 ### Database design
 - MVP Database
 ![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/mvp-db.png "MVP Database")
@@ -59,5 +115,7 @@
 
 ## Tools used
 - Trello
+    - Planning & Research Board: https://trello.com/b/FWmAdMZ8/group-project
+    - Kanban Development Board: https://trello.com/b/lStZ3bGY/ourspace-kanban-developer-board
 - DB Designer
 - Illustrator
