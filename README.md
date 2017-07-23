@@ -20,6 +20,9 @@
 
 ### Database design
 
+### Workflow Overview
+![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/workflow-overview.png "Workflow Overview")
+
 ## Wireframes
 
 ### Style Guide
