@@ -48,6 +48,10 @@ function fill(){
           _id: '597435e196906a669414fa27',
           name: 'D A Signs',
           logo: ''
+        },{
+          _id: '59749b4c6df3cd4b3b517050',
+          name: 'Signwave Parramatta',
+          logo: ''
         }
       ]
     },{
@@ -95,6 +99,13 @@ function fill(){
           role: 'Installer',
           type: 'HQ',
           description: 'D A Signs HQ'
+        },{
+          _id: '59749ecce9d15f72244e5dc9',
+          companyId: '59749b4c6df3cd4b3b517050',
+          locationId: '59749d9ac5dee462430ea5ca',
+          role: 'Installer',
+          type: 'HQ',
+          description: 'Signwave Parramatta HQ'
         }
       ]
     },{
@@ -199,7 +210,7 @@ function fill(){
           name: 'Repair 2 vans for COL Alice Springs',
           status: 'Incomplete',
           description: 'Van Alicia (H-G2): SKN, FRA repairs; Van Stan (H-G2): SKN, SAV repairs'
-        },{
+       },{
           _id: '596c6c85c5dbc447854c9a62',
           parentProject: '596c52e6cfa78333529928fe',
           owner: '59719d405f8ee87150225b99',
@@ -233,18 +244,51 @@ function fill(){
       model: 'Booking',
       documents: [
         {
+          _id: '597440e438c63043695130f7',
           jobId: '5972d38877e3597c6a578c27',
           taskId: ['5973165c71af1a36b66126ef', '5973165c71af1a36b66126f0', '5973165c71af1a36b66126f1', '5973165c71af1a36b66126f2'],
-          name: 'D A Signs @ COL Albury - Mon 31 Jull 2017 @ 11AM',
+          name: 'D A Signs @ COL Albury',
           status: 'Tentative',
           installerConfirmed: false,
           clientConfirmed: false,
           changeRequests: [], 
-          installerId: '597438f1ec0f19855b6921bd',
+          installerId: '597435e196906a669414fa27',
           locationId: '59719d405f8ee87150225b98',
           bookedDate: Date.now(),
           instructions: '',
-          attachments: [''],
+          attachments: [],
+          actualStartTime: Date.now(),
+          actualFinishTime: Date.now()
+        },{
+          _id: '5974a1de40b8a08c453a8374',
+          jobId: '596c6c85c5dbc447854c9a60',
+          taskId: ['596dc1db10dc3a08f61be9f6', '596dc1db10dc3a08f61be9f7', '596dc1db10dc3a08f61be9f8'],
+          name: 'Alice Crash Repairs @ COL Alice Springs',
+          status: 'Complete',
+          installerConfirmed: true,
+          clientConfirmed: true,
+          changeRequests: [], 
+          installerId: '597413e439e98c0769da5a65',
+          locationId: '59719d405f8ee87150225b9a',
+          bookedDate: Date.now(),
+          instructions: '',
+          attachments: [],
+          actualStartTime: Date.now(),
+          actualFinishTime: Date.now()
+        },{
+          _id: '5974a28970e80793d18252c0',
+          jobId: '5972b18f151a63e4ea041308',
+          taskId: ['5973165c71af1a36b66126f7', '5973165c71af1a36b66126f8', '5973165c71af1a36b66126f9'],
+          name: 'Signwave Parramatta @ Linfox Erskine Park for Myer',
+          status: 'Confirmed',
+          installerConfirmed: true,
+          clientConfirmed: true,
+          changeRequests: [], 
+          installerId: '59749b4c6df3cd4b3b517050',
+          locationId: '59747d6948526cb95cafc0cf',
+          bookedDate: Date.now(),
+          instructions: '',
+          attachments: [],
           actualStartTime: Date.now(),
           actualFinishTime: Date.now()
         }
@@ -363,7 +407,7 @@ function fill(){
         },{
           _id: '5973165c71af1a36b66126f7',
           parentJob: '5972b18f151a63e4ea041308',
-          name: 'Measure and produce diagram of P/S panel01',
+          name: 'Measure and produce diagram of P/S panel',
           status: 'Incomplete',
           completed: false
         },{
@@ -405,7 +449,7 @@ function fill(){
           email: '',
           __v: 0,
           primaryContacts: ['Brett Enever'],
-          phoneNumber: [''],
+          phoneNumber: [],
           coordinates: [-37.743437, 145.340579]
         },{  
           _id: '59743795e834d174405a6574',
@@ -416,9 +460,33 @@ function fill(){
           postcode: '3690',
           email: 'info@dasigns.com.au',
           __v: 0,
-          primaryContacts: [''],
+          primaryContacts: [],
           phoneNumber: ['+61 2 6056 6060'],
           coordinates: [-36.116037, 146.891318]
+        },{  
+          _id: '59747d6948526cb95cafc0cf',
+          name: 'Linfox Logistics - New South Wales',
+          street: 'Fox Lane',
+          city: 'Erskine Park',
+          state: 'NSW',
+          postcode: '2759',
+          email: '',
+          __v: 0,
+          primaryContacts: [],
+          phoneNumber: ['+61 2 8882 5000'],
+          coordinates: [-33.812496, 150.791190]
+        },{  
+          _id: '59749d9ac5dee462430ea5ca',
+          name: 'Signwave Parramatta',
+          street: '1/35 Foundry Road',
+          city: 'Seven Hills',
+          state: 'NSW',
+          postcode: '2147',
+          email: '802@signwave.com.au',
+          __v: 0,
+          primaryContacts: [],
+          phoneNumber: ['+61 2 9630 3044'], 
+          coordinates: [-33.770912, 150.955110]
         },{
                _id: '59719d405f8ee87150225b9a',
                name: 'COL Alice Springs',
@@ -2570,12 +2638,21 @@ function fill(){
       './models/booking.js',
       './models/company.js',
       './models/job.js',
+      './models/location.js',
       './models/project.js',
-      './models/task.js',
-      './models/service.js'
+      './models/service.js',
+      './models/task.js'
     ])
 
-    seeder.clearModels(['Service','Company','Project','Location', 'Job', 'Task'], function() {
+    seeder.clearModels([
+      'Booking',
+      'Company',
+      'Job',
+      'Location',
+      'Project',
+      'Service',
+      'Task'
+    ], function() {
 
       // Callback to populate DB once collections have been cleared
       seeder.populateModels(data, function() {
