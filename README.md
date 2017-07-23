@@ -25,6 +25,9 @@
 ![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/new-password-mobile.jpg "New Password Mobile View")
 ![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/dashboard-mobile.jpg "Dashboard Mobile View")
 
+### Desktop View
+![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/sign-in-desktop.jpg "Sign In Desktop View")
+
 
 
 ## Tools used
