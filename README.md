@@ -20,18 +20,23 @@
 
 ### Starting the application
 #### Start API Server
+```
 1. `$ cd yfm-project/api`
 2. `$ yarn`
 3. `$ yarn dev`
 4. Stage seeds: `localhost:7000/setup`
+```
 
 #### Start React Front-End
+```
 1. `$ cd yfm-project/react-web`
 2. `$ yarn`
 3. `$ yarn start`
+```
 
-#### Project Dependencies & Libraries
-**Front-End**
+### Project Dependencies & Libraries
+
+#### Front-End
 
 |Dependency|Version|
 |---|---|
@@ -55,7 +60,7 @@
 |gulp-concat|2.6.1|
 |gulp-sass|3.1.0|
 
-**Back-End**
+#### Back-End
 
 |Dependency|Version|
 |---|---|
