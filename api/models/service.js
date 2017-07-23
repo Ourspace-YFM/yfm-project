@@ -5,7 +5,7 @@ const mongoose = require('./init')
 const servicesSchema = Schema({
   company:  {
     type: Schema.Types.ObjectId,
-    ref: 'Job'
+    ref: 'Company'
   },
   location:  {
     type: Schema.Types.ObjectId,
