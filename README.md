@@ -19,6 +19,11 @@
 - Add a booking
 
 ### Database design
+- MVP Database
+![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/mvp-db.png "MVP Database")
+
+- Future Database
+![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/db.png "Future Database")
 
 ### Workflow Overview
 ![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/workflow-overview.png "Workflow Overview")
