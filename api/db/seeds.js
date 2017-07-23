@@ -2599,6 +2599,7 @@ function fill(){
     seeder.loadModels([
       './models/booking.js',
       './models/company.js',
+      './models/contact.js',
       './models/job.js',
       './models/location.js',
       './models/project.js',
@@ -2609,6 +2610,7 @@ function fill(){
     seeder.clearModels([
       'Booking',
       'Company',
+      'Contact',
       'Job',
       'Location',
       'Project',
