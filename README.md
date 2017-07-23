@@ -13,6 +13,10 @@
 - As YFM's director I want to be able to search and filter all contacts using an appropriate key/keys: Company name, type/services, location (state).
 
 ### MVP Features
+- View all projects. jobs, callouts and bookings
+- View all client trucks
+- Search and filter client assets, locations, companies and contacts
+- Add a booking
 
 ### Database design
 
