@@ -33,7 +33,7 @@
 #### Project Dependencies & Libraries
 **Front-End**
 | Dependency | Version |
-| --- | --- |
+|---|---|
 | axios | 0.16.2 |
 | google-map-react | 0.24.0 |
 | lodash | 4.17.4 |
@@ -56,7 +56,7 @@
 
 **Back-End**
 | Dependency | Version |
-| --- | --- |
+|---|---|
 | eslint | 3.19.0 |
 | eslint-config-airbnb | 15.0.2 |
 | eslint-plugin-import | 2.7.0 |
