@@ -47,19 +47,20 @@ const Bookings = ({
 							 <ExpandableCard
 							 	title={ booking.name }>
 								<div>
-									<BoldText text="Installer"/>
+									<BoldText text="Installer: "/>
 									<LightText text={ booking.installerId.name }/>
 								</div>
 								<div>
-									<BoldText text="Location"/>
+									<BoldText text="Location: "/>
 									<LightText text={ booking.locationId.name }/>
 								</div>
 								<div>
-									<BoldText text="Status"/>
+									<BoldText text="Status: "/>
 									<LightText text={ booking.status }/>
 								</div>
+								<br />
 								<div>
-									<LinkButton link={ "/booking/" + booking._id } label="View"/>
+									<LinkButton link={ "/bookings/" + booking._id } label="View"/>
 								</div>
 							</ExpandableCard>
 						 ))}

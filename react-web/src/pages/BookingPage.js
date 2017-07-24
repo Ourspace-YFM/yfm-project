@@ -13,16 +13,32 @@ export default function BookingPage({
     <div className='booking'>
   {
       !!data ? (
-        <div>
-          <h1></h1>
           <div>
-            <BoldText text='Attachments:' /> <LightText text={ data.name } />
-          </div>
+            <h1>Booking</h1>
 
-          <div>
-            <BoldText text='Status:' /> <LightText text={ data.installerId } />
+            <div>
+              <BoldText text='Booking Name:' /> <LightText text={ data.name } />
+            </div>
+
+            <div>
+              <BoldText text='Booking Date:' /> <LightText text='Thur Jul 27 2017 at 9 AM' />
+            </div>            
+
+            <div>
+              <BoldText text='Status:' /> <LightText text={ data.status } />
+            </div>
+
+            <br />
+
+            <h2>Tasks:</h2>
+            { data.taskId.map((task) => (
+            <div>
+              <ul><LightText text={ task.name } /></ul>
+            </div>      
+            )) }    
+            
           </div>
-        </div>
+        
       ) : (
         'Loading Tasks'
       )
