@@ -5,6 +5,7 @@ const authMiddleware = require('./middleware/auth')
 
 const authRouter = require('./routes/auth')
 const bookingsRouter = require('./routes/bookings')
+const contactsRouter = require('./routes/contacts')
 const companiesRouter = require('./routes/companies')
 const jobsRouter = require('./routes/jobs')
 const profilesRouter = require('./routes/profiles')
@@ -31,6 +32,7 @@ server.get('/setup', (req,res)=> {
 // Routes
 server.use(authRouter)
 server.use(bookingsRouter)
+server.use(contactsRouter)
 server.use(companiesRouter)
 server.use(jobsRouter)
 server.use(profilesRouter)

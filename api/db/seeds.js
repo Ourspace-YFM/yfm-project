@@ -109,6 +109,27 @@ function fill(){
         }
       ]
     },{
+      model: 'Contact',
+      documents: [
+        {
+          companyId: '59719d405f8ee87150225b92', 
+          firstName: 'Brett', 
+          lastName: 'Enever', 
+          position: 'Owner',
+          locationScope: '',
+          phone: [],
+          email: ['brett@lbesigns.com.au']
+        },{
+          companyId: '597413e439e98c0769da5a65', 
+          firstName: 'Alexi', 
+          lastName: 'Hatzimihail', 
+          position: 'Owner',
+          locationScope: '',
+          phone: [],
+          email: ['alexi@alicecrashrepairs.com.au']
+        }
+      ]
+    },{
       model: 'Project',
       documents: [
         {
@@ -126,7 +147,7 @@ function fill(){
           clientId: '596634c0b925e80783c7721d',
           name: 'COL fleet reapirs & maintenance',
           type: 'Maintainance',
-          description: 'Ongoing nationwide repairs and maintenance of the COL fleet',
+          description: 'Ongoing nationwide repairs & maintenance of the COL fleet',
           status: 'Open',
           priority: false,
           startDate: Date.now(),
@@ -164,7 +185,7 @@ function fill(){
         },{
           _id: '59743bd952973f13d720b4d0',
           clientId: '59719d405f8ee87150225b90',
-          name: 'Ongoing repairs and maintenance of Myer fleet',
+          name: 'Ongoing repairs & maintenance of Myer fleet',
           type: 'Maintenance',
           description: '',
           status: 'Open',
@@ -276,18 +297,34 @@ function fill(){
           actualStartTime: Date.now(),
           actualFinishTime: Date.now()
         },{
-          _id: '5974a28970e80793d18252c0',
-          jobId: '5972b18f151a63e4ea041308',
-          taskId: ['5973165c71af1a36b66126f7', '5973165c71af1a36b66126f8', '5973165c71af1a36b66126f9'],
-          name: 'Signwave Parramatta @ Linfox Erskine Park for Myer',
-          status: 'Confirmed',
+          _id: "5974a28970e80793d18252c0",
+          jobId: "5972b18f151a63e4ea041308",
+          taskId: ["5973165c71af1a36b66126f7", "5973165c71af1a36b66126f8", "5973165c71af1a36b66126f9"],
+          name: "Signwave Parramatta @ Linfox Erskine Park for Myer",
+          status: "Confirmed",
           installerConfirmed: true,
           clientConfirmed: true,
           changeRequests: [], 
-          installerId: '59749b4c6df3cd4b3b517050',
-          locationId: '59747d6948526cb95cafc0cf',
+          installerId: "59749b4c6df3cd4b3b517050",
+          locationId: "59747d6948526cb95cafc0cf",
           bookedDate: Date.now(),
           instructions: '',
+          attachments: [],
+          actualStartTime: Date.now(),
+          actualFinishTime: Date.now()
+        },{
+          _id:"597528c5799d49291d9dfac6",
+          jobId: "596c6c85c5dbc447854c9a5f",
+          taskId: [],
+          name: "LBE Signs @ SCS Richmond",
+          status: "Tentative",
+          installerConfirmed: false,
+          clientConfirmed: false,
+          changeRequests: [], 
+          installerId: "59719d405f8ee87150225b92",
+          locationId: "5975281ccb9e6921e03287ea",
+          bookedDate: Date.now(),
+          instructions: "",
           attachments: [],
           actualStartTime: Date.now(),
           actualFinishTime: Date.now()
@@ -407,19 +444,19 @@ function fill(){
         },{
           _id: '5973165c71af1a36b66126f7',
           parentJob: '5972b18f151a63e4ea041308',
-          name: 'Measure and produce diagram of P/S panel',
+          name: 'Measure & produce diagram of P/S panel',
           status: 'Incomplete',
           completed: false
         },{
           _id: '5973165c71af1a36b66126f8',
           parentJob: '5972b18f151a63e4ea041308',
-          name: 'Measure and produce diagram of D/S panel',
+          name: 'Measure & produce diagram of D/S panel',
           status: 'Incomplete',
           completed: false
         },{
           _id: '5973165c71af1a36b66126f9',
           parentJob: '5972b18f151a63e4ea041308',
-          name: 'Measure and produce diagram of rear panel',
+          name: 'Measure & produce diagram of rear panel',
           status: 'Incomplete',
           completed: false
         }
@@ -428,90 +465,133 @@ function fill(){
       model: 'Location',
       documents: [  
         {
-          _id: '597414fa98a3a71116fe07c1',
-          name: 'Alice Crash Repairs',
-          street: '7 Brown Street',
-          city: "Alice Springs",
-          state: "NT",
-          postcode: "0870",
-          email: 'alexi@alicecrashrepairs.com.au',
-          __v: 0,
-          primaryContacts: ['Alexi Hatzimihail'],
-          phoneNumber: ['+61 8 8952 1600'],
-          coordinates: [-23.690220, 133.869832]
-        },{  
-          _id: '597434a5d8c8205405cca7ae',
-          name: 'LBE Signs',
-          street: '121 The Gateway',
-          city: 'Lilydale',
-          state: 'VIC',
-          postcode: '3140',
-          email: '',
-          __v: 0,
-          primaryContacts: ['Brett Enever'],
-          phoneNumber: [],
-          coordinates: [-37.743437, 145.340579]
-        },{  
-          _id: '59743795e834d174405a6574',
-          name: 'D A Signs',
-          street: '52 High Street',
-          city: 'Wodonga',
-          state: 'VIC',
-          postcode: '3690',
-          email: 'info@dasigns.com.au',
-          __v: 0,
-          primaryContacts: [],
-          phoneNumber: ['+61 2 6056 6060'],
-          coordinates: [-36.116037, 146.891318]
-        },{  
-          _id: '59747d6948526cb95cafc0cf',
-          name: 'Linfox Logistics - New South Wales',
-          street: 'Fox Lane',
-          city: 'Erskine Park',
-          state: 'NSW',
-          postcode: '2759',
-          email: '',
-          __v: 0,
-          primaryContacts: [],
-          phoneNumber: ['+61 2 8882 5000'],
-          coordinates: [-33.812496, 150.791190]
-        },{  
-          _id: '59749d9ac5dee462430ea5ca',
-          name: 'Signwave Parramatta',
-          street: '1/35 Foundry Road',
-          city: 'Seven Hills',
-          state: 'NSW',
-          postcode: '2147',
-          email: '802@signwave.com.au',
-          __v: 0,
-          primaryContacts: [],
-          phoneNumber: ['+61 2 9630 3044'], 
-          coordinates: [-33.770912, 150.955110]
+          "_id":"5975281ccb9e6921e03287ea",
+          "name":"SCS Footscray",
+          "street":"47A/400 Somerville Road",
+          "city":"West Footscray",
+          "state":"VIC",
+          "postcode":"3012",
+          "email":"",
+          "__v":0,
+          "primaryContacts":[],
+          "phoneNumber":[
+            "+61 3 8547 3976"
+          ],
+          "coordinates":[
+            -37.810324,
+            144.863493
+          ]
         },{
-          _id: '59719d405f8ee87150225b9a',
-          name: 'COL Alice Springs',
-          street: 'Alice Springs S/C Cnr Gregory Tce & Bath St',
-          city: "Alice Springs",
-          state: "NT",
-          postcode: "0870",
-          email: "Coles.0418.Online.Manager@coles.com.au",
-          __v: 0,
-          primaryContacts: [  
+          "_id":"597414fa98a3a71116fe07c1",
+          "name":"Alice Crash Repairs",
+          "street":"7 Brown Street",
+          "city":"Alice Springs",
+          "state":"NT",
+          "postcode":"0870",
+          "email":"alexi@alicecrashrepairs.com.au",
+          "__v":0,
+          "primaryContacts":[
+            "Alexi Hatzimihail"
+          ],
+          "phoneNumber":[
+            "+61 8 8952 1600"
+          ],
+          "coordinates":[
+            -23.690220,
+            133.869832
+          ]
+        },{  
+          "_id":"597434a5d8c8205405cca7ae",
+          "name":"LBE Signs",
+          "street":"121 The Gateway",
+          "city":"Lilydale",
+          "state":"VIC",
+          "postcode":"3140",
+          "email":"",
+          "__v":0,
+          "primaryContacts":[
+            "Brett Enever"
+          ],
+          "phoneNumber":[],
+          "coordinates":[
+            -37.743437,
+            145.340579
+          ]
+        },{  
+          "_id":"59743795e834d174405a6574",
+          "name":"D A Signs",
+          "street":"52 High Street",
+          "city":"Wodonga",
+          "state":"VIC",
+          "postcode":"3690",
+          "email":"info@dasigns.com.au",
+          "__v":0,
+          "primaryContacts":[],
+          "phoneNumber":[
+            "+61 2 6056 6060"
+          ],
+          "coordinates":[
+            -36.116037,
+            146.891318
+          ]
+        },{  
+          "_id":"59747d6948526cb95cafc0cf",
+          "name":"Linfox Logistics - New South Wales",
+          "street":"Fox Lane",
+          "city":"Erskine Park",
+          "state":"NSW",
+          "postcode":"2759",
+          "email":'',
+          "__v":0,
+          "primaryContacts":[],
+          "phoneNumber":[
+            "+61 2 8882 5000"
+          ],
+          "coordinates":[
+            -33.812496,
+            150.791190
+          ]
+        },{  
+          "_id":"59749d9ac5dee462430ea5ca",
+          "name":"Signwave Parramatta",
+          "street":"1/35 Foundry Road",
+          "city":"Seven Hills",
+          "state":"NSW",
+          "postcode":"2147",
+          "email":"802@signwave.com.au",
+          "__v":0,
+          "primaryContacts":[],
+          "phoneNumber":[
+            "+61 2 9630 3044"
+          ], 
+          "coordinates":[
+            -33.770912,
+            150.955110
+          ]
+        },{
+          "_id":"59719d405f8ee87150225b9a",
+          "name":"COL Alice Springs",
+          "street":"Alice Springs S/C Cnr Gregory Tce & Bath St",
+          "city":"Alice Springs",
+          "state":"NT",
+          "postcode":"0870",
+          "email":"Coles.0418.Online.Manager@coles.com.au",
+          "_v":0,
+          "primaryContacts":[  
             "Lisa Morley",
             "Saskia Scott"
           ],
-          phoneNumber:[  
-            "08 8952 4575",
-            "10"
+          "phoneNumber":[
+            "08 8952 4575"
           ],
-          coordinates:[  
+          "coordinates":[  
             -23.6982962,
             133.8789453
           ]
         },{  
           "_id":"59719d405f8ee87150225b98",
           "name":"COL Albury",
-          "street":"Cnr Townend & Smollet Sts",
+          "street":"Cnr Townend & Smollet Streets",
           "city":"Albury",
           "state":"VIC",
           "postcode":"2640",
@@ -523,8 +603,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "02 6021 7806",
-            "10"
+            "+61 2 6021 7806"
           ],
           "coordinates":[  
             -36.0824321,
@@ -545,8 +624,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 36309730",
-            "10"
+            "+61 7 36309730"
           ],
           "coordinates":[  
             -27.3627851,
@@ -554,8 +632,8 @@ function fill(){
           ]
         },{  
           "_id":"59719d405f8ee87150225b9c",
-          "name":"Bacchus Marsh",
-          "street":"Bacchus Marsh S/C~ Cnr Main & Young Sts",
+          "name":"COL Bacchus Marsh",
+          "street":"Bacchus Marsh S/C~ Cnr Main & Young Streets",
           "city":"Bacchus Marsh",
           "state":"VIC",
           "postcode":"3340",
@@ -567,8 +645,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 5366 0560",
-            "10"
+            "+61 3 5366 0560"
           ],
           "coordinates":[  
             -37.6762492,
@@ -577,7 +654,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225b99",
-          "name":"Alexander Heights",
+          "name":"COL Alexander Heights",
           "street":"Cnr Mirrabooka Ave & Griffon Way",
           "city":"Alexander Heights",
           "state":"WA",
@@ -589,8 +666,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9343 0099",
-            "10"
+            "+61 8 9343 0099"
           ],
           "coordinates":[  
             -31.8312436,
@@ -599,8 +675,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225b9d",
-          "name":"Ballina",
-          "street":"Cnr Fox & Kerr Sts",
+          "name":"COL Ballina",
+          "street":"Cnr Fox & Kerr Streets",
           "city":"Ballina",
           "state":"NSW",
           "postcode":"2478",
@@ -612,8 +688,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 6618 5560",
-            "10"
+            "+61 2 6618 5560"
           ],
           "coordinates":[  
             -28.8601634,
@@ -622,12 +697,12 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225b9e",
-          "name":"Banksia Grove",
-          "street":"\"1001 Joondalup Drive~ Cnr Joseph Banks Blvd\"",
+          "name":"COL Banksia Grove",
+          "street":"1001 Joondalup Drive~ Cnr Joseph Banks Blvd",
           "city":"Banksia Grove",
           "state":"WA",
           "postcode":"6031",
-          "email":"Coles.0260.online.manager@coles.com.au ",
+          "email":"Coles.0260.Online.Manager@coles.com.au ",
           "__v":0,
           "primaryContacts":[  
             "Mark Ewing",
@@ -635,8 +710,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9406 2860",
-            "10"
+            "+61 8 9406 2860"
           ],
           "coordinates":[  
             -31.7055863,
@@ -645,7 +719,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225b9f",
-          "name":"Bassendean",
+          "name":"COL Bassendean",
           "street":"Cnr West & Guildford Roads",
           "city":"Bassendean",
           "state":"WA",
@@ -658,8 +732,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9261 5162",
-            "10"
+            "+61 8 9261 5162"
           ],
           "coordinates":[  
             -31.90200059999999,
@@ -668,8 +741,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225ba0",
-          "name":"Bateau Bay",
-          "street":"\"Bay Village S/C~ The Entrance Rd\"",
+          "name":"COL Bateau Bay",
+          "street":"Bay Village S/C~ The Entrance Road",
           "city":"Bateau Bay",
           "state":"NSW",
           "postcode":"2261",
@@ -681,8 +754,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 4332 0438",
-            "10"
+            "+61 2 4332 0438"
           ],
           "coordinates":[  
             -33.375362,
@@ -691,7 +763,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225ba1",
-          "name":"Beeliar",
+          "name":"COL Beeliar",
           "street":"8  Durin Avenue",
           "city":"Beeliar",
           "state":"WA",
@@ -704,8 +776,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 6595 5360",
-            "10"
+            "+61 8 6595 5360"
           ],
           "coordinates":[  
             -32.1280805,
@@ -714,8 +785,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225ba2",
-          "name":"Belmont",
-          "street":"Corner Macquarie Street and Edgar Street",
+          "name":"COL Belmont",
+          "street":"Corner Macquarie Street & Edgar Street",
           "city":"Belmont",
           "state":"NSW",
           "postcode":"2280",
@@ -727,8 +798,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 4945 0213",
-            "10"
+            "+61 2 4945 0213"
           ],
           "coordinates":[  
             -33.035911,
@@ -737,8 +807,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225ba4",
-          "name":"Benowa",
-          "street":"\"21 Ross Street~ Benowa\"",
+          "name":"COL Benowa",
+          "street":"21 Ross Street~ Benowa",
           "city":"Benowa Village",
           "state":"QLD",
           "postcode":"4217",
@@ -749,8 +819,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 5510 7560",
-            "10"
+            "+61 7 5510 7560"
           ],
           "coordinates":[  
             -28.0004672,
@@ -759,8 +828,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225ba3",
-          "name":"Bendigo",
-          "street":"Cnr Myer & Williamson St",
+          "name":"COL Bendigo",
+          "street":"Cnr Myer & Williamson Street",
           "city":"Bendigo",
           "state":"VIC",
           "postcode":"3550",
@@ -771,8 +840,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 5441 1539",
-            "10"
+            "+61 3 5441 1539"
           ],
           "coordinates":[  
             -36.7614118,
@@ -781,8 +849,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225ba5",
-          "name":"Bunbury",
-          "street":"Cnr Blair and Stevens Streets",
+          "name":"COL Bunbury",
+          "street":"Cnr Blair & Stevens Streets",
           "city":"Bunbury",
           "state":"WA",
           "postcode":"6230",
@@ -794,8 +862,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9791 3975",
-            "10"
+            "+61 8 9791 3975"
           ],
           "coordinates":[  
             -33.3283308,
@@ -804,8 +871,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225ba6",
-          "name":"Burwood",
-          "street":"\"Westfield Burwood~ 100 Burwood Rd\"",
+          "name":"COL Burwood",
+          "street":"Westfield Burwood~ 100 Burwood Road",
           "city":"Burwood",
           "state":"NSW",
           "postcode":"2134",
@@ -815,8 +882,7 @@ function fill(){
 
           ],
           "phoneNumber":[  
-            "",
-            "10"
+            ""
           ],
           "coordinates":[  
             -33.874692,
@@ -825,20 +891,19 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225ba7",
-          "name":"Byford",
+          "name":"COL Byford",
           "street":"20 Abernethy Road",
           "city":"Byford",
           "state":"WA",
           "postcode":"6122",
-          "email":"Coles.0263.online.manager@coles.com.au",
+          "email":"Coles.0263.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Tracey MacMillan",
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9532 0960",
-            "10"
+            "+61 8 9532 0960"
           ],
           "coordinates":[  
             -32.21976300000001,
@@ -847,7 +912,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225baa",
-          "name":"Cannonvale",
+          "name":"COL Cannonvale",
           "street":"Cnr Island Drive & Shute Harbour Road",
           "city":"Cannonvale",
           "state":"QLD",
@@ -859,8 +924,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 4948 2789",
-            "10"
+            "+61 7 4948 2789"
           ],
           "coordinates":[  
             -20.2771684,
@@ -869,7 +933,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bab",
-          "name":"Capalaba",
+          "name":"COL Capalaba",
           "street":"Morton Bay Road",
           "city":"Capalaba",
           "state":"QLD",
@@ -881,8 +945,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 3900 3760",
-            "10"
+            "+61 7 3900 3760"
           ],
           "coordinates":[  
             -27.5251651,
@@ -891,8 +954,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bb0",
-          "name":"Churchill",
-          "street":"\"Churchill Centre~ 380-408 Churchill Road\"",
+          "name":"COL Churchill",
+          "street":"Churchill Centre~ 380-408 Churchill Road",
           "city":"Churchill",
           "state":"SA",
           "postcode":"5084",
@@ -904,8 +967,7 @@ function fill(){
             "Saskia Scott"
           ],
           "phoneNumber":[  
-            "08 8360 3860",
-            "10"
+            "+61 8 8360 3860"
           ],
           "coordinates":[  
             -34.865371,
@@ -914,8 +976,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225baf",
-          "name":"Christies Beach",
-          "street":"101 Beach Rd",
+          "name":"COL Christies Beach",
+          "street":"101 Beach Road",
           "city":"Christies Beach",
           "state":"SA",
           "postcode":"5165",
@@ -927,8 +989,7 @@ function fill(){
             "Saskia Scott"
           ],
           "phoneNumber":[  
-            "08 8326 1885",
-            "10"
+            "+61 8 8326 1885"
           ],
           "coordinates":[  
             -35.1382768,
@@ -937,12 +998,12 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bac",
-          "name":"Carlingford",
+          "name":"COL Carlingford",
           "street":"Cnr Pennant Hills & Carlingford Roads",
           "city":"Carlingford",
           "state":"NSW",
           "postcode":"2118",
-          "email":"Coles.0872.online.manager@coles.com.au",
+          "email":"Coles.0872.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Cathy Arcuri",
@@ -950,8 +1011,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 9871 2452",
-            "10"
+            "+61 2 9871 2452"
           ],
           "coordinates":[  
             -33.7777204,
@@ -960,12 +1020,12 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bb4",
-          "name":"Deer Park",
-          "street":"\"28-72 Neale Rd\"",
+          "name":"COL Deer Park",
+          "street":"28-72 Neale Road",
           "city":"Deer Park",
           "state":"VIC",
           "postcode":"3023",
-          "email":"coles.7612.Online.Manager@coles.com.au",
+          "email":"Coles.7612.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Sally Clough",
@@ -973,8 +1033,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 9363 9160",
-            "10"
+            "+61 3 9363 9160"
           ],
           "coordinates":[  
             -37.752247,
@@ -983,7 +1042,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bb1",
-          "name":"Coburg",
+          "name":"COL Coburg",
           "street":"451/459 Sydney Road",
           "city":"Coburg",
           "state":"VIC",
@@ -996,8 +1055,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 9350 1278",
-            "10"
+            "+61 3 9350 1278"
           ],
           "coordinates":[  
             -37.742572,
@@ -1006,7 +1064,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bb5",
-          "name":"Dianella",
+          "name":"COL Dianella",
           "street":"366 Grand Promenade",
           "city":"Dianella",
           "state":"WA",
@@ -1018,8 +1076,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9267 6760",
-            "10"
+            "+61 8 9267 6760"
           ],
           "coordinates":[  
             -31.8963875,
@@ -1028,8 +1085,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225ba8",
-          "name":"Caboolture",
-          "street":"\"Caboolture Park S/C~ 60-78 King St\"",
+          "name":"COL Caboolture",
+          "street":"Caboolture Park S/C~ 60-78 King Street",
           "city":"Caboolture",
           "state":"QLD",
           "postcode":"4510",
@@ -1040,8 +1097,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 5499 3787",
-            "10"
+            "+61 7 5499 3787"
           ],
           "coordinates":[  
             -27.0851119,
@@ -1050,20 +1106,19 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bb6",
-          "name":"Emerald",
-          "street":"Cnr Clermont & Opal Sts",
+          "name":"COL Emerald",
+          "street":"Cnr Clermont & Opal Streets",
           "city":"Emerald",
           "state":"QLD",
           "postcode":"4720",
-          "email":"Coles.4541.online.manager@coles.com.au ",
+          "email":"Coles.4541.Online.Manager@coles.com.au ",
           "__v":0,
           "primaryContacts":[  
             "Bec Reynolds",
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 4980 8100",
-            "10"
+            "+61 7 4980 8100"
           ],
           "coordinates":[  
             -23.5281035,
@@ -1072,8 +1127,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225ba9",
-          "name":"Cairns",
-          "street":"\"274 Mulgrave Rd~ Westcourt\"",
+          "name":"COL Cairns",
+          "street":"274 Mulgrave Road~ Westcourt",
           "city":"Cairns",
           "state":"QLD",
           "postcode":"4870",
@@ -1084,8 +1139,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 4041 3267",
-            "10"
+            "+61 7 4041 3267"
           ],
           "coordinates":[  
             -16.9331266,
@@ -1094,8 +1148,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bad",
-          "name":"Casuarina",
-          "street":"Cnr Dripstone & Trower Rd",
+          "name":"COL Casuarina",
+          "street":"Cnr Dripstone & Trower Road",
           "city":"Casuarina",
           "state":"NT",
           "postcode":"810",
@@ -1107,8 +1161,7 @@ function fill(){
             "Saskia Scott"
           ],
           "phoneNumber":[  
-            "08 8927 6714",
-            "10"
+            "+61 8 8927 6714"
           ],
           "coordinates":[  
             -12.3775136,
@@ -1117,8 +1170,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bb9",
-          "name":"Fletcher",
-          "street":"Lot 901 221 Cnr Minmi Rd & Churnwood Drive",
+          "name":"COL Fletcher",
+          "street":"Lot 901 221 Cnr Minmi Road & Churnwood Drive",
           "city":"Fletcher",
           "state":"NSW",
           "postcode":"2287",
@@ -1130,8 +1183,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 4941 6360",
-            "10"
+            "+61 2 4941 6360"
           ],
           "coordinates":[  
             -32.8776022,
@@ -1140,8 +1192,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bae",
-          "name":"Casula",
-          "street":"\"Casula Mall Shopping Centre~ Kurrajong Rd\"",
+          "name":"COL Casula",
+          "street":"Casula Mall Shopping Centre~ Kurrajong Road",
           "city":"Casula",
           "state":"NSW",
           "postcode":"2170",
@@ -1153,8 +1205,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 9602 7855",
-            "10"
+            "+61 2 9602 7855"
           ],
           "coordinates":[  
             -33.948068,
@@ -1163,7 +1214,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bb2",
-          "name":"Coburg North ",
+          "name":"COL Coburg North ",
           "street":"180 Gaffney Street",
           "city":"Coburg North ",
           "state":"VIC",
@@ -1174,8 +1225,7 @@ function fill(){
 
           ],
           "phoneNumber":[  
-            "",
-            "10"
+            ""
           ],
           "coordinates":[  
             -37.7315464,
@@ -1184,8 +1234,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bba",
-          "name":"Flinders Square",
-          "street":"\"Flinders Square S/C~ Cnr Wiluna & Flinders Sts\"",
+          "name":"COL Flinders Square",
+          "street":"Flinders Square S/C~ Cnr Wiluna & Flinders Streets",
           "city":"Flinders Square",
           "state":"WA",
           "postcode":"6060",
@@ -1195,8 +1245,7 @@ function fill(){
 
           ],
           "phoneNumber":[  
-            "",
-            "10"
+            ""
           ],
           "coordinates":[  
             -31.9096951,
@@ -1205,8 +1254,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bbb",
-          "name":"Fremantle",
-          "street":"Cn Cantonement & Goldsborough St",
+          "name":"COL Fremantle",
+          "street":"Cn Cantonement & Goldsborough Street",
           "city":"Fremantle",
           "state":"WA",
           "postcode":"6160",
@@ -1218,8 +1267,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9430 8319",
-            "10"
+            "+61 8 9430 8319"
           ],
           "coordinates":[  
             -32.0510479,
@@ -1228,8 +1276,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bb3",
-          "name":"Dee Why",
-          "street":"\"Dee Why Plaza~ 36 Howard Ave\"",
+          "name":"COL Dee Why",
+          "street":"Dee Why Plaza~ 36 Howard Ave",
           "city":"Dee Why",
           "state":"NSW",
           "postcode":"2099",
@@ -1241,8 +1289,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "0439 205 340",
-            "10"
+            "0439 205 340"
           ],
           "coordinates":[  
             -33.7525165,
@@ -1251,8 +1298,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bb7",
-          "name":"Endeavour Hills",
-          "street":"\"Endeavour Hills S/C~  Matthew Flinders Ave\"",
+          "name":"COL Endeavour Hills",
+          "street":"Endeavour Hills S/C~  Matthew Flinders Ave",
           "city":"Endeavour Hills",
           "state":"VIC",
           "postcode":"3802",
@@ -1264,8 +1311,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 9700 6952",
-            "10"
+            "+61 3 9700 6952"
           ],
           "coordinates":[  
             -37.976662,
@@ -1274,7 +1320,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bbe",
-          "name":"Glenorchy",
+          "name":"COL Glenorchy",
           "street":"387-391 main road Glenorchy",
           "city":"Glenorchy",
           "state":"TAS",
@@ -1287,8 +1333,7 @@ function fill(){
             "Saskia Scott"
           ],
           "phoneNumber":[  
-            "03 6274 1436",
-            "10"
+            "+61 3 6274 1436"
           ],
           "coordinates":[  
             -42.832121,
@@ -1297,7 +1342,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bb8",
-          "name":"Fairfield",
+          "name":"COL Fairfield",
           "street":"Cnr Brougham St & Fairfield Road",
           "city":"Fairfield",
           "state":"QLD",
@@ -1310,8 +1355,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 3214 6560",
-            "10"
+            "+61 7 3214 6560"
           ],
           "coordinates":[  
             -27.508059,
@@ -1320,7 +1364,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bbf",
-          "name":"Gosnells",
+          "name":"COL Gosnells",
           "street":"2160 Albany Hwy",
           "city":"Gosnells",
           "state":"WA",
@@ -1333,8 +1377,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9398 1434",
-            "10"
+            "+61 8 9398 1434"
           ],
           "coordinates":[  
             -32.0692618,
@@ -1343,8 +1386,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bbc",
-          "name":"Gawler",
-          "street":"\"Nothern Market S/C~ Cnr Murray & Cowan Sts\"",
+          "name":"COL Gawler",
+          "street":"Nothern Market S/C~ Cnr Murray & Cowan Streets",
           "city":"Gawler",
           "state":"SA",
           "postcode":"5118",
@@ -1356,8 +1399,7 @@ function fill(){
             "Saskia Scott"
           ],
           "phoneNumber":[  
-            "08 8522 4792",
-            "10"
+            "+61 8 8522 4792"
           ],
           "coordinates":[  
             -34.5952378,
@@ -1366,8 +1408,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bc0",
-          "name":"Greenacre",
-          "street":"13-19 Boronia Rd",
+          "name":"COL Greenacre",
+          "street":"13-19 Boronia Road",
           "city":"Greenacre",
           "state":"NSW",
           "postcode":"2190",
@@ -1379,8 +1421,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 8709 0460",
-            "10"
+            "+61 2 8709 0460"
           ],
           "coordinates":[  
             -33.9060409,
@@ -1389,8 +1430,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bbd",
-          "name":"Gladstone",
-          "street":"\"Kim Kora S/C~ Dawson Hwy\"",
+          "name":"COL Gladstone",
+          "street":"Kim Kora S/C~ Dawson Hwy",
           "city":"Gladstone",
           "state":"QLD",
           "postcode":"4680",
@@ -1402,8 +1443,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 4978 6930",
-            "10"
+            "+61 7 4978 6930"
           ],
           "coordinates":[  
             -24.6233337,
@@ -1412,8 +1452,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bc1",
-          "name":"Greenacres",
-          "street":"Cnr Muller & Floridale Rds",
+          "name":"COL Greenacres",
+          "street":"Cnr Muller & Floridale Roads",
           "city":"Greenacres",
           "state":"SA",
           "postcode":"5086",
@@ -1425,8 +1465,7 @@ function fill(){
             "Saskia Scott"
           ],
           "phoneNumber":[  
-            "08 8368 6160",
-            "10"
+            "+61 8 8368 6160"
           ],
           "coordinates":[  
             -34.8702905,
@@ -1435,7 +1474,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bc3",
-          "name":"Halls Head",
+          "name":"COL Halls Head",
           "street":"18 Guava Way",
           "city":"Halls Head",
           "state":"WA",
@@ -1448,8 +1487,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9586 5160",
-            "10"
+            "+61 8 9586 5160"
           ],
           "coordinates":[  
             -32.54814,
@@ -1458,8 +1496,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bc2",
-          "name":"Gungahlin",
-          "street":"Cnr Hibberson Street and Gungahlin Place",
+          "name":"COL Gungahlin",
+          "street":"Cnr Hibberson Street & Gungahlin Place",
           "city":"Gungahlin",
           "state":"ACT",
           "postcode":"2912",
@@ -1471,8 +1509,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "(02) 6123 4560",
-            "10"
+            "+61 2 6123 4560"
           ],
           "coordinates":[  
             -35.1855205,
@@ -1481,8 +1518,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bc4",
-          "name":"Hastings",
-          "street":"Cnr Church & Victoria Sts",
+          "name":"COL Hastings",
+          "street":"Cnr Church & Victoria Streets",
           "city":"Hastings",
           "state":"VIC",
           "postcode":"3915",
@@ -1494,8 +1531,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 5979 3743",
-            "10"
+            "+61 3 5979 3743"
           ],
           "coordinates":[  
             -38.3060029,
@@ -1504,7 +1540,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bc5",
-          "name":"Hervey Bay",
+          "name":"COL Hervey Bay",
           "street":"Bay Central SC 6 Central Ave",
           "city":"Hervey Bay Central",
           "state":"QLD",
@@ -1517,8 +1553,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 4196 9500",
-            "10"
+            "+61 7 4196 9500"
           ],
           "coordinates":[  
             -25.290103,
@@ -1527,8 +1562,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bc6",
-          "name":"Hoppers Crossing",
-          "street":"\"Werribee Plaza SC~ Cnr Derrimut Rd & Heath Rd\"",
+          "name":"COL Hoppers Crossing",
+          "street":"Werribee Plaza SC~ Cnr Derrimut Road & Heath Road",
           "city":"Hoppers Crossing",
           "state":"VIC",
           "postcode":"3029",
@@ -1539,8 +1574,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 9974 7359",
-            "10"
+            "+61 3 9974 7359"
           ],
           "coordinates":[  
             -37.8769472,
@@ -1549,7 +1583,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bc7",
-          "name":"Kellyville",
+          "name":"COL Kellyville",
           "street":"Wrights Road ",
           "city":"Kellyville",
           "state":"NSW",
@@ -1562,8 +1596,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 8818 2160",
-            "10"
+            "+61 2 8818 2160"
           ],
           "coordinates":[  
             -33.7142577,
@@ -1572,7 +1605,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bc8",
-          "name":"Loganholme",
+          "name":"COL Loganholme",
           "street":"Cnr Pacific Highway & Bryants Road",
           "city":"Loganholme",
           "state":"QLD",
@@ -1584,8 +1617,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 3801 7260",
-            "10"
+            "+61 7 3801 7260"
           ],
           "coordinates":[  
             -27.663267,
@@ -1594,8 +1626,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bc9",
-          "name":"Mackay",
-          "street":"\"Mt Pleasant SC~ Cnr Malcomson St & Mackay Bucasia Rd\"",
+          "name":"COL Mackay",
+          "street":"Mt Pleasant SC~ Cnr Malcomson St & Mackay Bucasia Road",
           "city":"Mackay",
           "state":"QLD",
           "postcode":"4740",
@@ -1606,15 +1638,14 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 4942 6745",
-            "10"
+            "+61 7 4942 6745"
           ],
           "coordinates":null
         },
         {  
           "_id":"59719d405f8ee87150225bca",
-          "name":"Maddington",
-          "street":"Cnr Attfield St & Olga Rd",
+          "name":"COL Maddington",
+          "street":"Cnr Attfield St & Olga Road",
           "city":"Maddington",
           "state":"WA",
           "postcode":"6109",
@@ -1626,8 +1657,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9452 0163",
-            "10"
+            "+61 8 9452 0163"
           ],
           "coordinates":[  
             -32.0534354,
@@ -1636,8 +1666,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bcb",
-          "name":"Mandurah",
-          "street":"Cnr Pinjarra & Mandurah Rds",
+          "name":"COL Mandurah",
+          "street":"Cnr Pinjarra & Mandurah Roads",
           "city":"Mandurah",
           "state":"WA",
           "postcode":"6210",
@@ -1648,8 +1678,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9583 5257",
-            "10"
+            "+61 8 9583 5257"
           ],
           "coordinates":[  
             -32.5374401,
@@ -1658,20 +1687,19 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bcc",
-          "name":"Mango Hill",
+          "name":"COL Mango Hill",
           "street":"1-21 Halpine Drive",
           "city":"Mango Hill",
           "state":"QLD",
           "postcode":"4509",
-          "email":"Coles.4436.online.manager@coles.com.au",
+          "email":"Coles.4436.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Paula Fitzgerald",
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 3490 3600",
-            "10"
+            "+61 7 3490 3600"
           ],
           "coordinates":[  
             -27.2425629,
@@ -1680,8 +1708,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bcd",
-          "name":"Maroochydore",
-          "street":"Sunshine Plaza S/C Bunro St",
+          "name":"COL Maroochydore",
+          "street":"Sunshine Plaza S/C Bunro Street",
           "city":"Maroochydore",
           "state":"QLD",
           "postcode":"4558",
@@ -1693,8 +1721,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 5409 4260",
-            "10"
+            "+61 7 5409 4260"
           ],
           "coordinates":[  
             -26.64618,
@@ -1703,8 +1730,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bce",
-          "name":"Mirrabooka",
-          "street":"Cnr Yirrigan Dr & Ferrier Rd",
+          "name":"COL Mirrabooka",
+          "street":"Cnr Yirrigan Dr & Ferrier Road",
           "city":"Mirrabooka",
           "state":"WA",
           "postcode":"6061",
@@ -1716,8 +1743,7 @@ function fill(){
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9207 3931",
-            "10"
+            "+61 8 9207 3931"
           ],
           "coordinates":[  
             -31.8735486,
@@ -1726,12 +1752,12 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bcf",
-          "name":"Mona Vale",
+          "name":"COL Mona Vale",
           "street":"10 Park Street",
           "city":"Mona Vale",
           "state":"NSW",
           "postcode":"2103",
-          "email":"Coles.0884.online.manager@coles.com.au",
+          "email":"Coles.0884.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Heidi Schofield",
@@ -1739,8 +1765,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 9999 0698",
-            "10"
+            "+61 2 9999 0698"
           ],
           "coordinates":[  
             -33.6759177,
@@ -1749,12 +1774,12 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bd0",
-          "name":"Morwell",
-          "street":"\"Mid Valley Shopping Centre~ Princes Hwy\"",
+          "name":"COL Morwell",
+          "street":"Mid Valley Shopping Centre~ Princes Hwy",
           "city":"Morwell",
           "state":"VIC",
           "postcode":"3841",
-          "email":"coles.7899.Online.Manager@coles.com.au",
+          "email":"Coles.7899.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Meagan",
@@ -1762,8 +1787,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 5135 3692",
-            "10"
+            "+61 3 5135 3692"
           ],
           "coordinates":[  
             -38.2362251,
@@ -1772,12 +1796,12 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bd1",
-          "name":"Mowbray",
+          "name":"COL Mowbray",
           "street":"385 Invermay Road",
           "city":"Mowbray",
           "state":"TAS",
           "postcode":"7248",
-          "email":"Coles.7502.online.manager@coles.com.au",
+          "email":"Coles.7502.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Beau Ward",
@@ -1785,8 +1809,7 @@ function fill(){
             "Saskia Scott"
           ],
           "phoneNumber":[  
-            "03 6324 4760",
-            "10"
+            "+61 3 6324 4760"
           ],
           "coordinates":[  
             -41.4054664,
@@ -1795,19 +1818,18 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bd2",
-          "name":"Mt Gambier",
+          "name":"COL Mt Gambier",
           "street":"Cnr James & Elizabeth Streets",
           "city":"Mt Gambier",
           "state":"SA",
           "postcode":"5290",
-          "email":"coles.0433.online.manager@coles.com.au",
+          "email":"Coles.0433.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Rebecca Bell"
           ],
           "phoneNumber":[  
-            "08 8725 6655",
-            "10"
+            "+61 8 8725 6655"
           ],
           "coordinates":[  
             -37.828301,
@@ -1816,8 +1838,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bd3",
-          "name":"Murwillumbah",
-          "street":"Cnr Brisbane & Wollumbin St",
+          "name":"COL Murwillumbah",
+          "street":"Cnr Brisbane & Wollumbin Street",
           "city":"Murwillumbah",
           "state":"NSW",
           "postcode":"2484",
@@ -1829,8 +1851,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 6672 2634",
-            "10"
+            "+61 2 6672 2634"
           ],
           "coordinates":[  
             -28.3278034,
@@ -1839,12 +1860,12 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bd4",
-          "name":"Narellan",
+          "name":"COL Narellan",
           "street":"326 Camden Valley Way Narellan ",
           "city":"Narellan",
           "state":"NSW",
           "postcode":"2567",
-          "email":"coles.5800.online.manager@coles.com.au",
+          "email":"Coles.5800.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Jessica Nielson",
@@ -1852,8 +1873,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 46457160",
-            "10"
+            "+61 2 46457160"
           ],
           "coordinates":[  
             -34.0393522,
@@ -1862,7 +1882,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bd9",
-          "name":"Queanbeyan",
+          "name":"COL Queanbeyan",
           "street":"131 Monaro Street",
           "city":"Queanbeyan",
           "state":"NSW",
@@ -1875,8 +1895,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 6124 3660",
-            "10"
+            "+61 2 6124 3660"
           ],
           "coordinates":[  
             -35.3529296,
@@ -1885,8 +1904,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bd8",
-          "name":"Pagewood",
-          "street":"\"East Gardens SC~ Cnr Bunnerong Rd and Wentworth Ave\"",
+          "name":"COL Pagewood",
+          "street":"East Gardens SC~ Cnr Bunnerong Road & Wentworth Ave",
           "city":"Pagewood",
           "state":"NSW",
           "postcode":"2035",
@@ -1896,8 +1915,7 @@ function fill(){
 
           ],
           "phoneNumber":[  
-            "",
-            "10"
+            ""
           ],
           "coordinates":[  
             -33.9444798,
@@ -1906,8 +1924,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bde",
-          "name":"Rockhampton",
-          "street":"\"Rockhampton Fair SC~ Musgrave St\"",
+          "name":"COL Rockhampton",
+          "street":"Rockhampton Fair SC~ Musgrave Street",
           "city":"Rockhampton",
           "state":"QLD",
           "postcode":"4701",
@@ -1919,8 +1937,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 4930 8464",
-            "10"
+            "+61 7 4930 8464"
           ],
           "coordinates":[  
             -23.3563744,
@@ -1929,12 +1946,12 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225be3",
-          "name":"Sebastopol",
+          "name":"COL Sebastopol",
           "street":"210 Albert Street",
           "city":"Sebastapol",
           "state":"VIC",
           "postcode":"3356",
-          "email":"Coles.0580.online.manager@coles.com.au",
+          "email":"Coles.0580.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "Lyndell Eshuag",
@@ -1942,8 +1959,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 5336 3823",
-            "10"
+            "+61 3 5336 3823"
           ],
           "coordinates":[  
             -37.59927,
@@ -1952,7 +1968,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bd5",
-          "name":"Nerang",
+          "name":"COL Nerang",
           "street":"Station Street",
           "city":"Nerang",
           "state":"QLD",
@@ -1964,8 +1980,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 5578 3322",
-            "10"
+            "+61 7 5578 3322"
           ],
           "coordinates":[  
             -27.9954048,
@@ -1974,8 +1989,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225be8",
-          "name":"Tamworth",
-          "street":"\"Kathleen Street~ South Tamworth\"",
+          "name":"COL Tamworth",
+          "street":"Kathleen Street~ South Tamworth",
           "city":"South Tamworth",
           "state":"NSW",
           "postcode":"2340",
@@ -1987,8 +2002,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 6760 1460",
-            "10"
+            "+61 2 6760 1460"
           ],
           "coordinates":[  
             -31.1073823,
@@ -1997,8 +2011,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bda",
-          "name":"Richmond NSW",
-          "street":"271 - 281 Windsor St",
+          "name":"COL Richmond NSW",
+          "street":"271 - 281 Windsor Street",
           "city":"Richmond",
           "state":"NSW",
           "postcode":"2753",
@@ -2010,8 +2024,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 4578 0526",
-            "10"
+            "+61 2 4578 0526"
           ],
           "coordinates":[  
             -33.5957025,
@@ -2020,8 +2033,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bdf",
-          "name":"Rouse Hill",
-          "street":"Corner Windsor Rd & Whitehart Drive",
+          "name":"COL Rouse Hill",
+          "street":"Corner Windsor Road & Whitehart Drive",
           "city":"Rouse Hill",
           "state":"NSW",
           "postcode":"2155",
@@ -2033,8 +2046,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 9836 3461",
-            "10"
+            "+61 2 9836 3461"
           ],
           "coordinates":[  
             -33.6937192,
@@ -2043,8 +2055,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225be4",
-          "name":"Shellharbour",
-          "street":"\"Shop 1021~ Shellharbour Square\"",
+          "name":"COL Shellharbour",
+          "street":"Shop 1021~ Shellharbour Square",
           "city":"Shellharbour",
           "state":"NSW",
           "postcode":"2529",
@@ -2056,8 +2068,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 4295 8360",
-            "10"
+            "+61 2 4295 8360"
           ],
           "coordinates":[  
             -34.5646649,
@@ -2066,7 +2077,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bd6",
-          "name":"North Ward",
+          "name":"COL North Ward",
           "street":"26-28 MITCHELL STREET",
           "city":"North Ward",
           "state":"QLD",
@@ -2078,8 +2089,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 4721 8900",
-            "10"
+            "+61 7 4721 8900"
           ],
           "coordinates":[  
             -19.2526573,
@@ -2088,8 +2098,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225be9",
-          "name":"The Gap",
-          "street":"\"1000 Waterworks Road~ The Gap\"",
+          "name":"COL The Gap",
+          "street":"1000 Waterworks Road~ The Gap",
           "city":"The Gap",
           "state":"QLD",
           "postcode":"4061",
@@ -2100,8 +2110,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 3511 1196",
-            "10"
+            "+61 7 3511 1196"
           ],
           "coordinates":[  
             -27.4459006,
@@ -2110,8 +2119,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bd7",
-          "name":"Oakleigh",
-          "street":"Cnr Hanover & Portman Sts",
+          "name":"COL Oakleigh",
+          "street":"Cnr Hanover & Portman Streets",
           "city":"Oakleigh",
           "state":"VIC",
           "postcode":"3166",
@@ -2123,8 +2132,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 9568 5803",
-            "10"
+            "+61 3 9568 5803"
           ],
           "coordinates":[  
             -37.9012376,
@@ -2133,8 +2141,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bee",
-          "name":"Ulverstone",
-          "street":"16 Reibey St",
+          "name":"COL Ulverstone",
+          "street":"16 Reibey Street",
           "city":"Ulverstone",
           "state":"TAS",
           "postcode":"7315",
@@ -2146,8 +2154,7 @@ function fill(){
             "Saskia Scott"
           ],
           "phoneNumber":[  
-            "03 6425 4632",
-            "10"
+            "+61 3 6425 4632"
           ],
           "coordinates":[  
             -41.1571629,
@@ -2156,8 +2163,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bdb",
-          "name":"Richmond VIC",
-          "street":"198-200 Swan St",
+          "name":"COL Richmond VIC",
+          "street":"198-200 Swan Street",
           "city":"Richmond South",
           "state":"VIC",
           "postcode":"3121",
@@ -2169,8 +2176,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 84200200",
-            "10"
+            "+61 3 8420 0200"
           ],
           "coordinates":[  
             -37.8256546,
@@ -2179,8 +2185,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bdc",
-          "name":"Riverlink",
-          "street":"Cnr of The Terrace and Downs Sts",
+          "name":"COL Riverlink",
+          "street":"Cnr of The Terrace & Downs Streets",
           "city":"Riverlink",
           "state":"QLD",
           "postcode":"4305",
@@ -2191,8 +2197,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 3281 3496",
-            "10"
+            "+61 7 3281 3496"
           ],
           "coordinates":[  
             -27.6081327,
@@ -2201,7 +2206,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225be1",
-          "name":"Roxburgh Park",
+          "name":"COL Roxburgh Park",
           "street":"250 Somerton Road",
           "city":"Roxburgh Park",
           "state":"VIC",
@@ -2214,8 +2219,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 9303 2660",
-            "10"
+            "+61 3 9303 2660"
           ],
           "coordinates":[  
             -37.639013,
@@ -2224,7 +2228,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bf3",
-          "name":"Westmead",
+          "name":"COL Westmead",
           "street":"29-33 Darcy Road",
           "city":"Westmead",
           "state":"NSW",
@@ -2237,8 +2241,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 8837 7700",
-            "10"
+            "+61 2 8837 7700"
           ],
           "coordinates":[  
             -33.8039135,
@@ -2247,7 +2250,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225be0",
-          "name":"Roxborough Park",
+          "name":"COL Roxborough Park",
           "street":"250 Somerton Road",
           "city":"Roxborough Park",
           "state":"VIC",
@@ -2260,8 +2263,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 9303 2660",
-            "10"
+            "+61 3 9303 2660"
           ],
           "coordinates":[  
             -37.639013,
@@ -2270,8 +2272,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225be6",
-          "name":"St Clair",
-          "street":"\"Cheltenham Parade~ Woodville\"",
+          "name":"COL St Clair",
+          "street":"Cheltenham Parade~ Woodville",
           "city":"St Clair",
           "state":"SA",
           "postcode":"5011",
@@ -2283,8 +2285,7 @@ function fill(){
             "Saskia Scott"
           ],
           "phoneNumber":[  
-            "08 8413 5260",
-            "10"
+            "+61 8 8413 5260"
           ],
           "coordinates":[  
             -34.8700124,
@@ -2293,8 +2294,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225be5",
-          "name":"Springfield Orion",
-          "street":"\"1 Main Street~ Springfield Lakes\"",
+          "name":"COL Springfield Orion",
+          "street":"1 Main Street~ Springfield Lakes",
           "city":"Springfield Orion",
           "state":"QLD",
           "postcode":"4300",
@@ -2305,8 +2306,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 3470 3160",
-            "10"
+            "+61 7 3470 3160"
           ],
           "coordinates":[  
             -27.6768575,
@@ -2315,8 +2315,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225beb",
-          "name":"Toormina",
-          "street":"\"Toormina Gardens S/C~ Cnr Minorie Drv & Toormina Rd\"",
+          "name":"COL Toormina",
+          "street":"Toormina Gardens S/C~ Cnr Minorie Drv & Toormina Road",
           "city":"Toormina",
           "state":"NSW",
           "postcode":"2452",
@@ -2328,8 +2328,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 6659 6500",
-            "10"
+            "+61 2 6659 6500"
           ],
           "coordinates":[  
             -30.3532498,
@@ -2338,20 +2337,19 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bdd",
-          "name":"Riverton",
+          "name":"COL Riverton",
           "street":"353-361 High Road",
           "city":"Riverton",
           "state":"WA",
           "postcode":"6147",
-          "email":"coles.0465.online.manager@coles.com.au",
+          "email":"Coles.0465.Online.Manager@coles.com.au",
           "__v":0,
           "primaryContacts":[  
             "David Deb",
             "Alexia Sammut"
           ],
           "phoneNumber":[  
-            "08 9253 4160",
-            "10"
+            "+61 8 9253 4160"
           ],
           "coordinates":[  
             -32.0392288,
@@ -2360,7 +2358,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bea",
-          "name":"The Pines",
+          "name":"COL The Pines",
           "street":"Cnr K.P.McGrath Drive & Guiness Creek Road",
           "city":"The Pines",
           "state":"QLD",
@@ -2372,8 +2370,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 5586 4460",
-            "10"
+            "+61 7 5586 4460"
           ],
           "coordinates":[  
             -28.1338957,
@@ -2382,7 +2379,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225be2",
-          "name":"Runaway Bay",
+          "name":"COL Runaway Bay",
           "street":"Cnr Bayview St & Lae Drv",
           "city":"Runaway Bay",
           "state":"QLD",
@@ -2394,8 +2391,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 5537 7990",
-            "10"
+            "+61 7 5537 7990"
           ],
           "coordinates":[  
             -27.9137821,
@@ -2404,8 +2400,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bf0",
-          "name":"Wagga Wagga",
-          "street":"\"Sturt Mall S/C~ Cnr Forsyth Street & Baylis Sts\"",
+          "name":"COL Wagga Wagga",
+          "street":"Sturt Mall S/C~ Cnr Forsyth Street & Baylis Streets",
           "city":"Wagga Wagga",
           "state":"NSW",
           "postcode":"2650",
@@ -2417,8 +2413,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 6921 1352",
-            "10"
+            "+61 2 6921 1352"
           ],
           "coordinates":[  
             -35.11321,
@@ -2427,8 +2422,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bef",
-          "name":"Vermont South",
-          "street":"Vermont South SC~ cnr Burwood Hwy & Hanover Rd",
+          "name":"COL Vermont South",
+          "street":"Vermont South SC~ cnr Burwood Hwy & Hanover Road",
           "city":"Vermont South",
           "state":"VIC",
           "postcode":"3133",
@@ -2440,8 +2435,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 8847 4060",
-            "10"
+            "+61 3 8847 4060"
           ],
           "coordinates":[  
             -37.8560565,
@@ -2450,7 +2444,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bf5",
-          "name":"Winston Hills",
+          "name":"COL Winston Hills",
           "street":"Caroline Chisolm Drive",
           "city":"Winston Hills",
           "state":"NSW",
@@ -2463,8 +2457,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 9620 8462",
-            "10"
+            "+61 2 9620 8462"
           ],
           "coordinates":[  
             -33.7757815,
@@ -2473,8 +2466,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225be7",
-          "name":"Sunnybank",
-          "street":"Cnr Calam & Compton Rds",
+          "name":"COL Sunnybank",
+          "street":"Cnr Calam & Compton Roads",
           "city":"Sunnybank Hills",
           "state":"QLD",
           "postcode":"4109",
@@ -2485,8 +2478,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 3712 5660",
-            "10"
+            "+61 7 3712 5660"
           ],
           "coordinates":[  
             -27.6113434,
@@ -2495,8 +2487,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bed",
-          "name":"Townsville",
-          "street":"Cnr Ross River Rd & Nathan St",
+          "name":"COL Townsville",
+          "street":"Cnr Ross River Road & Nathan Street",
           "city":"Aitkenvale",
           "state":"QLD",
           "postcode":"4814",
@@ -2507,8 +2499,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 4779 0655",
-            "10"
+            "+61 7 4779 0655"
           ],
           "coordinates":[  
             -19.2981045,
@@ -2517,7 +2508,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bf2",
-          "name":"West Gosford",
+          "name":"COL West Gosford",
           "street":"West Gosford S/C~ Brisbane Water Drv",
           "city":"West Gosford",
           "state":"NSW",
@@ -2530,8 +2521,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 4322 2334",
-            "10"
+            "+61 2 4322 2334"
           ],
           "coordinates":[  
             -33.4294601,
@@ -2540,7 +2530,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bf4",
-          "name":"Wilsonton",
+          "name":"COL Wilsonton",
           "street":"Erin Street",
           "city":"Wilsonton",
           "state":"QLD",
@@ -2552,8 +2542,7 @@ function fill(){
             "Karissa Staples"
           ],
           "phoneNumber":[  
-            "07 4615 1700",
-            "10"
+            "+61 7 4615 1700"
           ],
           "coordinates":[  
             -27.5421112,
@@ -2562,8 +2551,8 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bec",
-          "name":"Top Ryde",
-          "street":"Cnr Devlin St & Blaxland Rd",
+          "name":"COL Top Ryde",
+          "street":"Cnr Devlin St & Blaxland Road",
           "city":"Top Ryde",
           "state":"NSW",
           "postcode":"2112",
@@ -2575,8 +2564,7 @@ function fill(){
             "Jayde Hudson (C/T)"
           ],
           "phoneNumber":[  
-            "02 88788160",
-            "10"
+            "+61 2 88788160"
           ],
           "coordinates":[  
             -33.8120293,
@@ -2585,7 +2573,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bf1",
-          "name":"Waurn Ponds",
+          "name":"COL Waurn Ponds",
           "street":"173-199 Pioneer Road",
           "city":"Waurn Ponds",
           "state":"VIC",
@@ -2597,8 +2585,7 @@ function fill(){
             "Sarah Esselbrugge"
           ],
           "phoneNumber":[  
-            "03 5247 3060",
-            "10"
+            "+61 3 5247 3060"
           ],
           "coordinates":[  
             -38.19942289999999,
@@ -2607,7 +2594,7 @@ function fill(){
         },
         {  
           "_id":"59719d405f8ee87150225bf6",
-          "name":"Customer Support Centre",
+          "name":"COL Customer Support Centre",
           "street":"800 Toorak Road",
           "city":"Hawthorn East",
           "state":"VIC",
@@ -2618,8 +2605,7 @@ function fill(){
 
           ],
           "phoneNumber":[  
-            "",
-            "10"
+            ""
           ],
           "coordinates":[  
             -37.8453794,
@@ -2634,6 +2620,7 @@ function fill(){
     seeder.loadModels([
       './models/booking.js',
       './models/company.js',
+      './models/contact.js',
       './models/job.js',
       './models/location.js',
       './models/project.js',
@@ -2644,6 +2631,7 @@ function fill(){
     seeder.clearModels([
       'Booking',
       'Company',
+      'Contact',
       'Job',
       'Location',
       'Project',
