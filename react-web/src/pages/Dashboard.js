@@ -3,6 +3,7 @@ import NavBar from '../components/atoms/Navigation'
 import TextInput from '../components/atoms/TextInput'
 import DynamicButton from '../components/atoms/DynamicButton'
 import Link from '../components/atoms/Link'
+import Subtitle from '../components/atoms/Subtitle'
 
 const SignIn = ({
 
@@ -34,6 +35,10 @@ const SignIn = ({
 				</div>
 			</div>
 			<div className="pageContents">
+				<h1>Dashboard</h1>
+				<Subtitle text="Updates"/>
+				<Subtitle text="Upcoming"/>
+				<Subtitle text="To Do"/>
 			</div>
 		</div>
 	)
