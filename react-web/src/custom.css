@@ -178,9 +178,8 @@ div.navbar {
   display: inline-block;
   float: left; }
   div.navbar .links {
-    padding-top: 20px;
-    text-align: left;
-    padding-left: 40px; }
+    padding: 15px 0 15px 40px;
+    text-align: left; }
   div.navbar .signOut {
     bottom: 0;
     position: absolute;
@@ -190,8 +189,7 @@ div.navbar {
 div.navbar .logo {
   height: 50px;
   width: 200px;
-  background-color: #F06734;
-  margin-bottom: 15px; }
+  background-color: #F06734; }
   div.navbar .logo p {
     color: #F1F2F2;
     margin: 0;
@@ -203,3 +201,9 @@ a {
   color: #F1F2F2;
   letter-spacing: 1px;
   text-decoration: none; }
+
+div.links.active {
+  background-color: #F1F2F2;
+  border-left: solid 2.5px #F06734; }
+  div.links.active a {
+    color: #414042; }
