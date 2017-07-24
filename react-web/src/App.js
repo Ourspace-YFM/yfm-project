@@ -4,9 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import './App.css'
 import './custom.css'
-import PrimaryNav from './components/atoms/PrimaryNav'
 import ErrorMessage from './components/atoms/ErrorMessage'
 import HomePage from './pages/HomePage'
 import SignInPage from './pages/SignInPage'
@@ -20,6 +18,7 @@ import Job from './pages/JobPage'
 import Task from './pages/TaskPage'
 import Contacts from './pages/ContactsPage'
 import SignIn from './pages/SignIn'
+import Dashboard from './pages/Dashboard'
 
 import * as authAPI from './api/auth'
 import * as projectsAPI from './api/projects'
@@ -201,7 +200,6 @@ setDrawerOpen = (boolean) => {
 
       <Router>
         <main>
-          <PrimaryNav isSignedIn={!!token} onSignOut={ this.handleSignOut } />
           <MuiThemeProvider>
             <Drawer
               docked={false}
@@ -223,6 +221,7 @@ setDrawerOpen = (boolean) => {
             <Route exact path='/contacts' component={ Contacts } />
             <Route exact path='/createbooking' component={ CreateBooking } />
             <Route exact path='/signin' component={ SignIn } />
+            <Route exact path='/dashboard' component={ Dashboard } />
 
               <Route path='/componentlibrary' render={ () => (
                 <ComponentLibrary

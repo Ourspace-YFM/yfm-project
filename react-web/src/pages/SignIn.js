@@ -1,7 +1,6 @@
 import React from 'react'
-import '../SignInPage.css'
 import TextInput from '../components/atoms/TextInput'
-import DynamicButton from '../components/atoms/DynamicButton'
+import LinkButton from '../components/atoms/LinkButton'
 import Link from '../components/atoms/Link'
 
 const SignIn = ({
@@ -22,9 +21,9 @@ const SignIn = ({
 				<div className="contents">
 					<h1><span className="bold">SIGN IN</span></h1>
 					<TextInput placeholder="Email" className="input"/>
-					<TextInput placeholder="Password" className="input"/>
+					<TextInput type="password" placeholder="Password" className="input"/>
 					<div>
-						<DynamicButton label="Log In" buttonColor="#F06734" className="signInButton"/>
+						<LinkButton label="Log In" buttonColor="#F06734" className="signInButton" link="/bookings"/>
 					</div>
 					<div className="forgotPasswordDiv">
 						<Link className="forgotPassword" name="Forgot your password?"/>

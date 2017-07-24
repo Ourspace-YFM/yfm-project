@@ -1,5 +1,4 @@
 import React from 'react'
-import '../custom.css'
 
 import ExpandableCard from '../components/molecules/ExpandableCard'
 import ProgressItem from '../components/molecules/ProgressItem'
