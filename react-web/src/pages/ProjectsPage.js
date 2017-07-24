@@ -11,6 +11,7 @@ const Projects = ({
 	projects
 
 }) => {
+	console.log(projects)
 	return (
 		<div>
 				<h1>Projects</h1>
