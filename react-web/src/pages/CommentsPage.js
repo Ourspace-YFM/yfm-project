@@ -1,19 +1,19 @@
 import React from 'react'
-import Text from '../components/atoms/TextField'
+import TextArea from '../components/atoms/TextArea'
 
 const Comments = () => (
   <div>
     <div>
       <h1>Installer Instructions</h1>
-      <Text text={ 'Installer Instructions' } />
+      <TextArea label={ 'Installer Instructions' } />
     </div>
 
     <br />
 
     <div>
       <h1>YFM Comments</h1>
-      <Text text={ 'YFM Comments' } />
-    </div>    
+      <TextArea label={ 'YFM Comments' } />
+    </div>
   </div>
 )
 
