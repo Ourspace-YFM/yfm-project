@@ -48,3 +48,17 @@ div.jobLogo {
   display: inline-block;
   min-width: 50%;
 }
+
+//Booking - Create
+div.stepContainer {
+}
+
+div.stepFormRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+div.stepFormTile{
+  flex-grow: 1;
+}
