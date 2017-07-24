@@ -19,6 +19,7 @@ import Assets from './pages/AssetsPage'
 import Job from './pages/JobPage'
 import Task from './pages/TaskPage'
 import Contacts from './pages/ContactsPage'
+import SignIn from './pages/SignIn'
 
 import * as authAPI from './api/auth'
 import * as projectsAPI from './api/projects'
@@ -221,6 +222,7 @@ setDrawerOpen = (boolean) => {
             <Route exact path='/assets' component={ Assets } />
             <Route exact path='/contacts' component={ Contacts } />
             <Route exact path='/createbooking' component={ CreateBooking } />
+            <Route exact path='/signin' component={ SignIn } />
 
               <Route path='/componentlibrary' render={ () => (
                 <ComponentLibrary

@@ -1,0 +1,8 @@
+body {
+  background-color: #505150;
+  min-height: 100%;
+  min-width: 100%;
+}
+ nav {
+   display: none; 
+ }
