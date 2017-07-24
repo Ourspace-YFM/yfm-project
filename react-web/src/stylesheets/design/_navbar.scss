@@ -6,9 +6,8 @@ div.navbar {
   float: left;
 
   .links {
-    padding-top: 20px;
+    padding: 15px 0 15px 40px;
     text-align: left;
-    padding-left: 40px;
   }
 
   .signOut{
@@ -24,7 +23,6 @@ div.navbar .logo {
   height: 50px;
   width: 200px;
   background-color: $orange;
-  margin-bottom: 15px;
 
   p {
     color: $white;
@@ -40,4 +38,13 @@ a {
   color: $white;
   letter-spacing: 1px;
   text-decoration: none;
+}
+
+div.links.active {
+  background-color: $white;
+  border-left: solid 2.5px $orange; 
+
+  a {
+    color: $darkgrey;
+  }
 }
