@@ -23,7 +23,7 @@ const SignIn = ({
 					<TextInput placeholder="Email" className="input"/>
 					<TextInput type="password" placeholder="Password" className="input"/>
 					<div>
-						<LinkButton label="Log In" buttonColor="#F06734" className="signInButton" link="/bookings"/>
+						<LinkButton label="Log In" buttonColor="#F06734" className="signInButton" link="/dashboard"/>
 					</div>
 					<div className="forgotPasswordDiv">
 						<Link className="forgotPassword" name="Forgot your password?"/>
