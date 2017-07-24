@@ -38,72 +38,111 @@ export default function AssetCard({
           <CardText expandable={true}>
           <div className="assetCardInfo">
             <BoldText text="Name" />
-            <br/><br/>
+            <br/>
             <LightText text={ companyID } />
           </div>
+
+          <br/>
+
           <div className="assetCardInfo">
             <BoldText text="Coles ID" />
-            <br/><br/>
+            <br/>
             <LightText text={ name } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="Registration" />
-            <br/><br/>
+            <br/>
             <LightText text={ registration } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="Operational Status" />
-            <br/><br/>
+            <br/>
             <LightText text={ operationalStatus } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="Chassis Make" />
-            <br/><br/>
+            <br/>
             <LightText text={ chassisMake } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="Chassis Model" />
-            <br/><br/>
+            <br/>
             <LightText text={ chassisModel } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="Body Manufacturer" />
-            <br/><br/>
+            <br/>
             <LightText text={ bodyManufacturer } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="Make/Model Code" />
-            <br/><br/>
+            <br/>
             <LightText text={ makeCode } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="Body Code" />
-            <br/><br/>
+            <br/>
             <LightText text={ bodyCode } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="Truck Type Code" />
-            <br/><br/>
+            <br/>
             <LightText text={ truckTypeCode } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="Lease End Date" />
-            <br/><br/>
+            <br/>
             <LightText text={ leaseEnd } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="DS Campaign" />
-            <br/><br/>
+            <br/>
             <LightText text={ dsCampaign } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="PS Campaign" />
-            <br/><br/>
+            <br/>
             <LightText text={ psCampaign } />
           </div>
+
+          <br/>
+          
           <div className="assetCardInfo">
             <BoldText text="R Campaign" />
-            <br/><br/>
+            <br/>
             <LightText text={ rCampaign } />
           </div>
           </CardText>

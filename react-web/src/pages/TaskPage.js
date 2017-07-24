@@ -17,7 +17,7 @@ export default function Task({
         !!data ? (
           <div>
 
-            <h2>{data.task.name}</h2> 
+            <h2>Task: {data.task.name}</h2> 
 
             <div>
               <BoldText text='Attachments:' /> <LightText text={ data.task.attachments } />
@@ -36,15 +36,35 @@ export default function Task({
 
 
               { /* If there are bookings, display the expandable card. If there aren't, display a message */
-                !!data.bookings ? (
+                !!data.bookings._id ? (
                   /* (data.bookings) information to go here when bookings seeds have been added. */
                     <div>
-                    { data.bookings.map((booking) => (                     
+                    { data.bookings.map((booking) => (    
                       <ExpandableCard
-                        title="Bookings"
+                        title="Current Bookings"
                         logoClass="logo-class" 
                         children={
-                          <LinkButton buttonColor='#F06734' link={ `/bookings/${booking._id}` } />
+                        <div>
+                          <div>
+                            <BoldText text='Booking Name:' /> <br />
+                            <LightText text={ booking.name } />
+                          </div>
+
+                          <br />
+
+                          <div>
+                            <BoldText text='Booking Status:' /> <br />
+                            <LightText text={ booking.status } />
+                          </div>                          
+                          
+                          <br />
+                          <br />
+
+                          <div>
+                            <LinkButton label='View' buttonColor='#F06734' link={ `/bookings/${booking._id}` } />
+                          </div>
+
+                        </div>
                         }
                       />
                     ))}

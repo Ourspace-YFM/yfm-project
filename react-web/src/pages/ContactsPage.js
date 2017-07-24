@@ -36,11 +36,66 @@ const Assets = () => (
             logoClass='mini'
             logoSrc='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png'
             companyName='Coles'
-            accountId='596dc1db10ec3b08f61abc01'
+            accountId='596dc1db10ec3b08f61dda01'
             position='Coles Operations Manager'
             phone='(03) 8888-8888'
             email='jhancock@coles.com.au'
           />
+					<br />
+          <ContactCard
+            contactName='Brett Enever'
+            logoClass='mini'
+            logoSrc='https://s3.us-east-2.amazonaws.com/ourspace/logos/SCS.png'
+            companyName='SCS'
+            accountId='596dc1db10ec3b08f61eed01'
+            position='Coles Operations Manager'
+            phone='(03) 8888-8888'
+            email='benever@scs.com.au'
+					/>
+					<br />
+          <ContactCard
+            contactName='Alex Hatzimihail'
+            logoClass='mini'
+            logoSrc='https://s3.us-east-2.amazonaws.com/ourspace/logos/SCS.png'
+            companyName='SCS'
+            accountId='596dc1db10ec3b08f61eed01'
+            position='Account Manager'
+            phone='(03) 8888-8888'
+            email='a_hatzimihail@scs.com.au'
+					/>
+					<br />
+          <ContactCard
+            contactName='Sharon Carr'
+            logoClass='mini'
+            logoSrc='https://s3.us-east-2.amazonaws.com/ourspace/logos/ONK.png'
+            companyName='City Of Onkaparinga'
+            accountId='596dc1db10ec3b08f61def01'
+            position='Account Manager'
+            phone='(03) 8888-8888'
+            email='scarr@cityofonkaparinga.gov.au'
+					/>
+					<br />
+          <ContactCard
+            contactName='Yuen Hua'
+            logoClass='mini'
+            logoSrc='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png'
+            companyName='Coles'
+            accountId='596dc1db10ec3b08f61ded01'
+            position='Coles Marketing Manager'
+            phone='(03) 8888-8888'
+            email='yhua@coles.com.au'
+					/>
+					<br />
+          <ContactCard
+            contactName='Kieren Pearson'
+            logoClass='mini'
+            logoSrc='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png'
+            companyName='Coles'
+            accountId='596dc1db10ec3b08f61dde01'
+            position='Coles Site Manager'
+            phone='(03) 8888-8888'
+            email='kpearson@coles.com.au'
+          />																								
         </div>
       </div>
     </div>
