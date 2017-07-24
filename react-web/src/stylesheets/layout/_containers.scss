@@ -48,3 +48,8 @@ div.jobLogo {
   display: inline-block;
   min-width: 50%;
 }
+
+div.pageContents {
+  display: inline-block;
+  width: calc(100vw - 200px); 
+}

@@ -11,6 +11,8 @@ const SignIn = ({
 	return (
 		<div className="dashboard">
 			<NavBar/>
+			<div className="pageContents">
+			</div>
 		</div>
 	)
 }
