@@ -109,6 +109,27 @@ function fill(){
         }
       ]
     },{
+      model: 'Contact',
+      documents: [
+        {
+          companyId: '59719d405f8ee87150225b92', 
+          firstName: 'Brett', 
+          lastName: 'Enever', 
+          position: 'Owner',
+          locationScope: '',
+          phone: [],
+          email: ['brett@lbesigns.com.au']
+        },{
+          companyId: '597413e439e98c0769da5a65', 
+          firstName: 'Alexi', 
+          lastName: 'Hatzimihail', 
+          position: 'Owner',
+          locationScope: '',
+          phone: [],
+          email: ['alexi@alicecrashrepairs.com.au']
+        }
+      ]
+    },{
       model: 'Project',
       documents: [
         {
