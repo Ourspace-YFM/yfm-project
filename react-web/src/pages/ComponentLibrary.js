@@ -1,5 +1,4 @@
 import React from 'react'
-import '../custom.css'
 
 // Components
 import ProgressBar from '../components/atoms/ProgressBar'

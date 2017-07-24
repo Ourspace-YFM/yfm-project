@@ -4,7 +4,6 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import './App.css'
 import './custom.css'
 import PrimaryNav from './components/atoms/PrimaryNav'
 import ErrorMessage from './components/atoms/ErrorMessage'
