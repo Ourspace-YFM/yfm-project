@@ -31,21 +31,25 @@ export default function Task({
               <BoldText text='Parent Job:' /> <LightText text={ data.task.parentJob.name } />
             </div>
 
-            <br />
+            <br />         
+
+
 
               { /* If there are bookings, display the expandable card. If there aren't, display a message */
                 !!data.bookings ? (
                   /* (data.bookings) information to go here when bookings seeds have been added. */
-                  <div className='tasks'>
-                    <ExpandableCard
-                      title="Bookings"
-                      logoClass="logo-class"
-                      children={
-                        <div>
-                          <LinkButton buttonColor='#F06734' link={ `/bookings/${data.bookings._id}` } />
-                        </div>
-                      } />
-                  </div>
+                    <div>
+                    { data.bookings.map((booking) => (                     
+                      <ExpandableCard
+                        title="Bookings"
+                        logoClass="logo-class" 
+                        children={
+                          <LinkButton buttonColor='#F06734' link={ `/bookings/${booking._id}` } />
+                        }
+                      />
+                    ))}
+                    </div>
+                  
                 ) : (
                   <div>
                     <LightText text='There are currently no assigned bookings for this task.' />

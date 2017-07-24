@@ -11,5 +11,14 @@ router
     res.json(bookings)
   })
 })
+router
+.route('/bookings/:id')
+.get((req, res) => {
+  const id = req.params.id
+  Booking.findById(id)
+  .then((booking)=>{
+    res.json(booking)
+  })
+})
 
 module.exports = router

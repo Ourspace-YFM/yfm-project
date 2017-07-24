@@ -15,6 +15,7 @@ import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import CreateBooking from'./pages/CreateBooking'
 import Bookings from'./pages/BookingsPage'
+import Booking from'./pages/BookingPage'
 import Assets from './pages/AssetsPage'
 import Job from './pages/JobPage'
 import Task from './pages/TaskPage'
@@ -48,7 +49,8 @@ class App extends Component {
     mapData: null,
     singleJob: null,
     singleTask: null,
-    bookings: null
+    bookings: null,
+    singleBooking: null
   }
 
   loadPromises = {}
@@ -111,6 +113,14 @@ class App extends Component {
     return this.loadUsing({
       makePromise: bookingsAPI.list,
       stateKey: 'bookings',
+      reload
+    })
+  }
+
+  loadSingleBooking({ reload = false, id } = {}) {
+    return this.loadUsing({
+      makePromise: () => bookingsAPI.listSingle(id),
+      stateKey: 'singleBooking',
       reload
     })
   }
@@ -211,8 +221,7 @@ setDrawerOpen = (boolean) => {
               <MenuItem onTouchTap={() => {this.setDrawerOpen(false)}}>Menu Item</MenuItem>
               <MenuItem onTouchTap={() => {this.setDrawerOpen(false)}}>Menu Item 2</MenuItem>
             </Drawer>
-
-                        </MuiThemeProvider>
+          </MuiThemeProvider>
 
           { !!error && <ErrorMessage error={error}/> }
 
@@ -269,6 +278,16 @@ setDrawerOpen = (boolean) => {
     							)
     						}
             } />
+          <Route path='/bookings/:id' render={
+              ({ match }) => {
+                  const id = match.params.id
+                  this.loadSingleBooking({id: id})
+                  !!this.state.singleBooking ? this.state.singleBooking : ''
+    							return (
+                    <Booking data={ this.state.singleBooking } />
+    							)
+    						}
+            } />            
             <Route render={
               ({ location }) => <p>{ location.pathname } not found</p>
             } />
