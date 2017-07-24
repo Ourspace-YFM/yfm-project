@@ -96,92 +96,104 @@ div.greyedInput {
   min-height: 100vh;
   min-width: 100vh;
   color: #ffffff; }
+  .signInPage div.left {
+    display: inline-block;
+    min-height: 100vh;
+    max-width: 50%;
+    min-width: 50%;
+    position: relative; }
+  .signInPage div.right {
+    display: inline-block;
+    min-height: 100vh;
+    max-width: 48%;
+    min-width: 48%; }
+  .signInPage div.border {
+    min-height: 80vh;
+    width: 5px;
+    border-right: solid 2px #FFFFFF;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  .signInPage div.left div.contents {
+    height: 40vh;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  .signInPage div.left h1 {
+    font-size: 60px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 10px; }
+  .signInPage div.right div.contents {
+    height: 40vh;
+    width: 50%;
+    position: absolute;
+    top: 48%;
+    transform: translateY(-52%); }
+  .signInPage p {
+    padding: 0 15%;
+    font-size: 25px;
+    line-height: 1.3; }
+  .signInPage div.right h1 {
+    font-size: 60px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 10px; }
+  .signInPage .input {
+    background-color: #505150;
+    color: #ffffff;
+    border: solid 1px #ffffff;
+    padding: 10px;
+    font-size: 16px;
+    min-width: 50%; }
+  .signInPage ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #ffffff; }
+  .signInPage ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ffffff; }
+  .signInPage :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #ffffff; }
+  .signInPage :-moz-placeholder {
+    /* Firefox 18- */
+    color: #ffffff; }
+  .signInPage .signInButton {
+    margin-top: 20px !important; }
+  .signInPage div.forgotPasswordDiv {
+    margin-top: 20px; }
+  .signInPage a.links.forgotPassword {
+    color: #7CB160; }
 
-nav {
-  display: none; }
-
-div.left {
-  display: inline-block;
+div.navbar {
   min-height: 100vh;
-  max-width: 50%;
-  min-width: 50%;
-  position: relative; }
+  width: 200px;
+  background-color: #414042; }
+  div.navbar .links {
+    padding-top: 20px;
+    text-align: left;
+    padding-left: 40px; }
+  div.navbar .signOut {
+    bottom: 0;
+    position: absolute;
+    padding-bottom: 20px;
+    width: 200px; }
 
-div.right {
-  display: inline-block;
-  min-height: 100vh;
-  max-width: 48%;
-  min-width: 48%; }
+div.navbar .logo {
+  height: 50px;
+  width: 200px;
+  background-color: #F06734;
+  margin-bottom: 15px; }
+  div.navbar .logo p {
+    color: #F1F2F2;
+    margin: 0;
+    font-size: 20px;
+    padding-top: 15px;
+    letter-spacing: 1.5px; }
 
-div.border {
-  min-height: 80vh;
-  width: 5px;
-  border-right: solid 2px #FFFFFF;
-  right: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); }
-
-div.left div.contents {
-  height: 40vh;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); }
-
-div.left h1 {
-  font-size: 60px;
-  font-weight: 100;
-  letter-spacing: 2px;
-  margin-bottom: 10px; }
-
-div.right div.contents {
-  height: 40vh;
-  width: 50%;
-  position: absolute;
-  top: 48%;
-  transform: translateY(-52%); }
-
-p {
-  padding: 0 15%;
-  font-size: 25px;
-  line-height: 1.3; }
-
-div.right h1 {
-  font-size: 60px;
-  font-weight: 100;
-  letter-spacing: 2px;
-  margin-bottom: 10px; }
-
-.input {
-  background-color: #505150;
-  color: #ffffff;
-  border: solid 1px #ffffff;
-  padding: 10px;
-  font-size: 16px;
-  min-width: 50%; }
-
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #ffffff; }
-
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #ffffff; }
-
-:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #ffffff; }
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: #ffffff; }
-
-.button.signInButton {
-  margin-top: 20px !important; }
-
-div.forgotPasswordDiv {
-  margin-top: 20px; }
-
-a.links.forgotPassword {
-  color: #7CB160; }
+a {
+  color: #F1F2F2;
+  letter-spacing: 1px;
+  text-decoration: none; }
