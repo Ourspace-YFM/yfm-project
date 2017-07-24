@@ -17,7 +17,7 @@ router
   getTask = () => (Task.findById(id)
   .populate('parentJob')
   .populate('completedBy'))
-  getBookingOfTasks = () => (Booking.find({parentJob: id}))
+  getBookingOfTasks = () => (Booking.find({taskId: id}))
   Promise.all([
     getTask(),
     getBookingOfTasks()
