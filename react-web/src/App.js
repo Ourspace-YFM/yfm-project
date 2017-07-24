@@ -14,6 +14,7 @@ import ComponentLibrary from './pages/ComponentLibrary'
 import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import CreateBooking from'./pages/CreateBooking'
+import Bookings from'./pages/BookingsPage'
 import Assets from './pages/AssetsPage'
 import Job from './pages/JobPage'
 import Task from './pages/TaskPage'
@@ -21,6 +22,7 @@ import Contacts from './pages/ContactsPage'
 
 import * as authAPI from './api/auth'
 import * as projectsAPI from './api/projects'
+import * as bookingsAPI from './api/bookings'
 import * as jobsAPI from './api/jobs'
 import * as tasksAPI from './api/tasks'
 import { setApiToken } from './api/init'
@@ -45,7 +47,8 @@ class App extends Component {
     singleProject: null,
     mapData: null,
     singleJob: null,
-    singleTask: null
+    singleTask: null,
+    bookings: null
   }
 
   loadPromises = {}
@@ -102,7 +105,15 @@ class App extends Component {
       stateKey: 'singleTask',
       reload
     })
-  }  
+  }
+
+  loadBookings({ reload = false } = {}) {
+    return this.loadUsing({
+      makePromise: bookingsAPI.list,
+      stateKey: 'bookings',
+      reload
+    })
+  }
 
 
   /* loadProjects({ reload = false } = {}) {
@@ -222,6 +233,9 @@ setDrawerOpen = (boolean) => {
 
                 // console.log(projectsAPI.list().then())
                 return <Projects projects={ this.state.projects } />} } />
+              <Route exact path='/bookings' render={() =>{
+                  this.loadBookings()
+                  return <Bookings bookings={ this.state.bookings } />} } />
             <Route path='/signin' render={
               () => (
                 <SignInPage token={ token } createAccount={ createAccount } toggleCreateAccount={ this.toggleCreateAccount } onSignIn={ this.handleSignIn } onCreateAccount={ this.handleCreateAccount} />
@@ -254,7 +268,7 @@ setDrawerOpen = (boolean) => {
                     <Task data={ this.state.singleTask } />
     							)
     						}
-            } />            
+            } />
             <Route render={
               ({ location }) => <p>{ location.pathname } not found</p>
             } />
