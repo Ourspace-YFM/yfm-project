@@ -7,11 +7,11 @@ function fill(){
         {
           _id: '596634c0b925e80783c7721d',
           name: 'Coles',
-          logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coles_logo.svg/1200px-Coles_logo.svg.png'
+          logo: 'https://s3.us-east-2.amazonaws.com/ourspace/logos/COL.png'
         },{
           _id: '596634c0b925e80783c7721e',
           name: 'Super Cheap Storage',
-          logo: 'https://pbs.twimg.com/profile_images/503746566574718976/DaszppQV.jpeg'
+          logo: 'https://s3.us-east-2.amazonaws.com/ourspace/logos/SCS.png'
         },{
           _id: '59719d405f8ee87150225b8f',
           name: 'Bokay',
@@ -19,11 +19,11 @@ function fill(){
         },{
           _id: '59719d405f8ee87150225b90',
           name: 'Myer',
-          logo: ''
+          logo: 'https://s3.us-east-2.amazonaws.com/ourspace/logos/MYR.png'
         },{
           _id: '59719d405f8ee87150225b91',
           name: 'City of Onkaparinga',
-          logo: ''
+          logo: 'https://s3.us-east-2.amazonaws.com/ourspace/logos/ONK.png'
         },{
           _id: '59719d405f8ee87150225b92',
           name: 'LBE Signs',
@@ -112,17 +112,17 @@ function fill(){
       model: 'Contact',
       documents: [
         {
-          companyId: '59719d405f8ee87150225b92', 
-          firstName: 'Brett', 
-          lastName: 'Enever', 
+          companyId: '59719d405f8ee87150225b92',
+          firstName: 'Brett',
+          lastName: 'Enever',
           position: 'Owner',
           locationScope: '',
           phone: [],
           email: ['brett@lbesigns.com.au']
         },{
-          companyId: '597413e439e98c0769da5a65', 
-          firstName: 'Alexi', 
-          lastName: 'Hatzimihail', 
+          companyId: '597413e439e98c0769da5a65',
+          firstName: 'Alexi',
+          lastName: 'Hatzimihail',
           position: 'Owner',
           locationScope: '',
           phone: [],
@@ -272,7 +272,7 @@ function fill(){
           status: 'Tentative',
           installerConfirmed: false,
           clientConfirmed: false,
-          changeRequests: [], 
+          changeRequests: [],
           installerId: '597435e196906a669414fa27',
           locationId: '59719d405f8ee87150225b98',
           bookedDate: Date.now(),
@@ -288,7 +288,7 @@ function fill(){
           status: 'Complete',
           installerConfirmed: true,
           clientConfirmed: true,
-          changeRequests: [], 
+          changeRequests: [],
           installerId: '597413e439e98c0769da5a65',
           locationId: '59719d405f8ee87150225b9a',
           bookedDate: Date.now(),
@@ -304,7 +304,7 @@ function fill(){
           status: "Confirmed",
           installerConfirmed: true,
           clientConfirmed: true,
-          changeRequests: [], 
+          changeRequests: [],
           installerId: "59749b4c6df3cd4b3b517050",
           locationId: "59747d6948526cb95cafc0cf",
           bookedDate: Date.now(),
@@ -320,7 +320,7 @@ function fill(){
           status: "Tentative",
           installerConfirmed: false,
           clientConfirmed: false,
-          changeRequests: [], 
+          changeRequests: [],
           installerId: "59719d405f8ee87150225b92",
           locationId: "5975281ccb9e6921e03287ea",
           bookedDate: Date.now(),
@@ -463,7 +463,7 @@ function fill(){
       ]
     },{
       model: 'Location',
-      documents: [  
+      documents: [
         {
           "_id":"5975281ccb9e6921e03287ea",
           "name":"SCS Footscray",
@@ -500,7 +500,7 @@ function fill(){
             -23.690220,
             133.869832
           ]
-        },{  
+        },{
           "_id":"597434a5d8c8205405cca7ae",
           "name":"LBE Signs",
           "street":"121 The Gateway",
@@ -517,7 +517,7 @@ function fill(){
             -37.743437,
             145.340579
           ]
-        },{  
+        },{
           "_id":"59743795e834d174405a6574",
           "name":"D A Signs",
           "street":"52 High Street",
@@ -534,7 +534,7 @@ function fill(){
             -36.116037,
             146.891318
           ]
-        },{  
+        },{
           "_id":"59747d6948526cb95cafc0cf",
           "name":"Linfox Logistics - New South Wales",
           "street":"Fox Lane",
@@ -551,7 +551,7 @@ function fill(){
             -33.812496,
             150.791190
           ]
-        },{  
+        },{
           "_id":"59749d9ac5dee462430ea5ca",
           "name":"Signwave Parramatta",
           "street":"1/35 Foundry Road",
@@ -563,7 +563,7 @@ function fill(){
           "primaryContacts":[],
           "phoneNumber":[
             "+61 2 9630 3044"
-          ], 
+          ],
           "coordinates":[
             -33.770912,
             150.955110
@@ -577,18 +577,18 @@ function fill(){
           "postcode":"0870",
           "email":"Coles.0418.Online.Manager@coles.com.au",
           "_v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Lisa Morley",
             "Saskia Scott"
           ],
           "phoneNumber":[
             "08 8952 4575"
           ],
-          "coordinates":[  
+          "coordinates":[
             -23.6982962,
             133.8789453
           ]
-        },{  
+        },{
           "_id":"59719d405f8ee87150225b98",
           "name":"COL Albury",
           "street":"Cnr Townend & Smollet Streets",
@@ -597,19 +597,19 @@ function fill(){
           "postcode":"2640",
           "email":"Coles.0693.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Kylie Koschel",
             "Susan Ward",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 6021 7806"
           ],
-          "coordinates":[  
+          "coordinates":[
             -36.0824321,
             146.9127367
           ]
-        },{  
+        },{
           "_id":"59719d405f8ee87150225b9b",
           "name":"COL Aspley",
           "street":"Albany Creek Road",
@@ -618,19 +618,19 @@ function fill(){
           "postcode":"4034",
           "email":"Coles.4670.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Franca Febbo",
             "Alisha Fertjowski",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 36309730"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.3627851,
             153.0093107
           ]
-        },{  
+        },{
           "_id":"59719d405f8ee87150225b9c",
           "name":"COL Bacchus Marsh",
           "street":"Bacchus Marsh S/C~ Cnr Main & Young Streets",
@@ -639,20 +639,20 @@ function fill(){
           "postcode":"3340",
           "email":"Coles.0672.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Alice Dowling",
             "Angela McNeill",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 5366 0560"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.6762492,
             144.4406627
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225b99",
           "name":"COL Alexander Heights",
           "street":"Cnr Mirrabooka Ave & Griffon Way",
@@ -661,19 +661,19 @@ function fill(){
           "postcode":"6064",
           "email":"Coles.0365.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Susan Vernon",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9343 0099"
           ],
-          "coordinates":[  
+          "coordinates":[
             -31.8312436,
             115.8529703
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225b9d",
           "name":"COL Ballina",
           "street":"Cnr Fox & Kerr Streets",
@@ -682,20 +682,20 @@ function fill(){
           "postcode":"2478",
           "email":"Coles.4401.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Lana Dever",
             "Emma Salgram",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 6618 5560"
           ],
-          "coordinates":[  
+          "coordinates":[
             -28.8601634,
             153.5592574
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225b9e",
           "name":"COL Banksia Grove",
           "street":"1001 Joondalup Drive~ Cnr Joseph Banks Blvd",
@@ -704,20 +704,20 @@ function fill(){
           "postcode":"6031",
           "email":"Coles.0260.Online.Manager@coles.com.au ",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Mark Ewing",
             "Jacki Christopher",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9406 2860"
           ],
-          "coordinates":[  
+          "coordinates":[
             -31.7055863,
             115.8013273
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225b9f",
           "name":"COL Bassendean",
           "street":"Cnr West & Guildford Roads",
@@ -726,20 +726,20 @@ function fill(){
           "postcode":"6054",
           "email":"Coles.0395.Online.Manager@Coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Rob Chatley",
             "Vicki Jeffery",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9261 5162"
           ],
-          "coordinates":[  
+          "coordinates":[
             -31.90200059999999,
             115.954267
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225ba0",
           "name":"COL Bateau Bay",
           "street":"Bay Village S/C~ The Entrance Road",
@@ -748,20 +748,20 @@ function fill(){
           "postcode":"2261",
           "email":"Coles.0904.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Carmen Zommers",
             "Rebecca Tout",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 4332 0438"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.375362,
             151.472421
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225ba1",
           "name":"COL Beeliar",
           "street":"8  Durin Avenue",
@@ -770,20 +770,20 @@ function fill(){
           "postcode":"6164",
           "email":"Coles.0494.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Kelly Young",
             "Lee Giles",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 6595 5360"
           ],
-          "coordinates":[  
+          "coordinates":[
             -32.1280805,
             115.796386
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225ba2",
           "name":"COL Belmont",
           "street":"Corner Macquarie Street & Edgar Street",
@@ -792,20 +792,20 @@ function fill(){
           "postcode":"2280",
           "email":"Coles.0823.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Beryl Hudson",
             "Veronica Mullane",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 4945 0213"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.035911,
             151.6587183
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225ba4",
           "name":"COL Benowa",
           "street":"21 Ross Street~ Benowa",
@@ -814,19 +814,19 @@ function fill(){
           "postcode":"4217",
           "email":"Coles.4390.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Kristen Charlton",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 5510 7560"
           ],
-          "coordinates":[  
+          "coordinates":[
             -28.0004672,
             153.3762844
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225ba3",
           "name":"COL Bendigo",
           "street":"Cnr Myer & Williamson Street",
@@ -835,19 +835,19 @@ function fill(){
           "postcode":"3550",
           "email":"Coles.0638.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Robyn Keefe",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 5441 1539"
           ],
-          "coordinates":[  
+          "coordinates":[
             -36.7614118,
             144.2834838
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225ba5",
           "name":"COL Bunbury",
           "street":"Cnr Blair & Stevens Streets",
@@ -856,20 +856,20 @@ function fill(){
           "postcode":"6230",
           "email":"Coles.0339.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Kim McDonough",
             "Vacant",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9791 3975"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.3283308,
             115.6407407
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225ba6",
           "name":"COL Burwood",
           "street":"Westfield Burwood~ 100 Burwood Road",
@@ -878,18 +878,18 @@ function fill(){
           "postcode":"2134",
           "email":"",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
 
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             ""
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.874692,
             151.1058779
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225ba7",
           "name":"COL Byford",
           "street":"20 Abernethy Road",
@@ -898,19 +898,19 @@ function fill(){
           "postcode":"6122",
           "email":"Coles.0263.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Tracey MacMillan",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9532 0960"
           ],
-          "coordinates":[  
+          "coordinates":[
             -32.21976300000001,
             116.0067963
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225baa",
           "name":"COL Cannonvale",
           "street":"Cnr Island Drive & Shute Harbour Road",
@@ -919,19 +919,19 @@ function fill(){
           "postcode":"4802",
           "email":"Coles.4598.Online.Manager@coles.com.au ",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Anne Ten-Tye",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 4948 2789"
           ],
-          "coordinates":[  
+          "coordinates":[
             -20.2771684,
             148.6992691
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bab",
           "name":"COL Capalaba",
           "street":"Morton Bay Road",
@@ -940,19 +940,19 @@ function fill(){
           "postcode":"4157",
           "email":"Coles.8759.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Sandra Vanderzipp",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 3900 3760"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.5251651,
             153.1895434
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bb0",
           "name":"COL Churchill",
           "street":"Churchill Centre~ 380-408 Churchill Road",
@@ -961,20 +961,20 @@ function fill(){
           "postcode":"5084",
           "email":"Coles.4972.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Sally-Ann Lehmann",
             "Sue Sandilands",
             "Saskia Scott"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 8360 3860"
           ],
-          "coordinates":[  
+          "coordinates":[
             -34.865371,
             138.581527
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225baf",
           "name":"COL Christies Beach",
           "street":"101 Beach Road",
@@ -983,20 +983,20 @@ function fill(){
           "postcode":"5165",
           "email":"Coles.4933.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Marion Demaria",
             "Jeremy Frannis",
             "Saskia Scott"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 8326 1885"
           ],
-          "coordinates":[  
+          "coordinates":[
             -35.1382768,
             138.4814555
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bac",
           "name":"COL Carlingford",
           "street":"Cnr Pennant Hills & Carlingford Roads",
@@ -1005,20 +1005,20 @@ function fill(){
           "postcode":"2118",
           "email":"Coles.0872.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Cathy Arcuri",
             "Julian Seitu",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 9871 2452"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.7777204,
             151.0518224
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bb4",
           "name":"COL Deer Park",
           "street":"28-72 Neale Road",
@@ -1027,20 +1027,20 @@ function fill(){
           "postcode":"3023",
           "email":"Coles.7612.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Sally Clough",
             "Mark Cassidy",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 9363 9160"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.752247,
             144.7774557
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bb1",
           "name":"COL Coburg",
           "street":"451/459 Sydney Road",
@@ -1049,20 +1049,20 @@ function fill(){
           "postcode":"3058",
           "email":"Coles.0592.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Virginia Bevilacqua ",
             "Ross James",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 9350 1278"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.742572,
             144.9661885
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bb5",
           "name":"COL Dianella",
           "street":"366 Grand Promenade",
@@ -1071,19 +1071,19 @@ function fill(){
           "postcode":"6059",
           "email":"Coles.0256.Online.Manager@coles.com.au ",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Sarah Abraham",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9267 6760"
           ],
-          "coordinates":[  
+          "coordinates":[
             -31.8963875,
             115.8709342
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225ba8",
           "name":"COL Caboolture",
           "street":"Caboolture Park S/C~ 60-78 King Street",
@@ -1092,19 +1092,19 @@ function fill(){
           "postcode":"4510",
           "email":"Coles.4404.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Tracy Bourke",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 5499 3787"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.0851119,
             152.9490602
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bb6",
           "name":"COL Emerald",
           "street":"Cnr Clermont & Opal Streets",
@@ -1113,19 +1113,19 @@ function fill(){
           "postcode":"4720",
           "email":"Coles.4541.Online.Manager@coles.com.au ",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Bec Reynolds",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 4980 8100"
           ],
-          "coordinates":[  
+          "coordinates":[
             -23.5281035,
             148.1630059
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225ba9",
           "name":"COL Cairns",
           "street":"274 Mulgrave Road~ Westcourt",
@@ -1134,19 +1134,19 @@ function fill(){
           "postcode":"4870",
           "email":"Coles.4443.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Steven Myatt",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 4041 3267"
           ],
-          "coordinates":[  
+          "coordinates":[
             -16.9331266,
             145.7528037
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bad",
           "name":"COL Casuarina",
           "street":"Cnr Dripstone & Trower Road",
@@ -1155,20 +1155,20 @@ function fill(){
           "postcode":"810",
           "email":"Coles.0404.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Tracey Mciver",
             "Angela Spencer",
             "Saskia Scott"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 8927 6714"
           ],
-          "coordinates":[  
+          "coordinates":[
             -12.3775136,
             130.8821298
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bb9",
           "name":"COL Fletcher",
           "street":"Lot 901 221 Cnr Minmi Road & Churnwood Drive",
@@ -1177,20 +1177,20 @@ function fill(){
           "postcode":"2287",
           "email":"Coles.0940.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Samantha Cremor",
             "Andrew Lance",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 4941 6360"
           ],
-          "coordinates":[  
+          "coordinates":[
             -32.8776022,
             151.6478367
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bae",
           "name":"COL Casula",
           "street":"Casula Mall Shopping Centre~ Kurrajong Road",
@@ -1199,20 +1199,20 @@ function fill(){
           "postcode":"2170",
           "email":"Coles.0908.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Joel Birch ",
             "Sharon Bellamy",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 9602 7855"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.948068,
             150.899674
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bb2",
           "name":"COL Coburg North ",
           "street":"180 Gaffney Street",
@@ -1221,18 +1221,18 @@ function fill(){
           "postcode":"3058",
           "email":"",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
 
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             ""
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.7315464,
             144.9503229
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bba",
           "name":"COL Flinders Square",
           "street":"Flinders Square S/C~ Cnr Wiluna & Flinders Streets",
@@ -1241,18 +1241,18 @@ function fill(){
           "postcode":"6060",
           "email":"",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
 
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             ""
           ],
-          "coordinates":[  
+          "coordinates":[
             -31.9096951,
             115.8485962
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bbb",
           "name":"COL Fremantle",
           "street":"Cn Cantonement & Goldsborough Street",
@@ -1261,20 +1261,20 @@ function fill(){
           "postcode":"6160",
           "email":"Coles.0342.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Klara Allsopp",
             "Helen McGary",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9430 8319"
           ],
-          "coordinates":[  
+          "coordinates":[
             -32.0510479,
             115.7482448
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bb3",
           "name":"COL Dee Why",
           "street":"Dee Why Plaza~ 36 Howard Ave",
@@ -1283,20 +1283,20 @@ function fill(){
           "postcode":"2099",
           "email":"Coles.0784.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Lachlan Swinbourne",
             "David Mclean",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "0439 205 340"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.7525165,
             151.2891462
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bb7",
           "name":"COL Endeavour Hills",
           "street":"Endeavour Hills S/C~  Matthew Flinders Ave",
@@ -1305,20 +1305,20 @@ function fill(){
           "postcode":"3802",
           "email":"Coles.0651.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Jacinta Sprague",
             "Brenna Bourke",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 9700 6952"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.976662,
             145.25832
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bbe",
           "name":"COL Glenorchy",
           "street":"387-391 main road Glenorchy",
@@ -1327,20 +1327,20 @@ function fill(){
           "postcode":"7010",
           "email":"Coles.7645.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Jessica Henry",
             "Melissa Luttrell",
             "Saskia Scott"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 6274 1436"
           ],
-          "coordinates":[  
+          "coordinates":[
             -42.832121,
             147.2737168
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bb8",
           "name":"COL Fairfield",
           "street":"Cnr Brougham St & Fairfield Road",
@@ -1349,20 +1349,20 @@ function fill(){
           "postcode":"4103",
           "email":"Coles.4512.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Lyvia Smith",
             "Lisa Dale",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 3214 6560"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.508059,
             153.024887
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bbf",
           "name":"COL Gosnells",
           "street":"2160 Albany Hwy",
@@ -1371,20 +1371,20 @@ function fill(){
           "postcode":"6110",
           "email":"Coles.0384.Online.Manager@coles.com.au ",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Amit Malhotra",
             "Nyree Stringer",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9398 1434"
           ],
-          "coordinates":[  
+          "coordinates":[
             -32.0692618,
             115.999475
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bbc",
           "name":"COL Gawler",
           "street":"Nothern Market S/C~ Cnr Murray & Cowan Streets",
@@ -1393,20 +1393,20 @@ function fill(){
           "postcode":"5118",
           "email":"Coles.0444.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Brenton Stone",
             "Casey Greunig",
             "Saskia Scott"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 8522 4792"
           ],
-          "coordinates":[  
+          "coordinates":[
             -34.5952378,
             138.748433
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bc0",
           "name":"COL Greenacre",
           "street":"13-19 Boronia Road",
@@ -1415,20 +1415,20 @@ function fill(){
           "postcode":"2190",
           "email":"Coles.5792.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Graham Jones",
             "Sose Tupou",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 8709 0460"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.9060409,
             151.0561831
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bbd",
           "name":"COL Gladstone",
           "street":"Kim Kora S/C~ Dawson Hwy",
@@ -1437,20 +1437,20 @@ function fill(){
           "postcode":"4680",
           "email":"Coles.4406.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Kirsty Bailey",
             "Kirsty Innes",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 4978 6930"
           ],
-          "coordinates":[  
+          "coordinates":[
             -24.6233337,
             149.7782871
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bc1",
           "name":"COL Greenacres",
           "street":"Cnr Muller & Floridale Roads",
@@ -1459,20 +1459,20 @@ function fill(){
           "postcode":"5086",
           "email":"Coles.4948.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Linda Anderson",
             "Tiffany Elliot",
             "Saskia Scott"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 8368 6160"
           ],
-          "coordinates":[  
+          "coordinates":[
             -34.8702905,
             138.635155
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bc3",
           "name":"COL Halls Head",
           "street":"18 Guava Way",
@@ -1481,20 +1481,20 @@ function fill(){
           "postcode":"6210",
           "email":"Coles.0257.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "May Wong",
             "Steven Sizer",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9586 5160"
           ],
-          "coordinates":[  
+          "coordinates":[
             -32.54814,
             115.70249
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bc2",
           "name":"COL Gungahlin",
           "street":"Cnr Hibberson Street & Gungahlin Place",
@@ -1503,20 +1503,20 @@ function fill(){
           "postcode":"2912",
           "email":"Coles.0803.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Paul Agresta ",
             "Crystal Cook",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 6123 4560"
           ],
-          "coordinates":[  
+          "coordinates":[
             -35.1855205,
             149.134776
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bc4",
           "name":"COL Hastings",
           "street":"Cnr Church & Victoria Streets",
@@ -1525,20 +1525,20 @@ function fill(){
           "postcode":"3915",
           "email":"Coles.0640.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Gayle Gilchrist",
             "Vanessa Sutterby",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 5979 3743"
           ],
-          "coordinates":[  
+          "coordinates":[
             -38.3060029,
             145.186769
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bc5",
           "name":"COL Hervey Bay",
           "street":"Bay Central SC 6 Central Ave",
@@ -1547,20 +1547,20 @@ function fill(){
           "postcode":"4655",
           "email":"Coles.4529.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Leonie Walker",
             "TBA- New Manager ",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 4196 9500"
           ],
-          "coordinates":[  
+          "coordinates":[
             -25.290103,
             152.835408
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bc6",
           "name":"COL Hoppers Crossing",
           "street":"Werribee Plaza SC~ Cnr Derrimut Road & Heath Road",
@@ -1569,19 +1569,19 @@ function fill(){
           "postcode":"3029",
           "email":"Coles.0691.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Karen Sutton",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 9974 7359"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.8769472,
             144.6820022
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bc7",
           "name":"COL Kellyville",
           "street":"Wrights Road ",
@@ -1590,20 +1590,20 @@ function fill(){
           "postcode":"2155",
           "email":"Coles.0883.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Ram Sevani",
             "Scott Bellamy ",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 8818 2160"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.7142577,
             150.9730033
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bc8",
           "name":"COL Loganholme",
           "street":"Cnr Pacific Highway & Bryants Road",
@@ -1612,19 +1612,19 @@ function fill(){
           "postcode":"4129",
           "email":"Coles.4407.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Karen Harris",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 3801 7260"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.663267,
             153.172986
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bc9",
           "name":"COL Mackay",
           "street":"Mt Pleasant SC~ Cnr Malcomson St & Mackay Bucasia Road",
@@ -1633,16 +1633,16 @@ function fill(){
           "postcode":"4740",
           "email":"Coles.4481.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Stacey Brady",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 4942 6745"
           ],
           "coordinates":null
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bca",
           "name":"COL Maddington",
           "street":"Cnr Attfield St & Olga Road",
@@ -1651,20 +1651,20 @@ function fill(){
           "postcode":"6109",
           "email":"Coles.0337.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Sharleen Price",
             "Manni Bahachu",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9452 0163"
           ],
-          "coordinates":[  
+          "coordinates":[
             -32.0534354,
             115.9818609
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bcb",
           "name":"COL Mandurah",
           "street":"Cnr Pinjarra & Mandurah Roads",
@@ -1673,19 +1673,19 @@ function fill(){
           "postcode":"6210",
           "email":"Coles.0311.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Angie Langford",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9583 5257"
           ],
-          "coordinates":[  
+          "coordinates":[
             -32.5374401,
             115.7447319
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bcc",
           "name":"COL Mango Hill",
           "street":"1-21 Halpine Drive",
@@ -1694,19 +1694,19 @@ function fill(){
           "postcode":"4509",
           "email":"Coles.4436.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Paula Fitzgerald",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 3490 3600"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.2425629,
             153.0261564
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bcd",
           "name":"COL Maroochydore",
           "street":"Sunshine Plaza S/C Bunro Street",
@@ -1715,20 +1715,20 @@ function fill(){
           "postcode":"4558",
           "email":"Coles.4523.Online.Manager@coles.com.au ",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Emm Keslake",
             "Shane Colman",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 5409 4260"
           ],
-          "coordinates":[  
+          "coordinates":[
             -26.64618,
             153.07648
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bce",
           "name":"COL Mirrabooka",
           "street":"Cnr Yirrigan Dr & Ferrier Road",
@@ -1737,20 +1737,20 @@ function fill(){
           "postcode":"6061",
           "email":"Coles.0314.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Brad Esselbach",
             "Leonie Ryniker",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9207 3931"
           ],
-          "coordinates":[  
+          "coordinates":[
             -31.8735486,
             115.8607866
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bcf",
           "name":"COL Mona Vale",
           "street":"10 Park Street",
@@ -1759,20 +1759,20 @@ function fill(){
           "postcode":"2103",
           "email":"Coles.0884.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Heidi Schofield",
             "Jessica Hofbauer-Jonas",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 9999 0698"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.6759177,
             151.3053635
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bd0",
           "name":"COL Morwell",
           "street":"Mid Valley Shopping Centre~ Princes Hwy",
@@ -1781,20 +1781,20 @@ function fill(){
           "postcode":"3841",
           "email":"Coles.7899.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Meagan",
             "Kim",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 5135 3692"
           ],
-          "coordinates":[  
+          "coordinates":[
             -38.2362251,
             146.4305019
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bd1",
           "name":"COL Mowbray",
           "street":"385 Invermay Road",
@@ -1803,20 +1803,20 @@ function fill(){
           "postcode":"7248",
           "email":"Coles.7502.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Beau Ward",
             "Fiona Kerrison",
             "Saskia Scott"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 6324 4760"
           ],
-          "coordinates":[  
+          "coordinates":[
             -41.4054664,
             147.1315965
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bd2",
           "name":"COL Mt Gambier",
           "street":"Cnr James & Elizabeth Streets",
@@ -1825,18 +1825,18 @@ function fill(){
           "postcode":"5290",
           "email":"Coles.0433.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Rebecca Bell"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 8725 6655"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.828301,
             140.7761748
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bd3",
           "name":"COL Murwillumbah",
           "street":"Cnr Brisbane & Wollumbin Street",
@@ -1845,20 +1845,20 @@ function fill(){
           "postcode":"2484",
           "email":"Coles.4505.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Leonie Pohlmann",
             "Stacey Gamble ",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 6672 2634"
           ],
-          "coordinates":[  
+          "coordinates":[
             -28.3278034,
             153.3959445
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bd4",
           "name":"COL Narellan",
           "street":"326 Camden Valley Way Narellan ",
@@ -1867,20 +1867,20 @@ function fill(){
           "postcode":"2567",
           "email":"Coles.5800.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Jessica Nielson",
             "Nicole Hopping ",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 46457160"
           ],
-          "coordinates":[  
+          "coordinates":[
             -34.0393522,
             150.7367867
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bd9",
           "name":"COL Queanbeyan",
           "street":"131 Monaro Street",
@@ -1889,20 +1889,20 @@ function fill(){
           "postcode":"2620",
           "email":"Coles.0820.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Gavin Read",
             "Ruchi Viring",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 6124 3660"
           ],
-          "coordinates":[  
+          "coordinates":[
             -35.3529296,
             149.2353897
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bd8",
           "name":"COL Pagewood",
           "street":"East Gardens SC~ Cnr Bunnerong Road & Wentworth Ave",
@@ -1911,18 +1911,18 @@ function fill(){
           "postcode":"2035",
           "email":"",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
 
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             ""
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.9444798,
             151.2237466
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bde",
           "name":"COL Rockhampton",
           "street":"Rockhampton Fair SC~ Musgrave Street",
@@ -1931,20 +1931,20 @@ function fill(){
           "postcode":"4701",
           "email":"Coles.4455.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Rachel Hausler",
             "Rebecca Parr",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 4930 8464"
           ],
-          "coordinates":[  
+          "coordinates":[
             -23.3563744,
             150.5225805
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225be3",
           "name":"COL Sebastopol",
           "street":"210 Albert Street",
@@ -1953,20 +1953,20 @@ function fill(){
           "postcode":"3356",
           "email":"Coles.0580.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Lyndell Eshuag",
             "Caroline Hughes",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 5336 3823"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.59927,
             143.8408543
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bd5",
           "name":"COL Nerang",
           "street":"Station Street",
@@ -1975,19 +1975,19 @@ function fill(){
           "postcode":"4221",
           "email":"Coles.4501.Online.Manager@Coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Fetu Pama",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 5578 3322"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.9954048,
             153.3394673
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225be8",
           "name":"COL Tamworth",
           "street":"Kathleen Street~ South Tamworth",
@@ -1996,20 +1996,20 @@ function fill(){
           "postcode":"2340",
           "email":"Coles.5796.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Louise Ryan",
             "Rebecca Hayes",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 6760 1460"
           ],
-          "coordinates":[  
+          "coordinates":[
             -31.1073823,
             150.9185119
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bda",
           "name":"COL Richmond NSW",
           "street":"271 - 281 Windsor Street",
@@ -2018,20 +2018,20 @@ function fill(){
           "postcode":"2753",
           "email":"Coles.0792.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Michelle Cotter",
             "Nathan Anderson",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 4578 0526"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.5957025,
             150.7494272
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bdf",
           "name":"COL Rouse Hill",
           "street":"Corner Windsor Road & Whitehart Drive",
@@ -2040,20 +2040,20 @@ function fill(){
           "postcode":"2155",
           "email":"Coles.0924.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Lauren Treloar",
             "Ammie Tremelyn",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 9836 3461"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.6937192,
             150.9249421
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225be4",
           "name":"COL Shellharbour",
           "street":"Shop 1021~ Shellharbour Square",
@@ -2062,20 +2062,20 @@ function fill(){
           "postcode":"2529",
           "email":"Coles.5797.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Elise Woodcock",
             "Morgan Tipping ",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 4295 8360"
           ],
-          "coordinates":[  
+          "coordinates":[
             -34.5646649,
             150.8373007
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bd6",
           "name":"COL North Ward",
           "street":"26-28 MITCHELL STREET",
@@ -2084,19 +2084,19 @@ function fill(){
           "postcode":"4810",
           "email":"Coles.4649.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Wendy Warren",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 4721 8900"
           ],
-          "coordinates":[  
+          "coordinates":[
             -19.2526573,
             146.8159387
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225be9",
           "name":"COL The Gap",
           "street":"1000 Waterworks Road~ The Gap",
@@ -2105,19 +2105,19 @@ function fill(){
           "postcode":"4061",
           "email":"Coles.4506.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Laura McGee",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 3511 1196"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.4459006,
             152.952527
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bd7",
           "name":"COL Oakleigh",
           "street":"Cnr Hanover & Portman Streets",
@@ -2126,20 +2126,20 @@ function fill(){
           "postcode":"3166",
           "email":"Coles.0645.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Penny Thomas",
             "Grant Fraser",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 9568 5803"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.9012376,
             145.0901858
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bee",
           "name":"COL Ulverstone",
           "street":"16 Reibey Street",
@@ -2148,20 +2148,20 @@ function fill(){
           "postcode":"7315",
           "email":"Coles.7606.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Tammy Maxwell-Bourke",
             "Tammy",
             "Saskia Scott"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 6425 4632"
           ],
-          "coordinates":[  
+          "coordinates":[
             -41.1571629,
             146.170268
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bdb",
           "name":"COL Richmond VIC",
           "street":"198-200 Swan Street",
@@ -2170,20 +2170,20 @@ function fill(){
           "postcode":"3121",
           "email":"Coles.0482.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Brenna Bourke",
             "Daniel Wilcox",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 8420 0200"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.8256546,
             144.9961881
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bdc",
           "name":"COL Riverlink",
           "street":"Cnr of The Terrace & Downs Streets",
@@ -2192,19 +2192,19 @@ function fill(){
           "postcode":"4305",
           "email":"Coles.4596.Online.Manager@coles.com.au ",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Tammy Baird",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 3281 3496"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.6081327,
             152.7582694
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225be1",
           "name":"COL Roxburgh Park",
           "street":"250 Somerton Road",
@@ -2213,20 +2213,20 @@ function fill(){
           "postcode":"3064",
           "email":"Coles.7703.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Georgina Bailey",
             "Matt",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 9303 2660"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.639013,
             144.9319631
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bf3",
           "name":"COL Westmead",
           "street":"29-33 Darcy Road",
@@ -2235,20 +2235,20 @@ function fill(){
           "postcode":"2145",
           "email":"Coles.0965.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Luke Stubbefield",
             "Richard Go",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 8837 7700"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.8039135,
             150.9797223
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225be0",
           "name":"COL Roxborough Park",
           "street":"250 Somerton Road",
@@ -2257,20 +2257,20 @@ function fill(){
           "postcode":"3064",
           "email":"Coles.7703.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Georgina Bailey",
             "Matt",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 9303 2660"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.639013,
             144.9319631
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225be6",
           "name":"COL St Clair",
           "street":"Cheltenham Parade~ Woodville",
@@ -2279,20 +2279,20 @@ function fill(){
           "postcode":"5011",
           "email":"Coles.4971.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Richard Dabek",
             "Damien Franyik",
             "Saskia Scott"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 8413 5260"
           ],
-          "coordinates":[  
+          "coordinates":[
             -34.8700124,
             138.5287151
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225be5",
           "name":"COL Springfield Orion",
           "street":"1 Main Street~ Springfield Lakes",
@@ -2301,19 +2301,19 @@ function fill(){
           "postcode":"4300",
           "email":"Coles.4666.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Nathan Garcia",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 3470 3160"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.6768575,
             152.9023417
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225beb",
           "name":"COL Toormina",
           "street":"Toormina Gardens S/C~ Cnr Minorie Drv & Toormina Road",
@@ -2322,20 +2322,20 @@ function fill(){
           "postcode":"2452",
           "email":"Coles.5682.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Carolyn Herbert",
             "Debbie Miles",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 6659 6500"
           ],
-          "coordinates":[  
+          "coordinates":[
             -30.3532498,
             153.0924922
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bdd",
           "name":"COL Riverton",
           "street":"353-361 High Road",
@@ -2344,19 +2344,19 @@ function fill(){
           "postcode":"6147",
           "email":"Coles.0465.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "David Deb",
             "Alexia Sammut"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 8 9253 4160"
           ],
-          "coordinates":[  
+          "coordinates":[
             -32.0392288,
             115.9074894
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bea",
           "name":"COL The Pines",
           "street":"Cnr K.P.McGrath Drive & Guiness Creek Road",
@@ -2365,19 +2365,19 @@ function fill(){
           "postcode":"4221",
           "email":"Coles.4405.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Kim Miles",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 5586 4460"
           ],
-          "coordinates":[  
+          "coordinates":[
             -28.1338957,
             153.468923
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225be2",
           "name":"COL Runaway Bay",
           "street":"Cnr Bayview St & Lae Drv",
@@ -2386,19 +2386,19 @@ function fill(){
           "postcode":"4216",
           "email":"Coles.4530.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Paul Hawkey",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 5537 7990"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.9137821,
             153.4030862
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bf0",
           "name":"COL Wagga Wagga",
           "street":"Sturt Mall S/C~ Cnr Forsyth Street & Baylis Streets",
@@ -2407,20 +2407,20 @@ function fill(){
           "postcode":"2650",
           "email":"Coles.0704.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Gayle Wood",
             "Barbara Evans",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 6921 1352"
           ],
-          "coordinates":[  
+          "coordinates":[
             -35.11321,
             147.370851
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bef",
           "name":"COL Vermont South",
           "street":"Vermont South SC~ cnr Burwood Hwy & Hanover Road",
@@ -2429,20 +2429,20 @@ function fill(){
           "postcode":"3133",
           "email":"Coles.0677.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Sami Abdullah",
             "Andrea Potau",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 8847 4060"
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.8560565,
             145.1798433
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bf5",
           "name":"COL Winston Hills",
           "street":"Caroline Chisolm Drive",
@@ -2451,20 +2451,20 @@ function fill(){
           "postcode":"2153",
           "email":"Coles.0843.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Anastasia Tzivanopolous",
             "Kristina Harriss",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 9620 8462"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.7757815,
             150.9756227
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225be7",
           "name":"COL Sunnybank",
           "street":"Cnr Calam & Compton Roads",
@@ -2473,19 +2473,19 @@ function fill(){
           "postcode":"4109",
           "email":"Coles.4671.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Roxane Redfern",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 3712 5660"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.6113434,
             153.0543822
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bed",
           "name":"COL Townsville",
           "street":"Cnr Ross River Road & Nathan Street",
@@ -2494,19 +2494,19 @@ function fill(){
           "postcode":"4814",
           "email":"Coles.4494.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Meisha Woodfield",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 4779 0655"
           ],
-          "coordinates":[  
+          "coordinates":[
             -19.2981045,
             146.7616165
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bf2",
           "name":"COL West Gosford",
           "street":"West Gosford S/C~ Brisbane Water Drv",
@@ -2515,20 +2515,20 @@ function fill(){
           "postcode":"2250",
           "email":"Coles.0821.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Adam Wakeling",
             "Jenna Browning",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 4322 2334"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.4294601,
             151.3167093
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bf4",
           "name":"COL Wilsonton",
           "street":"Erin Street",
@@ -2537,19 +2537,19 @@ function fill(){
           "postcode":"4350",
           "email":"Coles.4433.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Clayton Booth",
             "Karissa Staples"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 7 4615 1700"
           ],
-          "coordinates":[  
+          "coordinates":[
             -27.5421112,
             151.9263782
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bec",
           "name":"COL Top Ryde",
           "street":"Cnr Devlin St & Blaxland Road",
@@ -2558,20 +2558,20 @@ function fill(){
           "postcode":"2112",
           "email":"Coles.5801.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Filipe Lage",
             "Leticia Boyd",
             "Jayde Hudson (C/T)"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 2 88788160"
           ],
-          "coordinates":[  
+          "coordinates":[
             -33.8120293,
             151.1064609
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bf1",
           "name":"COL Waurn Ponds",
           "street":"173-199 Pioneer Road",
@@ -2580,19 +2580,19 @@ function fill(){
           "postcode":"3216",
           "email":"Coles.7810.Online.Manager@coles.com.au",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
             "Tracey Allen",
             "Sarah Esselbrugge"
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             "+61 3 5247 3060"
           ],
-          "coordinates":[  
+          "coordinates":[
             -38.19942289999999,
             144.3197542
           ]
         },
-        {  
+        {
           "_id":"59719d405f8ee87150225bf6",
           "name":"COL Customer Support Centre",
           "street":"800 Toorak Road",
@@ -2601,13 +2601,13 @@ function fill(){
           "postcode":"3123",
           "email":"",
           "__v":0,
-          "primaryContacts":[  
+          "primaryContacts":[
 
           ],
-          "phoneNumber":[  
+          "phoneNumber":[
             ""
           ],
-          "coordinates":[  
+          "coordinates":[
             -37.8453794,
             145.0479078
           ]
