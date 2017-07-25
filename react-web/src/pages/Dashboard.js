@@ -2,8 +2,11 @@ import React from 'react'
 import NavBar from '../components/atoms/Navigation'
 import TextInput from '../components/atoms/TextInput'
 import DynamicButton from '../components/atoms/DynamicButton'
+import LinkButton from '../components/atoms/LinkButton'
 import Link from '../components/atoms/Link'
 import Subtitle from '../components/atoms/Subtitle'
+import BoldText from '../components/atoms/BoldText'
+import LightText from '../components/atoms/LightText'
 
 const SignIn = ({
 
