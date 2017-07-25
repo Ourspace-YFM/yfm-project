@@ -13,11 +13,32 @@ export default function Task({
 
   return (
     <div className='task'>
+			<div className="navbar">
+				<div className="logo">
+					<p><span className="bold">OUR</span>SPACE</p>
+				</div>
+				<div className="links">
+					<a href="/dashboard">DASHBOARD</a>
+				</div>
+				<div className="links">
+					<a href="/projects">PROJECTS</a>
+				</div>
+				<div className="links">
+					<a href="/bookings">BOOKINGS</a>
+				</div>
+				<div className="links">
+					<a href="/contacts">CONTACTS</a>
+				</div>
+				<div className="signOut">
+					<a href="/contacts">Sign out</a>
+				</div>
+			</div>
+      <div className="pageContents">
       {
         !!data ? (
           <div>
 
-            <h2>Task: {data.task.name}</h2> 
+            <h2>Task: {data.task.name}</h2>
 
             <div>
               <BoldText text='Attachments:' /> <LightText text={ data.task.attachments } />
@@ -31,7 +52,7 @@ export default function Task({
               <BoldText text='Parent Job:' /> <LightText text={ data.task.parentJob.name } />
             </div>
 
-            <br />         
+            <br />
 
 
 
@@ -42,7 +63,7 @@ export default function Task({
                     { data.bookings.map((booking) => (
                       <ExpandableCard
                         title="Current Bookings"
-                        logoClass="logo-class" 
+                        logoClass="logo-class"
                         children={
                         <div>
                           <div>
@@ -55,8 +76,8 @@ export default function Task({
                           <div>
                             <BoldText text='Booking Status:' /> <br />
                             <LightText text={ booking.status } />
-                          </div>                          
-                          
+                          </div>
+
                           <br />
                           <br />
 
@@ -69,7 +90,7 @@ export default function Task({
                       />
                     ))}
                     </div>
-                  
+
                 ) : (
                   <div>
                     <LightText text='There are currently no assigned bookings for this task.' />
@@ -82,6 +103,7 @@ export default function Task({
           'Loading Tasks'
         )
       }
+      </div>
     </div>
   )
 }
