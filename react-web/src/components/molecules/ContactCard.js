@@ -32,11 +32,11 @@ export default function ContactCard({
           </CardHeader>
 
           <CardText expandable={true}>
-            <BoldText text="Company: " /> <LightText text={ companyName } /> <br />
-            <BoldText text="Account ID: "/> <LightText text={ accountId.toUpperCase() } /> <br />
-            <BoldText text="Position: "/> <LightText text={ position } /> <br />
-            <BoldText text="Phone: "/> <LightText text={ phone } /> <br />
-            <BoldText text="Email: "/> <LightText text={ email } /> <br />    
+            <BoldText text="Company: " /> <LightText text={ companyName } /> <br /><br />
+            <BoldText text="Account ID: "/> <LightText text={ accountId.toUpperCase() } /> <br /><br />
+            <BoldText text="Position: "/> <LightText text={ position } /> <br /><br />
+            <BoldText text="Phone: "/> <LightText text={ phone } /> <br /><br />
+            <BoldText text="Email: "/> <LightText text={ email } />
           </CardText>
         </Card>
       </MuiThemeProvider>

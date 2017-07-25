@@ -49,10 +49,6 @@ div.jobLogo {
   min-width: 50%;
 }
 
-//Booking - Create
-div.stepContainer {
-}
-
 div.stepFormRow {
   display: flex;
   flex-wrap: wrap;
@@ -61,4 +57,9 @@ div.stepFormRow {
 
 div.stepFormTile{
   flex-grow: 1;
+
+div.pageContents {
+  display: inline-block;
+  width: calc(100vw - 200px); 
+
 }

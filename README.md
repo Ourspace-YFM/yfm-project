@@ -84,34 +84,34 @@
 
 ### Database design
 - MVP Database
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/mvp-db.png "MVP Database")
+![Alt text](/document_photos/mvp-db.png "MVP Database")
 
 - Future Database
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/db.png "Future Database")
+![Alt text](/document_photos/db.png "Future Database")
 
 ### Workflow Overview
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/workflow-overview.png "Workflow Overview")
+![Alt text](/document_photos/workflow-overview.png "Workflow Overview")
 
 ## Wireframes
 
 ### Style Guide
 - Pulled from YFM Brand Guideline:
 
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/brand-guide.jpg "Brand Guideline")
+![Alt text](/document_photos/brand-guide.jpg "Brand Guideline")
 
 - Our Style Guide
 
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/Style-guide.jpg "Style Guide")
+![Alt text](/document_photos/Style-guide.jpg "Style Guide")
 
 ### Mobile View
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/sign-in-mobile.jpg "Sign In Page Mobile View")
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/new-password-mobile.jpg "New Password Mobile View")
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/dashboard-mobile.jpg "Dashboard Mobile View")
+![Alt text](/document_photos/sign-in-mobile.jpg "Sign In Page Mobile View")
+![Alt text](/document_photos/new-password-mobile.jpg "New Password Mobile View")
+![Alt text](/document_photos/dashboard-mobile.jpg "Dashboard Mobile View")
 
 ### Desktop View
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/sign-in-desktop.jpg "Sign In Desktop View")
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/new-password-desktop.jpg "New Password Desktop View")
-![Alt text](https://github.com/Ourspace-YFM/yfm-project/blob/edit-readme/document_photos/dashboard-and-form-desktop.jpg "Dashboard and Form Desktop View")
+![Alt text](/document_photos/sign-in-desktop.jpg "Sign In Desktop View")
+![Alt text](/document_photos/new-password-desktop.jpg "New Password Desktop View")
+![Alt text](/document_photos/dashboard-and-form-desktop.jpg "Dashboard and Form Desktop View")
 
 ## Other Documentation
 - **YFM Documentation & Resources Folder**: https://drive.google.com/drive/folders/0B4jkVluYNFKCRUtpa3RXREczOG8

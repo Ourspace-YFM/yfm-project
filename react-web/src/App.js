@@ -4,9 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import './App.css'
 import './custom.css'
-import PrimaryNav from './components/atoms/PrimaryNav'
 import ErrorMessage from './components/atoms/ErrorMessage'
 import HomePage from './pages/HomePage'
 import SignInPage from './pages/SignInPage'
@@ -15,10 +13,13 @@ import Projects from './pages/ProjectsPage'
 import Project from './pages/ProjectPage'
 import CreateBooking from'./pages/CreateBooking'
 import Bookings from'./pages/BookingsPage'
+import Booking from'./pages/BookingPage'
 import Assets from './pages/AssetsPage'
 import Job from './pages/JobPage'
 import Task from './pages/TaskPage'
 import Contacts from './pages/ContactsPage'
+import SignIn from './pages/SignIn'
+import Dashboard from './pages/Dashboard'
 
 import * as authAPI from './api/auth'
 import * as projectsAPI from './api/projects'
@@ -48,7 +49,8 @@ class App extends Component {
     mapData: null,
     singleJob: null,
     singleTask: null,
-    bookings: null
+    bookings: null,
+    singleBooking: null
   }
 
   loadPromises = {}
@@ -111,6 +113,14 @@ class App extends Component {
     return this.loadUsing({
       makePromise: bookingsAPI.list,
       stateKey: 'bookings',
+      reload
+    })
+  }
+
+  loadSingleBooking({ reload = false, id } = {}) {
+    return this.loadUsing({
+      makePromise: () => bookingsAPI.listSingle(id),
+      stateKey: 'singleBooking',
       reload
     })
   }
@@ -200,7 +210,6 @@ setDrawerOpen = (boolean) => {
 
       <Router>
         <main>
-          <PrimaryNav isSignedIn={!!token} onSignOut={ this.handleSignOut } />
           <MuiThemeProvider>
             <Drawer
               docked={false}
@@ -211,16 +220,16 @@ setDrawerOpen = (boolean) => {
               <MenuItem onTouchTap={() => {this.setDrawerOpen(false)}}>Menu Item</MenuItem>
               <MenuItem onTouchTap={() => {this.setDrawerOpen(false)}}>Menu Item 2</MenuItem>
             </Drawer>
-
-                        </MuiThemeProvider>
+          </MuiThemeProvider>
 
           { !!error && <ErrorMessage error={error}/> }
 
           <Switch>
-            <Route exact path='/' component={ HomePage } />
-            <Route exact path='/assets' component={ Assets } />
+            <Route exact path='/' component={ HomePage } />            
             <Route exact path='/contacts' component={ Contacts } />
             <Route exact path='/createbooking' component={ CreateBooking } />
+            <Route exact path='/signin' component={ SignIn } />
+            <Route exact path='/dashboard' component={ Dashboard } />
 
               <Route path='/componentlibrary' render={ () => (
                 <ComponentLibrary
@@ -269,6 +278,16 @@ setDrawerOpen = (boolean) => {
     							)
     						}
             } />
+          <Route path='/bookings/:id' render={
+              ({ match }) => {
+                  const id = match.params.id
+                  this.loadSingleBooking({id: id})
+                  !!this.state.singleBooking ? this.state.singleBooking : ''
+    							return (
+                    <Booking data={ this.state.singleBooking } />
+    							)
+    						}
+            } />            
             <Route render={
               ({ location }) => <p>{ location.pathname } not found</p>
             } />

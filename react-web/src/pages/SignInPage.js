@@ -14,12 +14,7 @@ const SignInPage = ({
         !!token ? (
             <Redirect to='/' />
         ) : (
-            <SignInForm
-            toggleCreateAccount={ toggleCreateAccount }
-            createAccount={ createAccount }
-            onSignIn={ onSignIn }
-            onCreateAccount={ onCreateAccount }
-            />
+            <Redirect to='/SignIn' />
         )
     }
     </div>

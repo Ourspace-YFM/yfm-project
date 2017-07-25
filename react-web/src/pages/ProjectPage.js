@@ -1,6 +1,8 @@
 import React from 'react'
 import LinkButton from '../components/atoms/LinkButton'
 import ExpandableCard from '../components/molecules/ExpandableCard'
+import BoldText from '../components/atoms/BoldText'
+import LightText from '../components/atoms/LightText'
 
 import * as dataSorter from '../api/dataSorter'
 
@@ -13,27 +15,96 @@ export default function Project({
     }
   return (
     <div className='project'>
+			<div className="navbar">
+				<div className="logo">
+					<p><span className="bold">OUR</span>SPACE</p>
+				</div>
+				<div className="links">
+					<a href="/dashboard">DASHBOARD</a>
+				</div>
+				<div className="links active">
+					<a href="/projects">PROJECTS</a>
+				</div>
+				<div className="links">
+					<a href="/bookings">BOOKINGS</a>
+				</div>
+				<div className="links">
+					<a href="/contacts">CONTACTS</a>
+				</div>
+				<div className="signOut">
+					<a href="/contacts">Sign out</a>
+				</div>
+			</div>
+      <div className="pageContents">
       {
         !!data ? (
           <div>
-            <p>{data.project.name}</p>
-            <p>{data.project.description}</p>
-            <p>{data.project.status}</p>
-            <p>{data.project.type} </p>
+            <h1>{ data.project.name }</h1>
+
+            <div>
+              <BoldText text='Project Description:' /> <br />
+              <LightText text={ data.project.description } />
+
+            </div>
+
+            <br />
+
+            <div>
+              <BoldText text='Project Status:' /> <br />
+              <LightText text={ data.project.status } />
+            </div>
+
+            <br />
+
+            <div>
+              <BoldText text='Project Type:' /> <br />
+              <LightText text={ data.project.type } />
+            </div>
+
+            <br />
+
             <div className='jobs'>
               {dataSorter.projectsGroupedByStatus(data.jobs).map(group => (
 
                 <ExpandableCard
-  								title={ group.key }
+  								title={
+                    <div>
+                      <BoldText text={<h2>Jobs</h2>} /> <br />
+                      <LightText text={ `Group Status: ${ group.key }` } />
+                    </div>
+                  }
   								logoClass="logo-class"
   								children="Test" >
   								{group.items.map((job)=>(
   									<div>
-                      <p>{job.name}</p>
-    									<p>{job.description}</p>
-    									<p>{job.status}</p>
-                      <LinkButton buttonColor='#F06734' link={`/jobs/${job._id}`}/>
+                      <div>
+                        <BoldText text='Job Name:' /> <br />
+                        <LightText text={ job.name } />
+                      </div>
+
+                      <br />
+
+                      <div>
+                        <BoldText text='Job Description:' /> <br />
+                        <LightText text={ job.description } />
+                      </div>
+
+                      <br />
+
+                      <div>
+                        <BoldText text='Job Status:' /> <br />
+                        <LightText text={ job.status } />
+                      </div>
+
+                      <br />
+
+                      <LinkButton label='View' buttonColor='#F06734' link={`/jobs/${job._id}`}/>
+
+                      <br />
+                      <br />
+                      <br />
   									</div>
+
   								))}
   							</ExpandableCard>
               ))}
@@ -44,6 +115,7 @@ export default function Project({
           'Loading Project'
         )
       }
+      </div>
     </div>
   )
 }
