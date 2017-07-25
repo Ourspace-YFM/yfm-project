@@ -37,8 +37,11 @@ const SignIn = ({
 			<div className="pageContents">
 				<h1>Dashboard</h1>
 				<Subtitle text="Updates"/>
+				<p className="none">None</p>
 				<Subtitle text="Upcoming"/>
+				<p className="none">None</p>
 				<Subtitle text="To Do"/>
+				<p className="none">None</p>
 			</div>
 		</div>
 	)
