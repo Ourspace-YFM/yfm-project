@@ -207,3 +207,13 @@ div.links.active {
   border-left: solid 2.5px #F06734; }
   div.links.active a {
     color: #414042; }
+
+.dashboard .subtitle {
+  font-size: 22px;
+  text-align: left;
+  margin: 0 50px 20px 50px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px; }
+
+.dashboard .none {
+  font-style: italic; }
