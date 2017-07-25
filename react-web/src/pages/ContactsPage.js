@@ -18,9 +18,6 @@ const Assets = () => (
 				<div className="links">
 					<a href="/bookings">BOOKINGS</a>
 				</div>
-				<div className="links">
-					<a href="/assets">ASSETS</a>
-				</div>
 				<div className="links active">
 					<a href="/contacts">CONTACTS</a>
 				</div>

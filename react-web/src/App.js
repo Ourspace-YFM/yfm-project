@@ -225,8 +225,7 @@ setDrawerOpen = (boolean) => {
           { !!error && <ErrorMessage error={error}/> }
 
           <Switch>
-            <Route exact path='/' component={ HomePage } />
-            <Route exact path='/assets' component={ Assets } />
+            <Route exact path='/' component={ HomePage } />            
             <Route exact path='/contacts' component={ Contacts } />
             <Route exact path='/createbooking' component={ CreateBooking } />
             <Route exact path='/signin' component={ SignIn } />

@@ -78,7 +78,12 @@ export default function Project({
                       <br />
 
                       <LinkButton label='View' buttonColor='#F06734' link={`/jobs/${job._id}`}/>
+
+                      <br />
+                      <br />
+                      <br />
   									</div>
+
   								))}
   							</ExpandableCard>
               ))}

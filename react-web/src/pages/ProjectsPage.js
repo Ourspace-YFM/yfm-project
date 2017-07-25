@@ -28,9 +28,6 @@ const Projects = ({
 					<a href="/bookings">BOOKINGS</a>
 				</div>
 				<div className="links">
-					<a href="/assets">ASSETS</a>
-				</div>
-				<div className="links">
 					<a href="/contacts">CONTACTS</a>
 				</div>
 				<div className="signOut">

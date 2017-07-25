@@ -39,7 +39,7 @@ export default function Task({
                 !!data.bookings ? (
                   /* (data.bookings) information to go here when bookings seeds have been added. */
                     <div>
-                    { data.bookings.map((booking) => (    
+                    { data.bookings.map((booking) => (
                       <ExpandableCard
                         title="Current Bookings"
                         logoClass="logo-class" 

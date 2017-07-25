@@ -19,9 +19,6 @@ export default ({
               <NavLink to='/projects' activeClassName='active' key='projects'>Projects</NavLink>
             </div>
             <div>
-              <NavLink to='/assets' activeClassName='active'>Assets</NavLink>
-            </div>
-            <div>
               <NavLink to='/createbooking' activeClassName='active'>CreateBooking</NavLink>
             </div>
             <div>
