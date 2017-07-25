@@ -15,6 +15,27 @@ export default function Project({
     }
   return (
     <div className='project'>
+			<div className="navbar">
+				<div className="logo">
+					<p><span className="bold">OUR</span>SPACE</p>
+				</div>
+				<div className="links">
+					<a href="/dashboard">DASHBOARD</a>
+				</div>
+				<div className="links active">
+					<a href="/projects">PROJECTS</a>
+				</div>
+				<div className="links">
+					<a href="/bookings">BOOKINGS</a>
+				</div>
+				<div className="links">
+					<a href="/contacts">CONTACTS</a>
+				</div>
+				<div className="signOut">
+					<a href="/contacts">Sign out</a>
+				</div>
+			</div>
+      <div className="pageContents">
       {
         !!data ? (
           <div>
@@ -23,7 +44,7 @@ export default function Project({
             <div>
               <BoldText text='Project Description:' /> <br />
               <LightText text={ data.project.description } />
-              
+
             </div>
 
             <br />
@@ -46,11 +67,11 @@ export default function Project({
               {dataSorter.projectsGroupedByStatus(data.jobs).map(group => (
 
                 <ExpandableCard
-  								title={ 
+  								title={
                     <div>
                       <BoldText text={<h2>Jobs</h2>} /> <br />
                       <LightText text={ `Group Status: ${ group.key }` } />
-                    </div> 
+                    </div>
                   }
   								logoClass="logo-class"
   								children="Test" >
@@ -62,14 +83,14 @@ export default function Project({
                       </div>
 
                       <br />
-                      
+
                       <div>
                         <BoldText text='Job Description:' /> <br />
                         <LightText text={ job.description } />
                       </div>
 
                       <br />
-                      
+
                       <div>
                         <BoldText text='Job Status:' /> <br />
                         <LightText text={ job.status } />
@@ -94,6 +115,7 @@ export default function Project({
           'Loading Project'
         )
       }
+      </div>
     </div>
   )
 }

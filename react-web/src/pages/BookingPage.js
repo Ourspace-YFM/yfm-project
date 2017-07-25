@@ -11,6 +11,27 @@ export default function BookingPage({
 
   return (
     <div className='booking'>
+			<div className="navbar">
+				<div className="logo">
+					<p><span className="bold">OUR</span>SPACE</p>
+				</div>
+				<div className="links">
+					<a href="/dashboard">DASHBOARD</a>
+				</div>
+				<div className="links">
+					<a href="/projects">PROJECTS</a>
+				</div>
+				<div className="links active">
+					<a href="/bookings">BOOKINGS</a>
+				</div>
+				<div className="links">
+					<a href="/contacts">CONTACTS</a>
+				</div>
+				<div className="signOut">
+					<a href="/contacts">Sign out</a>
+				</div>
+			</div>
+      <div className="pageContents">
   {
       !!data ? (
           <div>
@@ -22,7 +43,7 @@ export default function BookingPage({
 
             <div>
               <BoldText text='Booking Date:' /> <LightText text='Thur Jul 27 2017 at 9 AM' />
-            </div>            
+            </div>
 
             <div>
               <BoldText text='Status:' /> <LightText text={ data.status } />
@@ -34,15 +55,16 @@ export default function BookingPage({
             { data.taskId.map((task) => (
             <div>
               <ul><LightText text={ task.name } /></ul>
-            </div>      
-            )) }    
-            
+            </div>
+            )) }
+
           </div>
-        
+
       ) : (
         'Loading Tasks'
       )
   }
+    </div>
     </div>
   )
 }
