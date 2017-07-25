@@ -56,6 +56,7 @@ export default class CreateBooking extends React.Component {
     return (
       <MuiThemeProvider>
         <div style={{width: '100%', maxWidth: 700, margin: 'auto'}}>
+        <h1>Create New Booking</h1>
           <Stepper activeStep={stepIndex}>
             <Step>
               <StepLabel>Enter Booking Details</StepLabel>

@@ -49,7 +49,17 @@ div.jobLogo {
   min-width: 50%;
 }
 
+div.stepFormRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+div.stepFormTile{
+  flex-grow: 1;
+
 div.pageContents {
   display: inline-block;
   width: calc(100vw - 200px); 
+
 }

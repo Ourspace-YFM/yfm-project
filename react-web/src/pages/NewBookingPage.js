@@ -19,7 +19,7 @@ export default class Newbooking extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='stepContainer'>
         <div>
           <Title
             text='Enter Booking Details'
@@ -27,61 +27,88 @@ export default class Newbooking extends React.Component {
         </div>
 
         <div className='bookingName'>
-          <TextInput label='Booking Name'/>
+          <TextInput className='regularInput' label={
+              <BoldText text='Booking name:' />
+            }/>
         </div>
 
         <br />
 
-        <div className='owner'>
-          <BoldText text='Owner: ' />
-          <GreyedInput text='COL Burwood' /> <br />
-          <BoldText text='Owner Contact: ' />
-          <GreyedInput text='(03) 8888-8888' />
+        <div className='stepFormRow owner'>
+          <div className='stepFormTile'>
+            <BoldText text='Job owner: ' />
+            <GreyedInput text='COL Burwood' />
+          </div>
+          <div className='stepFormTile'>
+            <BoldText text='Owner contact: ' />
+            <GreyedInput text='(03) 8888-8888' />
+          </div>
         </div>
 
         <br />
 
-        <div className='bookingLocation'>
-          <BoldText text='Booking Location: ' />
-          <TextInput label='Booking Location'/>
+        <div className='stepFormRow'>
+          <div className='bookingLocation stepFormTile'>
+            <TextInput label={
+              <BoldText text='Booking location:' />
+            }/>
+          </div>
+
+          <div className='bookingContact stepFormTile'>
+            <TextInput label={
+              <BoldText text='Location contact:' />
+            }/>
+          </div>
+        </div>
+
+        <br />
+      
+        <div className='stepFormRow'>
+          <div className='installer stepFormTile'>
+            <DropDownMenu label={
+                <BoldText text='Installer:' />
+              } listItems={
+                [
+                  'Alice Crash Repairs',
+                  'Vehicle Wraps',
+                  'LBE Signs',
+                  'Unique Signs',
+                  'Empire Graphics'
+                ]
+              }
+            />
+          </div>
+
+          <br />
+
+          <div className='installerContact stepFormTile'>
+            <BoldText text='Installer contact:' />
+            <GreyedInput text='(03) 7777-7777' />
+          </div>
         </div>
 
         <br />
 
-        <div className='bookingContact'>
-          <BoldText text='Location Contact: ' />
-          <TextInput label='Location Contact'/>
-        </div>
+        <div className='stepFormRow'>
+          <div className='bookingDate stepFormTile'>
+            <DatePick label={ 
+              <BoldText text='Booking Date:' />
+            } className='bookingDatePicker' />
+          </div>
 
-        <br />
+          <div className='bookingTime stepFormTile'>
+            <TextInput label={
+              <BoldText text='Booking time:' />
+            }/>
+          </div>
 
-        <div className='installer'>
-          <BoldText text='Installer: ' />
-          <DropDownMenu listItems={['Alice Crash Repairs','Vehicle Wraps','LBE Signs','Unique Signs','Empire Graphics']} />
-        </div>
+          <br />
 
-        <br />
-
-        <div className='installerContact'>
-          <BoldText text='Installer Contact: ' />
-          <GreyedInput text='(03) 7777-7777' />
-        </div>
-
-        <br />
-
-        <div className='bookingDate'>
-          <DatePick label={ <BoldText text='Select Booking Date: ' /> } className='bookingDatePicker' />
-        </div>
-
-        <div className='bookingTime'>
-          <TextInput label='Booking Time'/>
-        </div>
-
-        <br />
-
-        <div className='bookingDuration'>
-          <BoldText text='Estimated Booking Duration: ' />
-          <TextInput label='Estimated Booking Duration'/>
+          <div className='bookingDuration stepFormTile'>
+            <TextInput label={
+              <BoldText text='Estimated duration:' />
+            }/>
+          </div>
         </div>
       </div>
     )
