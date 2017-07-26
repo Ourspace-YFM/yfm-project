@@ -22,7 +22,9 @@ const server = express()
 
 // Middleware
 server.use(bodyParser.json())
-server.use(cors())
+server.use(cors({
+  origin: process.env.CORS_ORIGINS
+}))
 
 server.get('/setup', (req,res)=> {
   Seed.fill()
