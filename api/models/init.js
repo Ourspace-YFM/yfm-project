@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 mongoose.Promise = Promise
-mongoose.connect('mongodb://localhost/yfm')
+mongoose.connect(process.env.MONGO_URL)
 
 const db = mongoose.connection
 
