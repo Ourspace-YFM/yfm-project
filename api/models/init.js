@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 mongoose.Promise = Promise
-mongoose.connect(process.env.MONGO_URL)
+MongoClient = require('mongodb').MongoClient
+MongoClient.connect(process.env.MONGO_URL)
 
 const db = mongoose.connection
 
