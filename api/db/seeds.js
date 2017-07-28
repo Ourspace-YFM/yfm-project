@@ -2615,7 +2615,7 @@ function fill(){
       ]
     }
   ]
-  seeder.connect('mongodb://localhost/yfm', () => {
+  seeder.connect(process.env.MONGO_URL, () => {
     // Load Mongoose models
     seeder.loadModels([
       './models/booking.js',
