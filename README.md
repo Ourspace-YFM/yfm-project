@@ -18,6 +18,21 @@
 - Search and filter client assets, locations, companies and contacts
 - Add a booking
 
+## Live Setup
+
+### Starting the application
+#### Start API Server
+```
+https://api-yfmproject.now.sh/setup
+```
+
+#### Start React Front-End
+```
+https://yfmproject.netlify.com/signin
+```
+
+## Local Setup
+
 ### Starting the application
 #### Start API Server
 ```
